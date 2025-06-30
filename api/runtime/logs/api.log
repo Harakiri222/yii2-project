@@ -1,0 +1,2670 @@
+2025-06-29 18:35:11 [127.0.0.1][-][-][trace][yii\base\Application::bootstrap] Bootstrap with yii\log\Dispatcher
+    in C:\Yii2\test-review\api\web\index.php:11
+2025-06-29 18:35:11 [127.0.0.1][-][-][warning][application] Unable to use cache for URL manager: Failed to instantiate component or class "cache".
+    in C:\Yii2\test-review\api\web\index.php:11
+2025-06-29 18:35:11 [127.0.0.1][-][-][trace][yii\web\UrlManager::parseRequest] [
+    'rule' => 'POST api/login',
+    'match' => false,
+    'parent' => null,
+]
+    in C:\Yii2\test-review\api\web\index.php:11
+2025-06-29 18:35:11 [127.0.0.1][-][-][trace][yii\web\UrlManager::parseRequest] [
+    'rule' => 'GET api/user-role/<id:\\d+>',
+    'match' => false,
+    'parent' => null,
+]
+    in C:\Yii2\test-review\api\web\index.php:11
+2025-06-29 18:35:11 [127.0.0.1][-][-][trace][yii\web\UrlRule::parseRequest] Request parsed with URL rule: api/products
+    in C:\Yii2\test-review\api\web\index.php:11
+2025-06-29 18:35:11 [127.0.0.1][-][-][trace][yii\web\UrlManager::parseRequest] [
+    'rule' => 'GET api/products',
+    'match' => true,
+    'parent' => null,
+]
+    in C:\Yii2\test-review\api\web\index.php:11
+2025-06-29 18:35:11 [127.0.0.1][-][-][trace][yii\web\Application::handleRequest] Route requested: 'v1/product/index'
+    in C:\Yii2\test-review\api\web\index.php:11
+2025-06-29 18:35:11 [127.0.0.1][-][-][trace][yii\base\Module::getModule] Loading module: v1
+    in C:\Yii2\test-review\api\web\index.php:11
+2025-06-29 18:35:11 [127.0.0.1][-][-][trace][yii\base\Controller::runAction] Route to run: v1/product/index
+    in C:\Yii2\test-review\api\web\index.php:11
+2025-06-29 18:35:11 [127.0.0.1][-][-][info][yii\filters\RateLimiter::beforeAction] Rate limit skipped: user not logged in.
+    in C:\Yii2\test-review\api\web\index.php:11
+2025-06-29 18:35:11 [127.0.0.1][-][-][trace][yii\base\Action::runWithParams] Running action: yii\rest\IndexAction::run(), invoked by api\modules\v1\controllers\ProductController
+    in C:\Yii2\test-review\api\web\index.php:11
+2025-06-29 18:35:11 [127.0.0.1][-][-][info][yii\db\Command::query] SHOW FULL COLUMNS FROM `product`
+    in C:\Yii2\test-review\api\web\index.php:11
+2025-06-29 18:35:11 [127.0.0.1][-][-][info][yii\db\Connection::open] Opening DB connection: mysql:host=localhost;dbname=test_review
+    in C:\Yii2\test-review\api\web\index.php:11
+2025-06-29 18:35:11 [127.0.0.1][-][-][info][yii\db\Command::query] SHOW CREATE TABLE `product`
+    in C:\Yii2\test-review\api\web\index.php:11
+2025-06-29 18:35:11 [127.0.0.1][-][-][info][yii\db\Command::query] SELECT
+    `kcu`.`CONSTRAINT_NAME` AS `constraint_name`,
+    `kcu`.`COLUMN_NAME` AS `column_name`,
+    `kcu`.`REFERENCED_TABLE_NAME` AS `referenced_table_name`,
+    `kcu`.`REFERENCED_COLUMN_NAME` AS `referenced_column_name`
+FROM `information_schema`.`REFERENTIAL_CONSTRAINTS` AS `rc`
+JOIN `information_schema`.`KEY_COLUMN_USAGE` AS `kcu` ON
+    (
+        `kcu`.`CONSTRAINT_CATALOG` = `rc`.`CONSTRAINT_CATALOG` OR
+        (`kcu`.`CONSTRAINT_CATALOG` IS NULL AND `rc`.`CONSTRAINT_CATALOG` IS NULL)
+    ) AND
+    `kcu`.`CONSTRAINT_SCHEMA` = `rc`.`CONSTRAINT_SCHEMA` AND
+    `kcu`.`CONSTRAINT_NAME` = `rc`.`CONSTRAINT_NAME`
+WHERE `rc`.`CONSTRAINT_SCHEMA` = database() AND `kcu`.`TABLE_SCHEMA` = database()
+AND `rc`.`TABLE_NAME` = 'product' AND `kcu`.`TABLE_NAME` = 'product'
+    in C:\Yii2\test-review\api\web\index.php:11
+2025-06-29 18:35:11 [127.0.0.1][-][-][info][yii\db\Command::query] SELECT COUNT(*) FROM `product`
+    in C:\Yii2\test-review\api\web\index.php:11
+2025-06-29 18:35:11 [127.0.0.1][-][-][info][yii\db\Command::query] SELECT * FROM `product` LIMIT 20
+    in C:\Yii2\test-review\api\web\index.php:11
+2025-06-29 18:35:11 [127.0.0.1][-][-][info][application] $_GET = []
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = [
+    'Phpstorm-90abd190' => 'e3ca3928-140e-49f6-83f7-dff6b78eef42'
+    'advanced-backend' => 't24k8pj9i32olfm0fmc6jq9639'
+    '_csrf-backend' => '1bd6362881ca72d91e33a653286a04965560bc3518b94935b7d75cb74c0278f6a:2:{i:0;s:13:\"_csrf-backend\";i:1;s:32:\"gTIVa9XaP-w9O8lth3uld6009sfSiZ2O\";}'
+]
+
+$_SERVER = [
+    'DOCUMENT_ROOT' => 'C:\\Yii2\\test-review\\api\\web'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'REMOTE_PORT' => '63053'
+    'SERVER_SOFTWARE' => 'PHP/8.3.0 (Development Server)'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_PORT' => '8080'
+    'REQUEST_URI' => '/api/products'
+    'REQUEST_METHOD' => 'GET'
+    'SCRIPT_NAME' => '/index.php'
+    'SCRIPT_FILENAME' => 'C:\\Yii2\\test-review\\api\\web\\index.php'
+    'PATH_INFO' => '/api/products'
+    'PHP_SELF' => '/index.php/api/products'
+    'HTTP_HOST' => 'localhost:8080'
+    'HTTP_CONNECTION' => 'close'
+    'HTTP_SEC_CH_UA_PLATFORM' => '\"Windows\"'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/137.0.0.0 Safari/537.36'
+    'HTTP_ACCEPT' => 'application/json, text/plain, */*'
+    'HTTP_SEC_CH_UA' => '\"Google Chrome\";v=\"137\", \"Chromium\";v=\"137\", \"Not/A)Brand\";v=\"24\"'
+    'HTTP_SEC_CH_UA_MOBILE' => '?0'
+    'HTTP_SEC_FETCH_SITE' => 'same-origin'
+    'HTTP_SEC_FETCH_MODE' => 'cors'
+    'HTTP_SEC_FETCH_DEST' => 'empty'
+    'HTTP_REFERER' => 'http://localhost:5173/products'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br, zstd'
+    'HTTP_ACCEPT_LANGUAGE' => 'ru-RU,ru;q=0.9,en-US;q=0.8,en;q=0.7'
+    'HTTP_COOKIE' => 'Phpstorm-90abd190=e3ca3928-140e-49f6-83f7-dff6b78eef42; advanced-backend=t24k8pj9i32olfm0fmc6jq9639; _csrf-backend=1bd6362881ca72d91e33a653286a04965560bc3518b94935b7d75cb74c0278f6a%3A2%3A%7Bi%3A0%3Bs%3A13%3A%22_csrf-backend%22%3Bi%3A1%3Bs%3A32%3A%22gTIVa9XaP-w9O8lth3uld6009sfSiZ2O%22%3B%7D'
+    'REQUEST_TIME_FLOAT' => 1751222111.3591
+    'REQUEST_TIME' => 1751222111
+]
+2025-06-29 18:35:56 [127.0.0.1][-][-][trace][yii\base\Application::bootstrap] Bootstrap with yii\log\Dispatcher
+    in C:\Yii2\test-review\api\web\index.php:11
+2025-06-29 18:35:56 [127.0.0.1][-][-][warning][application] Unable to use cache for URL manager: Failed to instantiate component or class "cache".
+    in C:\Yii2\test-review\api\web\index.php:11
+2025-06-29 18:35:56 [127.0.0.1][-][-][trace][yii\web\UrlRule::parseRequest] Request parsed with URL rule: api/login
+    in C:\Yii2\test-review\api\web\index.php:11
+2025-06-29 18:35:56 [127.0.0.1][-][-][trace][yii\web\UrlManager::parseRequest] [
+    'rule' => 'POST api/login',
+    'match' => true,
+    'parent' => null,
+]
+    in C:\Yii2\test-review\api\web\index.php:11
+2025-06-29 18:35:56 [127.0.0.1][-][-][trace][yii\web\Application::handleRequest] Route requested: 'v1/auth/login'
+    in C:\Yii2\test-review\api\web\index.php:11
+2025-06-29 18:35:56 [127.0.0.1][-][-][trace][yii\base\Module::getModule] Loading module: v1
+    in C:\Yii2\test-review\api\web\index.php:11
+2025-06-29 18:35:56 [127.0.0.1][-][-][trace][yii\base\Controller::runAction] Route to run: v1/auth/login
+    in C:\Yii2\test-review\api\web\index.php:11
+2025-06-29 18:35:56 [127.0.0.1][-][-][info][yii\filters\RateLimiter::beforeAction] Rate limit skipped: user not logged in.
+    in C:\Yii2\test-review\api\web\index.php:11
+2025-06-29 18:35:56 [127.0.0.1][-][-][trace][yii\base\InlineAction::runWithParams] Running action: api\modules\v1\controllers\AuthController::actionLogin()
+    in C:\Yii2\test-review\api\web\index.php:11
+2025-06-29 18:35:56 [127.0.0.1][-][-][info][yii\db\Command::query] SHOW FULL COLUMNS FROM `user`
+    in C:\Yii2\test-review\api\modules\v1\models\User.php:20
+    in C:\Yii2\test-review\api\modules\v1\controllers\AuthController.php:36
+    in C:\Yii2\test-review\api\web\index.php:11
+2025-06-29 18:35:56 [127.0.0.1][-][-][info][yii\db\Connection::open] Opening DB connection: mysql:host=localhost;dbname=test_review
+    in C:\Yii2\test-review\api\modules\v1\models\User.php:20
+    in C:\Yii2\test-review\api\modules\v1\controllers\AuthController.php:36
+    in C:\Yii2\test-review\api\web\index.php:11
+2025-06-29 18:35:56 [127.0.0.1][-][-][info][yii\db\Command::query] SHOW CREATE TABLE `user`
+    in C:\Yii2\test-review\api\modules\v1\models\User.php:20
+    in C:\Yii2\test-review\api\modules\v1\controllers\AuthController.php:36
+    in C:\Yii2\test-review\api\web\index.php:11
+2025-06-29 18:35:56 [127.0.0.1][-][-][info][yii\db\Command::query] SELECT
+    `kcu`.`CONSTRAINT_NAME` AS `constraint_name`,
+    `kcu`.`COLUMN_NAME` AS `column_name`,
+    `kcu`.`REFERENCED_TABLE_NAME` AS `referenced_table_name`,
+    `kcu`.`REFERENCED_COLUMN_NAME` AS `referenced_column_name`
+FROM `information_schema`.`REFERENTIAL_CONSTRAINTS` AS `rc`
+JOIN `information_schema`.`KEY_COLUMN_USAGE` AS `kcu` ON
+    (
+        `kcu`.`CONSTRAINT_CATALOG` = `rc`.`CONSTRAINT_CATALOG` OR
+        (`kcu`.`CONSTRAINT_CATALOG` IS NULL AND `rc`.`CONSTRAINT_CATALOG` IS NULL)
+    ) AND
+    `kcu`.`CONSTRAINT_SCHEMA` = `rc`.`CONSTRAINT_SCHEMA` AND
+    `kcu`.`CONSTRAINT_NAME` = `rc`.`CONSTRAINT_NAME`
+WHERE `rc`.`CONSTRAINT_SCHEMA` = database() AND `kcu`.`TABLE_SCHEMA` = database()
+AND `rc`.`TABLE_NAME` = 'user' AND `kcu`.`TABLE_NAME` = 'user'
+    in C:\Yii2\test-review\api\modules\v1\models\User.php:20
+    in C:\Yii2\test-review\api\modules\v1\controllers\AuthController.php:36
+    in C:\Yii2\test-review\api\web\index.php:11
+2025-06-29 18:35:56 [127.0.0.1][-][-][info][yii\db\Command::query] SELECT * FROM `user` WHERE `username`='mod1'
+    in C:\Yii2\test-review\api\modules\v1\models\User.php:20
+    in C:\Yii2\test-review\api\modules\v1\controllers\AuthController.php:36
+    in C:\Yii2\test-review\api\web\index.php:11
+2025-06-29 18:35:56 [127.0.0.1][-][-][info][application] $_GET = []
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = [
+    'Phpstorm-90abd190' => 'e3ca3928-140e-49f6-83f7-dff6b78eef42'
+    'advanced-backend' => 't24k8pj9i32olfm0fmc6jq9639'
+    '_csrf-backend' => '1bd6362881ca72d91e33a653286a04965560bc3518b94935b7d75cb74c0278f6a:2:{i:0;s:13:\"_csrf-backend\";i:1;s:32:\"gTIVa9XaP-w9O8lth3uld6009sfSiZ2O\";}'
+]
+
+$_SERVER = [
+    'DOCUMENT_ROOT' => 'C:\\Yii2\\test-review\\api\\web'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'REMOTE_PORT' => '63084'
+    'SERVER_SOFTWARE' => 'PHP/8.3.0 (Development Server)'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_PORT' => '8080'
+    'REQUEST_URI' => '/api/login'
+    'REQUEST_METHOD' => 'POST'
+    'SCRIPT_NAME' => '/index.php'
+    'SCRIPT_FILENAME' => 'C:\\Yii2\\test-review\\api\\web\\index.php'
+    'PATH_INFO' => '/api/login'
+    'PHP_SELF' => '/index.php/api/login'
+    'HTTP_HOST' => 'localhost:8080'
+    'HTTP_CONNECTION' => 'close'
+    'CONTENT_LENGTH' => '41'
+    'HTTP_CONTENT_LENGTH' => '41'
+    'HTTP_SEC_CH_UA_PLATFORM' => '\"Windows\"'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/137.0.0.0 Safari/537.36'
+    'HTTP_ACCEPT' => 'application/json, text/plain, */*'
+    'HTTP_SEC_CH_UA' => '\"Google Chrome\";v=\"137\", \"Chromium\";v=\"137\", \"Not/A)Brand\";v=\"24\"'
+    'CONTENT_TYPE' => 'application/json'
+    'HTTP_CONTENT_TYPE' => 'application/json'
+    'HTTP_SEC_CH_UA_MOBILE' => '?0'
+    'HTTP_ORIGIN' => 'http://localhost:5173'
+    'HTTP_SEC_FETCH_SITE' => 'same-origin'
+    'HTTP_SEC_FETCH_MODE' => 'cors'
+    'HTTP_SEC_FETCH_DEST' => 'empty'
+    'HTTP_REFERER' => 'http://localhost:5173/login'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br, zstd'
+    'HTTP_ACCEPT_LANGUAGE' => 'ru-RU,ru;q=0.9,en-US;q=0.8,en;q=0.7'
+    'HTTP_COOKIE' => 'Phpstorm-90abd190=e3ca3928-140e-49f6-83f7-dff6b78eef42; advanced-backend=t24k8pj9i32olfm0fmc6jq9639; _csrf-backend=1bd6362881ca72d91e33a653286a04965560bc3518b94935b7d75cb74c0278f6a%3A2%3A%7Bi%3A0%3Bs%3A13%3A%22_csrf-backend%22%3Bi%3A1%3Bs%3A32%3A%22gTIVa9XaP-w9O8lth3uld6009sfSiZ2O%22%3B%7D'
+    'REQUEST_TIME_FLOAT' => 1751222156.5142
+    'REQUEST_TIME' => 1751222156
+]
+2025-06-29 18:35:57 [127.0.0.1][4][-][trace][yii\base\Application::bootstrap] Bootstrap with yii\log\Dispatcher
+    in C:\Yii2\test-review\api\web\index.php:11
+2025-06-29 18:35:57 [127.0.0.1][4][-][warning][application] Unable to use cache for URL manager: Failed to instantiate component or class "cache".
+    in C:\Yii2\test-review\api\web\index.php:11
+2025-06-29 18:35:57 [127.0.0.1][4][-][trace][yii\web\UrlManager::parseRequest] [
+    'rule' => 'POST api/login',
+    'match' => false,
+    'parent' => null,
+]
+    in C:\Yii2\test-review\api\web\index.php:11
+2025-06-29 18:35:57 [127.0.0.1][4][-][trace][yii\web\UrlRule::parseRequest] Request parsed with URL rule: api/user-role/<id:\d+>
+    in C:\Yii2\test-review\api\web\index.php:11
+2025-06-29 18:35:57 [127.0.0.1][4][-][trace][yii\web\UrlManager::parseRequest] [
+    'rule' => 'GET api/user-role/<id:\\d+>',
+    'match' => true,
+    'parent' => null,
+]
+    in C:\Yii2\test-review\api\web\index.php:11
+2025-06-29 18:35:57 [127.0.0.1][4][-][trace][yii\web\Application::handleRequest] Route requested: 'v1/user/user-role'
+    in C:\Yii2\test-review\api\web\index.php:11
+2025-06-29 18:35:57 [127.0.0.1][4][-][trace][yii\base\Module::getModule] Loading module: v1
+    in C:\Yii2\test-review\api\web\index.php:11
+2025-06-29 18:35:57 [127.0.0.1][4][-][trace][yii\base\Controller::runAction] Route to run: v1/user/user-role
+    in C:\Yii2\test-review\api\web\index.php:11
+2025-06-29 18:35:57 [127.0.0.1][4][-][info][yii\db\Command::query] SHOW FULL COLUMNS FROM `user`
+    in C:\Yii2\test-review\api\modules\v1\models\User.php:61
+    in C:\Yii2\test-review\api\web\index.php:11
+2025-06-29 18:35:57 [127.0.0.1][4][-][info][yii\db\Connection::open] Opening DB connection: mysql:host=localhost;dbname=test_review
+    in C:\Yii2\test-review\api\modules\v1\models\User.php:61
+    in C:\Yii2\test-review\api\web\index.php:11
+2025-06-29 18:35:57 [127.0.0.1][4][-][info][yii\db\Command::query] SHOW CREATE TABLE `user`
+    in C:\Yii2\test-review\api\modules\v1\models\User.php:61
+    in C:\Yii2\test-review\api\web\index.php:11
+2025-06-29 18:35:57 [127.0.0.1][4][-][info][yii\db\Command::query] SELECT
+    `kcu`.`CONSTRAINT_NAME` AS `constraint_name`,
+    `kcu`.`COLUMN_NAME` AS `column_name`,
+    `kcu`.`REFERENCED_TABLE_NAME` AS `referenced_table_name`,
+    `kcu`.`REFERENCED_COLUMN_NAME` AS `referenced_column_name`
+FROM `information_schema`.`REFERENTIAL_CONSTRAINTS` AS `rc`
+JOIN `information_schema`.`KEY_COLUMN_USAGE` AS `kcu` ON
+    (
+        `kcu`.`CONSTRAINT_CATALOG` = `rc`.`CONSTRAINT_CATALOG` OR
+        (`kcu`.`CONSTRAINT_CATALOG` IS NULL AND `rc`.`CONSTRAINT_CATALOG` IS NULL)
+    ) AND
+    `kcu`.`CONSTRAINT_SCHEMA` = `rc`.`CONSTRAINT_SCHEMA` AND
+    `kcu`.`CONSTRAINT_NAME` = `rc`.`CONSTRAINT_NAME`
+WHERE `rc`.`CONSTRAINT_SCHEMA` = database() AND `kcu`.`TABLE_SCHEMA` = database()
+AND `rc`.`TABLE_NAME` = 'user' AND `kcu`.`TABLE_NAME` = 'user'
+    in C:\Yii2\test-review\api\modules\v1\models\User.php:61
+    in C:\Yii2\test-review\api\web\index.php:11
+2025-06-29 18:35:57 [127.0.0.1][4][-][info][yii\db\Command::query] SELECT * FROM `user` WHERE `id`=4
+    in C:\Yii2\test-review\api\modules\v1\models\User.php:61
+    in C:\Yii2\test-review\api\web\index.php:11
+2025-06-29 18:35:57 [127.0.0.1][4][-][info][yii\web\User::login] User '4' logged in from 127.0.0.1. Session not enabled.
+    in C:\Yii2\test-review\api\web\index.php:11
+2025-06-29 18:35:57 [127.0.0.1][4][-][info][yii\filters\RateLimiter::beforeAction] Rate limit skipped: "user" does not implement RateLimitInterface.
+    in C:\Yii2\test-review\api\web\index.php:11
+2025-06-29 18:35:57 [127.0.0.1][4][-][trace][yii\base\InlineAction::runWithParams] Running action: api\modules\v1\controllers\UserController::actionUserRole()
+    in C:\Yii2\test-review\api\web\index.php:11
+2025-06-29 18:35:57 [127.0.0.1][4][-][info][yii\db\Command::query] SELECT `item_name` FROM `auth_assignment` WHERE `user_id`='4'
+    in C:\Yii2\test-review\api\modules\v1\controllers\UserController.php:37
+    in C:\Yii2\test-review\api\web\index.php:11
+2025-06-29 18:35:57 [127.0.0.1][4][-][info][application] $_GET = [
+    'id' => '4'
+]
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = [
+    'Phpstorm-90abd190' => 'e3ca3928-140e-49f6-83f7-dff6b78eef42'
+    'advanced-backend' => 't24k8pj9i32olfm0fmc6jq9639'
+    '_csrf-backend' => '1bd6362881ca72d91e33a653286a04965560bc3518b94935b7d75cb74c0278f6a:2:{i:0;s:13:\"_csrf-backend\";i:1;s:32:\"gTIVa9XaP-w9O8lth3uld6009sfSiZ2O\";}'
+]
+
+$_SERVER = [
+    'DOCUMENT_ROOT' => 'C:\\Yii2\\test-review\\api\\web'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'REMOTE_PORT' => '63086'
+    'SERVER_SOFTWARE' => 'PHP/8.3.0 (Development Server)'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_PORT' => '8080'
+    'REQUEST_URI' => '/api/user-role/4'
+    'REQUEST_METHOD' => 'GET'
+    'SCRIPT_NAME' => '/index.php'
+    'SCRIPT_FILENAME' => 'C:\\Yii2\\test-review\\api\\web\\index.php'
+    'PATH_INFO' => '/api/user-role/4'
+    'PHP_SELF' => '/index.php/api/user-role/4'
+    'HTTP_HOST' => 'localhost:8080'
+    'HTTP_CONNECTION' => 'close'
+    'HTTP_SEC_CH_UA_PLATFORM' => '\"Windows\"'
+    'HTTP_AUTHORIZATION' => '***'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/137.0.0.0 Safari/537.36'
+    'HTTP_ACCEPT' => 'application/json, text/plain, */*'
+    'HTTP_SEC_CH_UA' => '\"Google Chrome\";v=\"137\", \"Chromium\";v=\"137\", \"Not/A)Brand\";v=\"24\"'
+    'HTTP_SEC_CH_UA_MOBILE' => '?0'
+    'HTTP_SEC_FETCH_SITE' => 'same-origin'
+    'HTTP_SEC_FETCH_MODE' => 'cors'
+    'HTTP_SEC_FETCH_DEST' => 'empty'
+    'HTTP_REFERER' => 'http://localhost:5173/login'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br, zstd'
+    'HTTP_ACCEPT_LANGUAGE' => 'ru-RU,ru;q=0.9,en-US;q=0.8,en;q=0.7'
+    'HTTP_COOKIE' => 'Phpstorm-90abd190=e3ca3928-140e-49f6-83f7-dff6b78eef42; advanced-backend=t24k8pj9i32olfm0fmc6jq9639; _csrf-backend=1bd6362881ca72d91e33a653286a04965560bc3518b94935b7d75cb74c0278f6a%3A2%3A%7Bi%3A0%3Bs%3A13%3A%22_csrf-backend%22%3Bi%3A1%3Bs%3A32%3A%22gTIVa9XaP-w9O8lth3uld6009sfSiZ2O%22%3B%7D'
+    'REQUEST_TIME_FLOAT' => 1751222157.0153
+    'REQUEST_TIME' => 1751222157
+]
+2025-06-29 18:35:57 [127.0.0.1][-][-][trace][yii\base\Application::bootstrap] Bootstrap with yii\log\Dispatcher
+    in C:\Yii2\test-review\api\web\index.php:11
+2025-06-29 18:35:57 [127.0.0.1][-][-][warning][application] Unable to use cache for URL manager: Failed to instantiate component or class "cache".
+    in C:\Yii2\test-review\api\web\index.php:11
+2025-06-29 18:35:57 [127.0.0.1][-][-][trace][yii\web\UrlManager::parseRequest] [
+    'rule' => 'POST api/login',
+    'match' => false,
+    'parent' => null,
+]
+    in C:\Yii2\test-review\api\web\index.php:11
+2025-06-29 18:35:57 [127.0.0.1][-][-][trace][yii\web\UrlManager::parseRequest] [
+    'rule' => 'GET api/user-role/<id:\\d+>',
+    'match' => false,
+    'parent' => null,
+]
+    in C:\Yii2\test-review\api\web\index.php:11
+2025-06-29 18:35:57 [127.0.0.1][-][-][trace][yii\web\UrlRule::parseRequest] Request parsed with URL rule: api/products
+    in C:\Yii2\test-review\api\web\index.php:11
+2025-06-29 18:35:57 [127.0.0.1][-][-][trace][yii\web\UrlManager::parseRequest] [
+    'rule' => 'GET api/products',
+    'match' => true,
+    'parent' => null,
+]
+    in C:\Yii2\test-review\api\web\index.php:11
+2025-06-29 18:35:57 [127.0.0.1][-][-][trace][yii\web\Application::handleRequest] Route requested: 'v1/product/index'
+    in C:\Yii2\test-review\api\web\index.php:11
+2025-06-29 18:35:57 [127.0.0.1][-][-][trace][yii\base\Module::getModule] Loading module: v1
+    in C:\Yii2\test-review\api\web\index.php:11
+2025-06-29 18:35:57 [127.0.0.1][-][-][trace][yii\base\Controller::runAction] Route to run: v1/product/index
+    in C:\Yii2\test-review\api\web\index.php:11
+2025-06-29 18:35:57 [127.0.0.1][-][-][info][yii\filters\RateLimiter::beforeAction] Rate limit skipped: user not logged in.
+    in C:\Yii2\test-review\api\web\index.php:11
+2025-06-29 18:35:57 [127.0.0.1][-][-][trace][yii\base\Action::runWithParams] Running action: yii\rest\IndexAction::run(), invoked by api\modules\v1\controllers\ProductController
+    in C:\Yii2\test-review\api\web\index.php:11
+2025-06-29 18:35:57 [127.0.0.1][-][-][info][yii\db\Command::query] SHOW FULL COLUMNS FROM `product`
+    in C:\Yii2\test-review\api\web\index.php:11
+2025-06-29 18:35:57 [127.0.0.1][-][-][info][yii\db\Connection::open] Opening DB connection: mysql:host=localhost;dbname=test_review
+    in C:\Yii2\test-review\api\web\index.php:11
+2025-06-29 18:35:57 [127.0.0.1][-][-][info][yii\db\Command::query] SHOW CREATE TABLE `product`
+    in C:\Yii2\test-review\api\web\index.php:11
+2025-06-29 18:35:57 [127.0.0.1][-][-][info][yii\db\Command::query] SELECT
+    `kcu`.`CONSTRAINT_NAME` AS `constraint_name`,
+    `kcu`.`COLUMN_NAME` AS `column_name`,
+    `kcu`.`REFERENCED_TABLE_NAME` AS `referenced_table_name`,
+    `kcu`.`REFERENCED_COLUMN_NAME` AS `referenced_column_name`
+FROM `information_schema`.`REFERENTIAL_CONSTRAINTS` AS `rc`
+JOIN `information_schema`.`KEY_COLUMN_USAGE` AS `kcu` ON
+    (
+        `kcu`.`CONSTRAINT_CATALOG` = `rc`.`CONSTRAINT_CATALOG` OR
+        (`kcu`.`CONSTRAINT_CATALOG` IS NULL AND `rc`.`CONSTRAINT_CATALOG` IS NULL)
+    ) AND
+    `kcu`.`CONSTRAINT_SCHEMA` = `rc`.`CONSTRAINT_SCHEMA` AND
+    `kcu`.`CONSTRAINT_NAME` = `rc`.`CONSTRAINT_NAME`
+WHERE `rc`.`CONSTRAINT_SCHEMA` = database() AND `kcu`.`TABLE_SCHEMA` = database()
+AND `rc`.`TABLE_NAME` = 'product' AND `kcu`.`TABLE_NAME` = 'product'
+    in C:\Yii2\test-review\api\web\index.php:11
+2025-06-29 18:35:57 [127.0.0.1][-][-][info][yii\db\Command::query] SELECT COUNT(*) FROM `product`
+    in C:\Yii2\test-review\api\web\index.php:11
+2025-06-29 18:35:57 [127.0.0.1][-][-][info][yii\db\Command::query] SELECT * FROM `product` LIMIT 20
+    in C:\Yii2\test-review\api\web\index.php:11
+2025-06-29 18:35:57 [127.0.0.1][-][-][info][application] $_GET = []
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = [
+    'Phpstorm-90abd190' => 'e3ca3928-140e-49f6-83f7-dff6b78eef42'
+    'advanced-backend' => 't24k8pj9i32olfm0fmc6jq9639'
+    '_csrf-backend' => '1bd6362881ca72d91e33a653286a04965560bc3518b94935b7d75cb74c0278f6a:2:{i:0;s:13:\"_csrf-backend\";i:1;s:32:\"gTIVa9XaP-w9O8lth3uld6009sfSiZ2O\";}'
+    '_csrf' => 'ef6b0ce460aad4c9304005bcaa8d2f622cbd71a72253a69f19e82b6c190921e5a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"gfMTWTQFHcuERRCNJm8195ALwT_PG8Ud\";}'
+]
+
+$_SERVER = [
+    'DOCUMENT_ROOT' => 'C:\\Yii2\\test-review\\api\\web'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'REMOTE_PORT' => '63088'
+    'SERVER_SOFTWARE' => 'PHP/8.3.0 (Development Server)'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_PORT' => '8080'
+    'REQUEST_URI' => '/api/products'
+    'REQUEST_METHOD' => 'GET'
+    'SCRIPT_NAME' => '/index.php'
+    'SCRIPT_FILENAME' => 'C:\\Yii2\\test-review\\api\\web\\index.php'
+    'PATH_INFO' => '/api/products'
+    'PHP_SELF' => '/index.php/api/products'
+    'HTTP_HOST' => 'localhost:8080'
+    'HTTP_CONNECTION' => 'close'
+    'HTTP_SEC_CH_UA_PLATFORM' => '\"Windows\"'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/137.0.0.0 Safari/537.36'
+    'HTTP_ACCEPT' => 'application/json, text/plain, */*'
+    'HTTP_SEC_CH_UA' => '\"Google Chrome\";v=\"137\", \"Chromium\";v=\"137\", \"Not/A)Brand\";v=\"24\"'
+    'HTTP_SEC_CH_UA_MOBILE' => '?0'
+    'HTTP_SEC_FETCH_SITE' => 'same-origin'
+    'HTTP_SEC_FETCH_MODE' => 'cors'
+    'HTTP_SEC_FETCH_DEST' => 'empty'
+    'HTTP_REFERER' => 'http://localhost:5173/products'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br, zstd'
+    'HTTP_ACCEPT_LANGUAGE' => 'ru-RU,ru;q=0.9,en-US;q=0.8,en;q=0.7'
+    'HTTP_COOKIE' => 'Phpstorm-90abd190=e3ca3928-140e-49f6-83f7-dff6b78eef42; advanced-backend=t24k8pj9i32olfm0fmc6jq9639; _csrf-backend=1bd6362881ca72d91e33a653286a04965560bc3518b94935b7d75cb74c0278f6a%3A2%3A%7Bi%3A0%3Bs%3A13%3A%22_csrf-backend%22%3Bi%3A1%3Bs%3A32%3A%22gTIVa9XaP-w9O8lth3uld6009sfSiZ2O%22%3B%7D; _csrf=ef6b0ce460aad4c9304005bcaa8d2f622cbd71a72253a69f19e82b6c190921e5a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22gfMTWTQFHcuERRCNJm8195ALwT_PG8Ud%22%3B%7D'
+    'REQUEST_TIME_FLOAT' => 1751222157.1057
+    'REQUEST_TIME' => 1751222157
+]
+2025-06-29 18:35:59 [127.0.0.1][-][-][trace][yii\base\Application::bootstrap] Bootstrap with yii\log\Dispatcher
+    in C:\Yii2\test-review\api\web\index.php:11
+2025-06-29 18:35:59 [127.0.0.1][-][-][warning][application] Unable to use cache for URL manager: Failed to instantiate component or class "cache".
+    in C:\Yii2\test-review\api\web\index.php:11
+2025-06-29 18:35:59 [127.0.0.1][-][-][trace][yii\web\UrlManager::parseRequest] [
+    'rule' => 'POST api/login',
+    'match' => false,
+    'parent' => null,
+]
+    in C:\Yii2\test-review\api\web\index.php:11
+2025-06-29 18:35:59 [127.0.0.1][-][-][trace][yii\web\UrlManager::parseRequest] [
+    'rule' => 'GET api/user-role/<id:\\d+>',
+    'match' => false,
+    'parent' => null,
+]
+    in C:\Yii2\test-review\api\web\index.php:11
+2025-06-29 18:35:59 [127.0.0.1][-][-][trace][yii\web\UrlRule::parseRequest] Request parsed with URL rule: api/products
+    in C:\Yii2\test-review\api\web\index.php:11
+2025-06-29 18:35:59 [127.0.0.1][-][-][trace][yii\web\UrlManager::parseRequest] [
+    'rule' => 'GET api/products',
+    'match' => true,
+    'parent' => null,
+]
+    in C:\Yii2\test-review\api\web\index.php:11
+2025-06-29 18:35:59 [127.0.0.1][-][-][trace][yii\web\Application::handleRequest] Route requested: 'v1/product/index'
+    in C:\Yii2\test-review\api\web\index.php:11
+2025-06-29 18:35:59 [127.0.0.1][-][-][trace][yii\base\Module::getModule] Loading module: v1
+    in C:\Yii2\test-review\api\web\index.php:11
+2025-06-29 18:35:59 [127.0.0.1][-][-][trace][yii\base\Controller::runAction] Route to run: v1/product/index
+    in C:\Yii2\test-review\api\web\index.php:11
+2025-06-29 18:35:59 [127.0.0.1][-][-][info][yii\filters\RateLimiter::beforeAction] Rate limit skipped: user not logged in.
+    in C:\Yii2\test-review\api\web\index.php:11
+2025-06-29 18:35:59 [127.0.0.1][-][-][trace][yii\base\Action::runWithParams] Running action: yii\rest\IndexAction::run(), invoked by api\modules\v1\controllers\ProductController
+    in C:\Yii2\test-review\api\web\index.php:11
+2025-06-29 18:35:59 [127.0.0.1][-][-][info][yii\db\Command::query] SHOW FULL COLUMNS FROM `product`
+    in C:\Yii2\test-review\api\web\index.php:11
+2025-06-29 18:35:59 [127.0.0.1][-][-][info][yii\db\Connection::open] Opening DB connection: mysql:host=localhost;dbname=test_review
+    in C:\Yii2\test-review\api\web\index.php:11
+2025-06-29 18:35:59 [127.0.0.1][-][-][info][yii\db\Command::query] SHOW CREATE TABLE `product`
+    in C:\Yii2\test-review\api\web\index.php:11
+2025-06-29 18:35:59 [127.0.0.1][-][-][info][yii\db\Command::query] SELECT
+    `kcu`.`CONSTRAINT_NAME` AS `constraint_name`,
+    `kcu`.`COLUMN_NAME` AS `column_name`,
+    `kcu`.`REFERENCED_TABLE_NAME` AS `referenced_table_name`,
+    `kcu`.`REFERENCED_COLUMN_NAME` AS `referenced_column_name`
+FROM `information_schema`.`REFERENTIAL_CONSTRAINTS` AS `rc`
+JOIN `information_schema`.`KEY_COLUMN_USAGE` AS `kcu` ON
+    (
+        `kcu`.`CONSTRAINT_CATALOG` = `rc`.`CONSTRAINT_CATALOG` OR
+        (`kcu`.`CONSTRAINT_CATALOG` IS NULL AND `rc`.`CONSTRAINT_CATALOG` IS NULL)
+    ) AND
+    `kcu`.`CONSTRAINT_SCHEMA` = `rc`.`CONSTRAINT_SCHEMA` AND
+    `kcu`.`CONSTRAINT_NAME` = `rc`.`CONSTRAINT_NAME`
+WHERE `rc`.`CONSTRAINT_SCHEMA` = database() AND `kcu`.`TABLE_SCHEMA` = database()
+AND `rc`.`TABLE_NAME` = 'product' AND `kcu`.`TABLE_NAME` = 'product'
+    in C:\Yii2\test-review\api\web\index.php:11
+2025-06-29 18:35:59 [127.0.0.1][-][-][info][yii\db\Command::query] SELECT COUNT(*) FROM `product`
+    in C:\Yii2\test-review\api\web\index.php:11
+2025-06-29 18:35:59 [127.0.0.1][-][-][info][yii\db\Command::query] SELECT * FROM `product` LIMIT 20
+    in C:\Yii2\test-review\api\web\index.php:11
+2025-06-29 18:35:59 [127.0.0.1][-][-][info][application] $_GET = []
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = [
+    'Phpstorm-90abd190' => 'e3ca3928-140e-49f6-83f7-dff6b78eef42'
+    'advanced-backend' => 't24k8pj9i32olfm0fmc6jq9639'
+    '_csrf-backend' => '1bd6362881ca72d91e33a653286a04965560bc3518b94935b7d75cb74c0278f6a:2:{i:0;s:13:\"_csrf-backend\";i:1;s:32:\"gTIVa9XaP-w9O8lth3uld6009sfSiZ2O\";}'
+    '_csrf' => 'ef6b0ce460aad4c9304005bcaa8d2f622cbd71a72253a69f19e82b6c190921e5a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"gfMTWTQFHcuERRCNJm8195ALwT_PG8Ud\";}'
+]
+
+$_SERVER = [
+    'DOCUMENT_ROOT' => 'C:\\Yii2\\test-review\\api\\web'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'REMOTE_PORT' => '63100'
+    'SERVER_SOFTWARE' => 'PHP/8.3.0 (Development Server)'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_PORT' => '8080'
+    'REQUEST_URI' => '/api/products'
+    'REQUEST_METHOD' => 'GET'
+    'SCRIPT_NAME' => '/index.php'
+    'SCRIPT_FILENAME' => 'C:\\Yii2\\test-review\\api\\web\\index.php'
+    'PATH_INFO' => '/api/products'
+    'PHP_SELF' => '/index.php/api/products'
+    'HTTP_HOST' => 'localhost:8080'
+    'HTTP_CONNECTION' => 'close'
+    'HTTP_SEC_CH_UA_PLATFORM' => '\"Windows\"'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/137.0.0.0 Safari/537.36'
+    'HTTP_ACCEPT' => 'application/json, text/plain, */*'
+    'HTTP_SEC_CH_UA' => '\"Google Chrome\";v=\"137\", \"Chromium\";v=\"137\", \"Not/A)Brand\";v=\"24\"'
+    'HTTP_SEC_CH_UA_MOBILE' => '?0'
+    'HTTP_SEC_FETCH_SITE' => 'same-origin'
+    'HTTP_SEC_FETCH_MODE' => 'cors'
+    'HTTP_SEC_FETCH_DEST' => 'empty'
+    'HTTP_REFERER' => 'http://localhost:5173/products'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br, zstd'
+    'HTTP_ACCEPT_LANGUAGE' => 'ru-RU,ru;q=0.9,en-US;q=0.8,en;q=0.7'
+    'HTTP_COOKIE' => 'Phpstorm-90abd190=e3ca3928-140e-49f6-83f7-dff6b78eef42; advanced-backend=t24k8pj9i32olfm0fmc6jq9639; _csrf-backend=1bd6362881ca72d91e33a653286a04965560bc3518b94935b7d75cb74c0278f6a%3A2%3A%7Bi%3A0%3Bs%3A13%3A%22_csrf-backend%22%3Bi%3A1%3Bs%3A32%3A%22gTIVa9XaP-w9O8lth3uld6009sfSiZ2O%22%3B%7D; _csrf=ef6b0ce460aad4c9304005bcaa8d2f622cbd71a72253a69f19e82b6c190921e5a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22gfMTWTQFHcuERRCNJm8195ALwT_PG8Ud%22%3B%7D'
+    'REQUEST_TIME_FLOAT' => 1751222159.9206
+    'REQUEST_TIME' => 1751222159
+]
+2025-06-29 18:36:01 [127.0.0.1][-][-][trace][yii\base\Application::bootstrap] Bootstrap with yii\log\Dispatcher
+    in C:\Yii2\test-review\api\web\index.php:11
+2025-06-29 18:36:01 [127.0.0.1][-][-][warning][application] Unable to use cache for URL manager: Failed to instantiate component or class "cache".
+    in C:\Yii2\test-review\api\web\index.php:11
+2025-06-29 18:36:01 [127.0.0.1][-][-][trace][yii\web\UrlManager::parseRequest] [
+    'rule' => 'POST api/login',
+    'match' => false,
+    'parent' => null,
+]
+    in C:\Yii2\test-review\api\web\index.php:11
+2025-06-29 18:36:01 [127.0.0.1][-][-][trace][yii\web\UrlManager::parseRequest] [
+    'rule' => 'GET api/user-role/<id:\\d+>',
+    'match' => false,
+    'parent' => null,
+]
+    in C:\Yii2\test-review\api\web\index.php:11
+2025-06-29 18:36:01 [127.0.0.1][-][-][trace][yii\web\UrlManager::parseRequest] [
+    'rule' => 'GET api/products',
+    'match' => false,
+    'parent' => null,
+]
+    in C:\Yii2\test-review\api\web\index.php:11
+2025-06-29 18:36:01 [127.0.0.1][-][-][trace][yii\web\UrlRule::parseRequest] Request parsed with URL rule: api/products/<id:\d+>
+    in C:\Yii2\test-review\api\web\index.php:11
+2025-06-29 18:36:01 [127.0.0.1][-][-][trace][yii\web\UrlManager::parseRequest] [
+    'rule' => 'GET api/products/<id:\\d+>',
+    'match' => true,
+    'parent' => null,
+]
+    in C:\Yii2\test-review\api\web\index.php:11
+2025-06-29 18:36:01 [127.0.0.1][-][-][trace][yii\web\Application::handleRequest] Route requested: 'v1/product/view'
+    in C:\Yii2\test-review\api\web\index.php:11
+2025-06-29 18:36:01 [127.0.0.1][-][-][trace][yii\base\Module::getModule] Loading module: v1
+    in C:\Yii2\test-review\api\web\index.php:11
+2025-06-29 18:36:01 [127.0.0.1][-][-][trace][yii\base\Controller::runAction] Route to run: v1/product/view
+    in C:\Yii2\test-review\api\web\index.php:11
+2025-06-29 18:36:01 [127.0.0.1][-][-][info][yii\filters\RateLimiter::beforeAction] Rate limit skipped: user not logged in.
+    in C:\Yii2\test-review\api\web\index.php:11
+2025-06-29 18:36:01 [127.0.0.1][-][-][trace][yii\base\Action::runWithParams] Running action: yii\rest\ViewAction::run(), invoked by api\modules\v1\controllers\ProductController
+    in C:\Yii2\test-review\api\web\index.php:11
+2025-06-29 18:36:01 [127.0.0.1][-][-][info][yii\db\Command::query] SHOW FULL COLUMNS FROM `product`
+    in C:\Yii2\test-review\api\web\index.php:11
+2025-06-29 18:36:01 [127.0.0.1][-][-][info][yii\db\Connection::open] Opening DB connection: mysql:host=localhost;dbname=test_review
+    in C:\Yii2\test-review\api\web\index.php:11
+2025-06-29 18:36:01 [127.0.0.1][-][-][info][yii\db\Command::query] SHOW CREATE TABLE `product`
+    in C:\Yii2\test-review\api\web\index.php:11
+2025-06-29 18:36:01 [127.0.0.1][-][-][info][yii\db\Command::query] SELECT
+    `kcu`.`CONSTRAINT_NAME` AS `constraint_name`,
+    `kcu`.`COLUMN_NAME` AS `column_name`,
+    `kcu`.`REFERENCED_TABLE_NAME` AS `referenced_table_name`,
+    `kcu`.`REFERENCED_COLUMN_NAME` AS `referenced_column_name`
+FROM `information_schema`.`REFERENTIAL_CONSTRAINTS` AS `rc`
+JOIN `information_schema`.`KEY_COLUMN_USAGE` AS `kcu` ON
+    (
+        `kcu`.`CONSTRAINT_CATALOG` = `rc`.`CONSTRAINT_CATALOG` OR
+        (`kcu`.`CONSTRAINT_CATALOG` IS NULL AND `rc`.`CONSTRAINT_CATALOG` IS NULL)
+    ) AND
+    `kcu`.`CONSTRAINT_SCHEMA` = `rc`.`CONSTRAINT_SCHEMA` AND
+    `kcu`.`CONSTRAINT_NAME` = `rc`.`CONSTRAINT_NAME`
+WHERE `rc`.`CONSTRAINT_SCHEMA` = database() AND `kcu`.`TABLE_SCHEMA` = database()
+AND `rc`.`TABLE_NAME` = 'product' AND `kcu`.`TABLE_NAME` = 'product'
+    in C:\Yii2\test-review\api\web\index.php:11
+2025-06-29 18:36:01 [127.0.0.1][-][-][info][yii\db\Command::query] SELECT * FROM `product` WHERE `id`='1'
+    in C:\Yii2\test-review\api\web\index.php:11
+2025-06-29 18:36:01 [127.0.0.1][-][-][info][application] $_GET = [
+    'id' => '1'
+]
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = [
+    'Phpstorm-90abd190' => 'e3ca3928-140e-49f6-83f7-dff6b78eef42'
+    'advanced-backend' => 't24k8pj9i32olfm0fmc6jq9639'
+    '_csrf-backend' => '1bd6362881ca72d91e33a653286a04965560bc3518b94935b7d75cb74c0278f6a:2:{i:0;s:13:\"_csrf-backend\";i:1;s:32:\"gTIVa9XaP-w9O8lth3uld6009sfSiZ2O\";}'
+    '_csrf' => 'ef6b0ce460aad4c9304005bcaa8d2f622cbd71a72253a69f19e82b6c190921e5a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"gfMTWTQFHcuERRCNJm8195ALwT_PG8Ud\";}'
+]
+
+$_SERVER = [
+    'DOCUMENT_ROOT' => 'C:\\Yii2\\test-review\\api\\web'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'REMOTE_PORT' => '63108'
+    'SERVER_SOFTWARE' => 'PHP/8.3.0 (Development Server)'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_PORT' => '8080'
+    'REQUEST_URI' => '/api/products/1'
+    'REQUEST_METHOD' => 'GET'
+    'SCRIPT_NAME' => '/index.php'
+    'SCRIPT_FILENAME' => 'C:\\Yii2\\test-review\\api\\web\\index.php'
+    'PATH_INFO' => '/api/products/1'
+    'PHP_SELF' => '/index.php/api/products/1'
+    'HTTP_HOST' => 'localhost:8080'
+    'HTTP_CONNECTION' => 'close'
+    'HTTP_SEC_CH_UA_PLATFORM' => '\"Windows\"'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/137.0.0.0 Safari/537.36'
+    'HTTP_ACCEPT' => 'application/json, text/plain, */*'
+    'HTTP_SEC_CH_UA' => '\"Google Chrome\";v=\"137\", \"Chromium\";v=\"137\", \"Not/A)Brand\";v=\"24\"'
+    'HTTP_SEC_CH_UA_MOBILE' => '?0'
+    'HTTP_SEC_FETCH_SITE' => 'same-origin'
+    'HTTP_SEC_FETCH_MODE' => 'cors'
+    'HTTP_SEC_FETCH_DEST' => 'empty'
+    'HTTP_REFERER' => 'http://localhost:5173/products/1'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br, zstd'
+    'HTTP_ACCEPT_LANGUAGE' => 'ru-RU,ru;q=0.9,en-US;q=0.8,en;q=0.7'
+    'HTTP_COOKIE' => 'Phpstorm-90abd190=e3ca3928-140e-49f6-83f7-dff6b78eef42; advanced-backend=t24k8pj9i32olfm0fmc6jq9639; _csrf-backend=1bd6362881ca72d91e33a653286a04965560bc3518b94935b7d75cb74c0278f6a%3A2%3A%7Bi%3A0%3Bs%3A13%3A%22_csrf-backend%22%3Bi%3A1%3Bs%3A32%3A%22gTIVa9XaP-w9O8lth3uld6009sfSiZ2O%22%3B%7D; _csrf=ef6b0ce460aad4c9304005bcaa8d2f622cbd71a72253a69f19e82b6c190921e5a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22gfMTWTQFHcuERRCNJm8195ALwT_PG8Ud%22%3B%7D'
+    'REQUEST_TIME_FLOAT' => 1751222161.8885
+    'REQUEST_TIME' => 1751222161
+]
+2025-06-29 18:36:01 [127.0.0.1][-][-][trace][yii\base\Application::bootstrap] Bootstrap with yii\log\Dispatcher
+    in C:\Yii2\test-review\api\web\index.php:11
+2025-06-29 18:36:01 [127.0.0.1][-][-][warning][application] Unable to use cache for URL manager: Failed to instantiate component or class "cache".
+    in C:\Yii2\test-review\api\web\index.php:11
+2025-06-29 18:36:01 [127.0.0.1][-][-][trace][yii\web\UrlManager::parseRequest] [
+    'rule' => 'POST api/login',
+    'match' => false,
+    'parent' => null,
+]
+    in C:\Yii2\test-review\api\web\index.php:11
+2025-06-29 18:36:01 [127.0.0.1][-][-][trace][yii\web\UrlManager::parseRequest] [
+    'rule' => 'GET api/user-role/<id:\\d+>',
+    'match' => false,
+    'parent' => null,
+]
+    in C:\Yii2\test-review\api\web\index.php:11
+2025-06-29 18:36:01 [127.0.0.1][-][-][trace][yii\web\UrlManager::parseRequest] [
+    'rule' => 'GET api/products',
+    'match' => false,
+    'parent' => null,
+]
+    in C:\Yii2\test-review\api\web\index.php:11
+2025-06-29 18:36:01 [127.0.0.1][-][-][trace][yii\web\UrlManager::parseRequest] [
+    'rule' => 'GET api/products/<id:\\d+>',
+    'match' => false,
+    'parent' => null,
+]
+    in C:\Yii2\test-review\api\web\index.php:11
+2025-06-29 18:36:01 [127.0.0.1][-][-][trace][yii\web\UrlRule::parseRequest] Request parsed with URL rule: api/reviews
+    in C:\Yii2\test-review\api\web\index.php:11
+2025-06-29 18:36:01 [127.0.0.1][-][-][trace][yii\web\UrlManager::parseRequest] [
+    'rule' => 'GET api/reviews',
+    'match' => true,
+    'parent' => null,
+]
+    in C:\Yii2\test-review\api\web\index.php:11
+2025-06-29 18:36:01 [127.0.0.1][-][-][trace][yii\web\Application::handleRequest] Route requested: 'v1/review/index'
+    in C:\Yii2\test-review\api\web\index.php:11
+2025-06-29 18:36:01 [127.0.0.1][-][-][trace][yii\base\Module::getModule] Loading module: v1
+    in C:\Yii2\test-review\api\web\index.php:11
+2025-06-29 18:36:01 [127.0.0.1][-][-][trace][yii\base\Controller::runAction] Route to run: v1/review/index
+    in C:\Yii2\test-review\api\web\index.php:11
+2025-06-29 18:36:01 [127.0.0.1][-][-][info][yii\filters\RateLimiter::beforeAction] Rate limit skipped: user not logged in.
+    in C:\Yii2\test-review\api\web\index.php:11
+2025-06-29 18:36:01 [127.0.0.1][-][-][trace][yii\base\Action::runWithParams] Running action: yii\rest\IndexAction::run(), invoked by api\modules\v1\controllers\ReviewController
+    in C:\Yii2\test-review\api\web\index.php:11
+2025-06-29 18:36:02 [127.0.0.1][-][-][info][yii\db\Command::query] SHOW FULL COLUMNS FROM `review`
+    in C:\Yii2\test-review\api\web\index.php:11
+2025-06-29 18:36:02 [127.0.0.1][-][-][info][yii\db\Connection::open] Opening DB connection: mysql:host=localhost;dbname=test_review
+    in C:\Yii2\test-review\api\web\index.php:11
+2025-06-29 18:36:02 [127.0.0.1][-][-][info][yii\db\Command::query] SHOW CREATE TABLE `review`
+    in C:\Yii2\test-review\api\web\index.php:11
+2025-06-29 18:36:02 [127.0.0.1][-][-][info][yii\db\Command::query] SELECT
+    `kcu`.`CONSTRAINT_NAME` AS `constraint_name`,
+    `kcu`.`COLUMN_NAME` AS `column_name`,
+    `kcu`.`REFERENCED_TABLE_NAME` AS `referenced_table_name`,
+    `kcu`.`REFERENCED_COLUMN_NAME` AS `referenced_column_name`
+FROM `information_schema`.`REFERENTIAL_CONSTRAINTS` AS `rc`
+JOIN `information_schema`.`KEY_COLUMN_USAGE` AS `kcu` ON
+    (
+        `kcu`.`CONSTRAINT_CATALOG` = `rc`.`CONSTRAINT_CATALOG` OR
+        (`kcu`.`CONSTRAINT_CATALOG` IS NULL AND `rc`.`CONSTRAINT_CATALOG` IS NULL)
+    ) AND
+    `kcu`.`CONSTRAINT_SCHEMA` = `rc`.`CONSTRAINT_SCHEMA` AND
+    `kcu`.`CONSTRAINT_NAME` = `rc`.`CONSTRAINT_NAME`
+WHERE `rc`.`CONSTRAINT_SCHEMA` = database() AND `kcu`.`TABLE_SCHEMA` = database()
+AND `rc`.`TABLE_NAME` = 'review' AND `kcu`.`TABLE_NAME` = 'review'
+    in C:\Yii2\test-review\api\web\index.php:11
+2025-06-29 18:36:02 [127.0.0.1][-][-][info][yii\db\Command::query] SELECT COUNT(*) FROM `review`
+    in C:\Yii2\test-review\api\web\index.php:11
+2025-06-29 18:36:02 [127.0.0.1][-][-][info][yii\db\Command::query] SELECT * FROM `review` LIMIT 20
+    in C:\Yii2\test-review\api\web\index.php:11
+2025-06-29 18:36:02 [127.0.0.1][-][-][info][yii\db\Command::query] SELECT * FROM `user` WHERE `id`=3
+    in C:\Yii2\test-review\api\modules\v1\models\Review.php:43
+    in C:\Yii2\test-review\api\web\index.php:11
+2025-06-29 18:36:02 [127.0.0.1][-][-][info][yii\db\Command::query] SHOW FULL COLUMNS FROM `user`
+    in C:\Yii2\test-review\api\modules\v1\models\Review.php:43
+    in C:\Yii2\test-review\api\web\index.php:11
+2025-06-29 18:36:02 [127.0.0.1][-][-][info][yii\db\Command::query] SHOW CREATE TABLE `user`
+    in C:\Yii2\test-review\api\modules\v1\models\Review.php:43
+    in C:\Yii2\test-review\api\web\index.php:11
+2025-06-29 18:36:02 [127.0.0.1][-][-][info][yii\db\Command::query] SELECT
+    `kcu`.`CONSTRAINT_NAME` AS `constraint_name`,
+    `kcu`.`COLUMN_NAME` AS `column_name`,
+    `kcu`.`REFERENCED_TABLE_NAME` AS `referenced_table_name`,
+    `kcu`.`REFERENCED_COLUMN_NAME` AS `referenced_column_name`
+FROM `information_schema`.`REFERENTIAL_CONSTRAINTS` AS `rc`
+JOIN `information_schema`.`KEY_COLUMN_USAGE` AS `kcu` ON
+    (
+        `kcu`.`CONSTRAINT_CATALOG` = `rc`.`CONSTRAINT_CATALOG` OR
+        (`kcu`.`CONSTRAINT_CATALOG` IS NULL AND `rc`.`CONSTRAINT_CATALOG` IS NULL)
+    ) AND
+    `kcu`.`CONSTRAINT_SCHEMA` = `rc`.`CONSTRAINT_SCHEMA` AND
+    `kcu`.`CONSTRAINT_NAME` = `rc`.`CONSTRAINT_NAME`
+WHERE `rc`.`CONSTRAINT_SCHEMA` = database() AND `kcu`.`TABLE_SCHEMA` = database()
+AND `rc`.`TABLE_NAME` = 'user' AND `kcu`.`TABLE_NAME` = 'user'
+    in C:\Yii2\test-review\api\modules\v1\models\Review.php:43
+    in C:\Yii2\test-review\api\web\index.php:11
+2025-06-29 18:36:02 [127.0.0.1][-][-][info][yii\db\Command::query] SELECT * FROM `product` WHERE `id`=8
+    in C:\Yii2\test-review\api\modules\v1\models\Review.php:47
+    in C:\Yii2\test-review\api\web\index.php:11
+2025-06-29 18:36:02 [127.0.0.1][-][-][info][yii\db\Command::query] SHOW FULL COLUMNS FROM `product`
+    in C:\Yii2\test-review\api\modules\v1\models\Review.php:47
+    in C:\Yii2\test-review\api\web\index.php:11
+2025-06-29 18:36:02 [127.0.0.1][-][-][info][yii\db\Command::query] SHOW CREATE TABLE `product`
+    in C:\Yii2\test-review\api\modules\v1\models\Review.php:47
+    in C:\Yii2\test-review\api\web\index.php:11
+2025-06-29 18:36:02 [127.0.0.1][-][-][info][yii\db\Command::query] SELECT
+    `kcu`.`CONSTRAINT_NAME` AS `constraint_name`,
+    `kcu`.`COLUMN_NAME` AS `column_name`,
+    `kcu`.`REFERENCED_TABLE_NAME` AS `referenced_table_name`,
+    `kcu`.`REFERENCED_COLUMN_NAME` AS `referenced_column_name`
+FROM `information_schema`.`REFERENTIAL_CONSTRAINTS` AS `rc`
+JOIN `information_schema`.`KEY_COLUMN_USAGE` AS `kcu` ON
+    (
+        `kcu`.`CONSTRAINT_CATALOG` = `rc`.`CONSTRAINT_CATALOG` OR
+        (`kcu`.`CONSTRAINT_CATALOG` IS NULL AND `rc`.`CONSTRAINT_CATALOG` IS NULL)
+    ) AND
+    `kcu`.`CONSTRAINT_SCHEMA` = `rc`.`CONSTRAINT_SCHEMA` AND
+    `kcu`.`CONSTRAINT_NAME` = `rc`.`CONSTRAINT_NAME`
+WHERE `rc`.`CONSTRAINT_SCHEMA` = database() AND `kcu`.`TABLE_SCHEMA` = database()
+AND `rc`.`TABLE_NAME` = 'product' AND `kcu`.`TABLE_NAME` = 'product'
+    in C:\Yii2\test-review\api\modules\v1\models\Review.php:47
+    in C:\Yii2\test-review\api\web\index.php:11
+2025-06-29 18:36:02 [127.0.0.1][-][-][info][yii\db\Command::query] SELECT * FROM `user` WHERE `id`=2
+    in C:\Yii2\test-review\api\modules\v1\models\Review.php:43
+    in C:\Yii2\test-review\api\web\index.php:11
+2025-06-29 18:36:02 [127.0.0.1][-][-][info][yii\db\Command::query] SELECT * FROM `product` WHERE `id`=4
+    in C:\Yii2\test-review\api\modules\v1\models\Review.php:47
+    in C:\Yii2\test-review\api\web\index.php:11
+2025-06-29 18:36:02 [127.0.0.1][-][-][info][yii\db\Command::query] SELECT * FROM `user` WHERE `id`=1
+    in C:\Yii2\test-review\api\modules\v1\models\Review.php:43
+    in C:\Yii2\test-review\api\web\index.php:11
+2025-06-29 18:36:02 [127.0.0.1][-][-][info][yii\db\Command::query] SELECT * FROM `product` WHERE `id`=8
+    in C:\Yii2\test-review\api\modules\v1\models\Review.php:47
+    in C:\Yii2\test-review\api\web\index.php:11
+2025-06-29 18:36:02 [127.0.0.1][-][-][info][yii\db\Command::query] SELECT * FROM `user` WHERE `id`=3
+    in C:\Yii2\test-review\api\modules\v1\models\Review.php:43
+    in C:\Yii2\test-review\api\web\index.php:11
+2025-06-29 18:36:02 [127.0.0.1][-][-][info][yii\db\Command::query] SELECT * FROM `product` WHERE `id`=7
+    in C:\Yii2\test-review\api\modules\v1\models\Review.php:47
+    in C:\Yii2\test-review\api\web\index.php:11
+2025-06-29 18:36:02 [127.0.0.1][-][-][info][yii\db\Command::query] SELECT * FROM `user` WHERE `id`=2
+    in C:\Yii2\test-review\api\modules\v1\models\Review.php:43
+    in C:\Yii2\test-review\api\web\index.php:11
+2025-06-29 18:36:02 [127.0.0.1][-][-][info][yii\db\Command::query] SELECT * FROM `product` WHERE `id`=5
+    in C:\Yii2\test-review\api\modules\v1\models\Review.php:47
+    in C:\Yii2\test-review\api\web\index.php:11
+2025-06-29 18:36:02 [127.0.0.1][-][-][info][yii\db\Command::query] SELECT * FROM `user` WHERE `id`=3
+    in C:\Yii2\test-review\api\modules\v1\models\Review.php:43
+    in C:\Yii2\test-review\api\web\index.php:11
+2025-06-29 18:36:02 [127.0.0.1][-][-][info][yii\db\Command::query] SELECT * FROM `product` WHERE `id`=6
+    in C:\Yii2\test-review\api\modules\v1\models\Review.php:47
+    in C:\Yii2\test-review\api\web\index.php:11
+2025-06-29 18:36:02 [127.0.0.1][-][-][info][yii\db\Command::query] SELECT * FROM `user` WHERE `id`=3
+    in C:\Yii2\test-review\api\modules\v1\models\Review.php:43
+    in C:\Yii2\test-review\api\web\index.php:11
+2025-06-29 18:36:02 [127.0.0.1][-][-][info][yii\db\Command::query] SELECT * FROM `product` WHERE `id`=1
+    in C:\Yii2\test-review\api\modules\v1\models\Review.php:47
+    in C:\Yii2\test-review\api\web\index.php:11
+2025-06-29 18:36:02 [127.0.0.1][-][-][info][yii\db\Command::query] SELECT * FROM `user` WHERE `id`=1
+    in C:\Yii2\test-review\api\modules\v1\models\Review.php:43
+    in C:\Yii2\test-review\api\web\index.php:11
+2025-06-29 18:36:02 [127.0.0.1][-][-][info][yii\db\Command::query] SELECT * FROM `product` WHERE `id`=2
+    in C:\Yii2\test-review\api\modules\v1\models\Review.php:47
+    in C:\Yii2\test-review\api\web\index.php:11
+2025-06-29 18:36:02 [127.0.0.1][-][-][info][yii\db\Command::query] SELECT * FROM `user` WHERE `id`=1
+    in C:\Yii2\test-review\api\modules\v1\models\Review.php:43
+    in C:\Yii2\test-review\api\web\index.php:11
+2025-06-29 18:36:02 [127.0.0.1][-][-][info][yii\db\Command::query] SELECT * FROM `product` WHERE `id`=8
+    in C:\Yii2\test-review\api\modules\v1\models\Review.php:47
+    in C:\Yii2\test-review\api\web\index.php:11
+2025-06-29 18:36:02 [127.0.0.1][-][-][info][yii\db\Command::query] SELECT * FROM `user` WHERE `id`=1
+    in C:\Yii2\test-review\api\modules\v1\models\Review.php:43
+    in C:\Yii2\test-review\api\web\index.php:11
+2025-06-29 18:36:02 [127.0.0.1][-][-][info][yii\db\Command::query] SELECT * FROM `product` WHERE `id`=3
+    in C:\Yii2\test-review\api\modules\v1\models\Review.php:47
+    in C:\Yii2\test-review\api\web\index.php:11
+2025-06-29 18:36:02 [127.0.0.1][-][-][info][yii\db\Command::query] SELECT * FROM `user` WHERE `id`=3
+    in C:\Yii2\test-review\api\modules\v1\models\Review.php:43
+    in C:\Yii2\test-review\api\web\index.php:11
+2025-06-29 18:36:02 [127.0.0.1][-][-][info][yii\db\Command::query] SELECT * FROM `product` WHERE `id`=9
+    in C:\Yii2\test-review\api\modules\v1\models\Review.php:47
+    in C:\Yii2\test-review\api\web\index.php:11
+2025-06-29 18:36:02 [127.0.0.1][-][-][info][yii\db\Command::query] SELECT * FROM `user` WHERE `id`=1
+    in C:\Yii2\test-review\api\modules\v1\models\Review.php:43
+    in C:\Yii2\test-review\api\web\index.php:11
+2025-06-29 18:36:02 [127.0.0.1][-][-][info][yii\db\Command::query] SELECT * FROM `product` WHERE `id`=10
+    in C:\Yii2\test-review\api\modules\v1\models\Review.php:47
+    in C:\Yii2\test-review\api\web\index.php:11
+2025-06-29 18:36:02 [127.0.0.1][-][-][info][yii\db\Command::query] SELECT * FROM `user` WHERE `id`=2
+    in C:\Yii2\test-review\api\modules\v1\models\Review.php:43
+    in C:\Yii2\test-review\api\web\index.php:11
+2025-06-29 18:36:02 [127.0.0.1][-][-][info][yii\db\Command::query] SELECT * FROM `product` WHERE `id`=6
+    in C:\Yii2\test-review\api\modules\v1\models\Review.php:47
+    in C:\Yii2\test-review\api\web\index.php:11
+2025-06-29 18:36:02 [127.0.0.1][-][-][info][yii\db\Command::query] SELECT * FROM `user` WHERE `id`=1
+    in C:\Yii2\test-review\api\modules\v1\models\Review.php:43
+    in C:\Yii2\test-review\api\web\index.php:11
+2025-06-29 18:36:02 [127.0.0.1][-][-][info][yii\db\Command::query] SELECT * FROM `product` WHERE `id`=7
+    in C:\Yii2\test-review\api\modules\v1\models\Review.php:47
+    in C:\Yii2\test-review\api\web\index.php:11
+2025-06-29 18:36:02 [127.0.0.1][-][-][info][yii\db\Command::query] SELECT * FROM `user` WHERE `id`=3
+    in C:\Yii2\test-review\api\modules\v1\models\Review.php:43
+    in C:\Yii2\test-review\api\web\index.php:11
+2025-06-29 18:36:02 [127.0.0.1][-][-][info][yii\db\Command::query] SELECT * FROM `product` WHERE `id`=6
+    in C:\Yii2\test-review\api\modules\v1\models\Review.php:47
+    in C:\Yii2\test-review\api\web\index.php:11
+2025-06-29 18:36:02 [127.0.0.1][-][-][info][yii\db\Command::query] SELECT * FROM `user` WHERE `id`=4
+    in C:\Yii2\test-review\api\modules\v1\models\Review.php:43
+    in C:\Yii2\test-review\api\web\index.php:11
+2025-06-29 18:36:02 [127.0.0.1][-][-][info][yii\db\Command::query] SELECT * FROM `product` WHERE `id`=2
+    in C:\Yii2\test-review\api\modules\v1\models\Review.php:47
+    in C:\Yii2\test-review\api\web\index.php:11
+2025-06-29 18:36:02 [127.0.0.1][-][-][info][yii\db\Command::query] SELECT * FROM `user` WHERE `id`=4
+    in C:\Yii2\test-review\api\modules\v1\models\Review.php:43
+    in C:\Yii2\test-review\api\web\index.php:11
+2025-06-29 18:36:02 [127.0.0.1][-][-][info][yii\db\Command::query] SELECT * FROM `product` WHERE `id`=2
+    in C:\Yii2\test-review\api\modules\v1\models\Review.php:47
+    in C:\Yii2\test-review\api\web\index.php:11
+2025-06-29 18:36:01 [127.0.0.1][-][-][info][application] $_GET = [
+    'expand' => 'product,user'
+]
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = [
+    'Phpstorm-90abd190' => 'e3ca3928-140e-49f6-83f7-dff6b78eef42'
+    'advanced-backend' => 't24k8pj9i32olfm0fmc6jq9639'
+    '_csrf-backend' => '1bd6362881ca72d91e33a653286a04965560bc3518b94935b7d75cb74c0278f6a:2:{i:0;s:13:\"_csrf-backend\";i:1;s:32:\"gTIVa9XaP-w9O8lth3uld6009sfSiZ2O\";}'
+    '_csrf' => 'ef6b0ce460aad4c9304005bcaa8d2f622cbd71a72253a69f19e82b6c190921e5a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"gfMTWTQFHcuERRCNJm8195ALwT_PG8Ud\";}'
+]
+
+$_SERVER = [
+    'DOCUMENT_ROOT' => 'C:\\Yii2\\test-review\\api\\web'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'REMOTE_PORT' => '63110'
+    'SERVER_SOFTWARE' => 'PHP/8.3.0 (Development Server)'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_PORT' => '8080'
+    'REQUEST_URI' => '/api/reviews?expand=product,user'
+    'REQUEST_METHOD' => 'GET'
+    'SCRIPT_NAME' => '/index.php'
+    'SCRIPT_FILENAME' => 'C:\\Yii2\\test-review\\api\\web\\index.php'
+    'PATH_INFO' => '/api/reviews'
+    'PHP_SELF' => '/index.php/api/reviews'
+    'QUERY_STRING' => 'expand=product,user'
+    'HTTP_HOST' => 'localhost:8080'
+    'HTTP_CONNECTION' => 'close'
+    'HTTP_SEC_CH_UA_PLATFORM' => '\"Windows\"'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/137.0.0.0 Safari/537.36'
+    'HTTP_ACCEPT' => 'application/json, text/plain, */*'
+    'HTTP_SEC_CH_UA' => '\"Google Chrome\";v=\"137\", \"Chromium\";v=\"137\", \"Not/A)Brand\";v=\"24\"'
+    'HTTP_SEC_CH_UA_MOBILE' => '?0'
+    'HTTP_SEC_FETCH_SITE' => 'same-origin'
+    'HTTP_SEC_FETCH_MODE' => 'cors'
+    'HTTP_SEC_FETCH_DEST' => 'empty'
+    'HTTP_REFERER' => 'http://localhost:5173/products/1'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br, zstd'
+    'HTTP_ACCEPT_LANGUAGE' => 'ru-RU,ru;q=0.9,en-US;q=0.8,en;q=0.7'
+    'HTTP_COOKIE' => 'Phpstorm-90abd190=e3ca3928-140e-49f6-83f7-dff6b78eef42; advanced-backend=t24k8pj9i32olfm0fmc6jq9639; _csrf-backend=1bd6362881ca72d91e33a653286a04965560bc3518b94935b7d75cb74c0278f6a%3A2%3A%7Bi%3A0%3Bs%3A13%3A%22_csrf-backend%22%3Bi%3A1%3Bs%3A32%3A%22gTIVa9XaP-w9O8lth3uld6009sfSiZ2O%22%3B%7D; _csrf=ef6b0ce460aad4c9304005bcaa8d2f622cbd71a72253a69f19e82b6c190921e5a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22gfMTWTQFHcuERRCNJm8195ALwT_PG8Ud%22%3B%7D'
+    'REQUEST_TIME_FLOAT' => 1751222161.9384
+    'REQUEST_TIME' => 1751222161
+]
+2025-06-29 18:36:02 [127.0.0.1][4][-][trace][yii\base\Application::bootstrap] Bootstrap with yii\log\Dispatcher
+    in C:\Yii2\test-review\api\web\index.php:11
+2025-06-29 18:36:02 [127.0.0.1][4][-][warning][application] Unable to use cache for URL manager: Failed to instantiate component or class "cache".
+    in C:\Yii2\test-review\api\web\index.php:11
+2025-06-29 18:36:02 [127.0.0.1][4][-][trace][yii\web\UrlManager::parseRequest] [
+    'rule' => 'POST api/login',
+    'match' => false,
+    'parent' => null,
+]
+    in C:\Yii2\test-review\api\web\index.php:11
+2025-06-29 18:36:02 [127.0.0.1][4][-][trace][yii\web\UrlRule::parseRequest] Request parsed with URL rule: api/user-role/<id:\d+>
+    in C:\Yii2\test-review\api\web\index.php:11
+2025-06-29 18:36:02 [127.0.0.1][4][-][trace][yii\web\UrlManager::parseRequest] [
+    'rule' => 'GET api/user-role/<id:\\d+>',
+    'match' => true,
+    'parent' => null,
+]
+    in C:\Yii2\test-review\api\web\index.php:11
+2025-06-29 18:36:02 [127.0.0.1][4][-][trace][yii\web\Application::handleRequest] Route requested: 'v1/user/user-role'
+    in C:\Yii2\test-review\api\web\index.php:11
+2025-06-29 18:36:02 [127.0.0.1][4][-][trace][yii\base\Module::getModule] Loading module: v1
+    in C:\Yii2\test-review\api\web\index.php:11
+2025-06-29 18:36:02 [127.0.0.1][4][-][trace][yii\base\Controller::runAction] Route to run: v1/user/user-role
+    in C:\Yii2\test-review\api\web\index.php:11
+2025-06-29 18:36:02 [127.0.0.1][4][-][info][yii\db\Command::query] SHOW FULL COLUMNS FROM `user`
+    in C:\Yii2\test-review\api\modules\v1\models\User.php:61
+    in C:\Yii2\test-review\api\web\index.php:11
+2025-06-29 18:36:02 [127.0.0.1][4][-][info][yii\db\Connection::open] Opening DB connection: mysql:host=localhost;dbname=test_review
+    in C:\Yii2\test-review\api\modules\v1\models\User.php:61
+    in C:\Yii2\test-review\api\web\index.php:11
+2025-06-29 18:36:02 [127.0.0.1][4][-][info][yii\db\Command::query] SHOW CREATE TABLE `user`
+    in C:\Yii2\test-review\api\modules\v1\models\User.php:61
+    in C:\Yii2\test-review\api\web\index.php:11
+2025-06-29 18:36:02 [127.0.0.1][4][-][info][yii\db\Command::query] SELECT
+    `kcu`.`CONSTRAINT_NAME` AS `constraint_name`,
+    `kcu`.`COLUMN_NAME` AS `column_name`,
+    `kcu`.`REFERENCED_TABLE_NAME` AS `referenced_table_name`,
+    `kcu`.`REFERENCED_COLUMN_NAME` AS `referenced_column_name`
+FROM `information_schema`.`REFERENTIAL_CONSTRAINTS` AS `rc`
+JOIN `information_schema`.`KEY_COLUMN_USAGE` AS `kcu` ON
+    (
+        `kcu`.`CONSTRAINT_CATALOG` = `rc`.`CONSTRAINT_CATALOG` OR
+        (`kcu`.`CONSTRAINT_CATALOG` IS NULL AND `rc`.`CONSTRAINT_CATALOG` IS NULL)
+    ) AND
+    `kcu`.`CONSTRAINT_SCHEMA` = `rc`.`CONSTRAINT_SCHEMA` AND
+    `kcu`.`CONSTRAINT_NAME` = `rc`.`CONSTRAINT_NAME`
+WHERE `rc`.`CONSTRAINT_SCHEMA` = database() AND `kcu`.`TABLE_SCHEMA` = database()
+AND `rc`.`TABLE_NAME` = 'user' AND `kcu`.`TABLE_NAME` = 'user'
+    in C:\Yii2\test-review\api\modules\v1\models\User.php:61
+    in C:\Yii2\test-review\api\web\index.php:11
+2025-06-29 18:36:02 [127.0.0.1][4][-][info][yii\db\Command::query] SELECT * FROM `user` WHERE `id`=4
+    in C:\Yii2\test-review\api\modules\v1\models\User.php:61
+    in C:\Yii2\test-review\api\web\index.php:11
+2025-06-29 18:36:02 [127.0.0.1][4][-][info][yii\web\User::login] User '4' logged in from 127.0.0.1. Session not enabled.
+    in C:\Yii2\test-review\api\web\index.php:11
+2025-06-29 18:36:02 [127.0.0.1][4][-][info][yii\filters\RateLimiter::beforeAction] Rate limit skipped: "user" does not implement RateLimitInterface.
+    in C:\Yii2\test-review\api\web\index.php:11
+2025-06-29 18:36:02 [127.0.0.1][4][-][trace][yii\base\InlineAction::runWithParams] Running action: api\modules\v1\controllers\UserController::actionUserRole()
+    in C:\Yii2\test-review\api\web\index.php:11
+2025-06-29 18:36:02 [127.0.0.1][4][-][info][yii\db\Command::query] SELECT `item_name` FROM `auth_assignment` WHERE `user_id`='4'
+    in C:\Yii2\test-review\api\modules\v1\controllers\UserController.php:37
+    in C:\Yii2\test-review\api\web\index.php:11
+2025-06-29 18:36:02 [127.0.0.1][4][-][info][application] $_GET = [
+    'id' => '4'
+]
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = [
+    'Phpstorm-90abd190' => 'e3ca3928-140e-49f6-83f7-dff6b78eef42'
+    'advanced-backend' => 't24k8pj9i32olfm0fmc6jq9639'
+    '_csrf-backend' => '1bd6362881ca72d91e33a653286a04965560bc3518b94935b7d75cb74c0278f6a:2:{i:0;s:13:\"_csrf-backend\";i:1;s:32:\"gTIVa9XaP-w9O8lth3uld6009sfSiZ2O\";}'
+    '_csrf' => 'ef6b0ce460aad4c9304005bcaa8d2f622cbd71a72253a69f19e82b6c190921e5a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"gfMTWTQFHcuERRCNJm8195ALwT_PG8Ud\";}'
+]
+
+$_SERVER = [
+    'DOCUMENT_ROOT' => 'C:\\Yii2\\test-review\\api\\web'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'REMOTE_PORT' => '63113'
+    'SERVER_SOFTWARE' => 'PHP/8.3.0 (Development Server)'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_PORT' => '8080'
+    'REQUEST_URI' => '/api/user-role/4'
+    'REQUEST_METHOD' => 'GET'
+    'SCRIPT_NAME' => '/index.php'
+    'SCRIPT_FILENAME' => 'C:\\Yii2\\test-review\\api\\web\\index.php'
+    'PATH_INFO' => '/api/user-role/4'
+    'PHP_SELF' => '/index.php/api/user-role/4'
+    'HTTP_HOST' => 'localhost:8080'
+    'HTTP_CONNECTION' => 'close'
+    'HTTP_SEC_CH_UA_PLATFORM' => '\"Windows\"'
+    'HTTP_AUTHORIZATION' => '***'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/137.0.0.0 Safari/537.36'
+    'HTTP_ACCEPT' => 'application/json, text/plain, */*'
+    'HTTP_SEC_CH_UA' => '\"Google Chrome\";v=\"137\", \"Chromium\";v=\"137\", \"Not/A)Brand\";v=\"24\"'
+    'HTTP_SEC_CH_UA_MOBILE' => '?0'
+    'HTTP_SEC_FETCH_SITE' => 'same-origin'
+    'HTTP_SEC_FETCH_MODE' => 'cors'
+    'HTTP_SEC_FETCH_DEST' => 'empty'
+    'HTTP_REFERER' => 'http://localhost:5173/products/1'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br, zstd'
+    'HTTP_ACCEPT_LANGUAGE' => 'ru-RU,ru;q=0.9,en-US;q=0.8,en;q=0.7'
+    'HTTP_COOKIE' => 'Phpstorm-90abd190=e3ca3928-140e-49f6-83f7-dff6b78eef42; advanced-backend=t24k8pj9i32olfm0fmc6jq9639; _csrf-backend=1bd6362881ca72d91e33a653286a04965560bc3518b94935b7d75cb74c0278f6a%3A2%3A%7Bi%3A0%3Bs%3A13%3A%22_csrf-backend%22%3Bi%3A1%3Bs%3A32%3A%22gTIVa9XaP-w9O8lth3uld6009sfSiZ2O%22%3B%7D; _csrf=ef6b0ce460aad4c9304005bcaa8d2f622cbd71a72253a69f19e82b6c190921e5a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22gfMTWTQFHcuERRCNJm8195ALwT_PG8Ud%22%3B%7D'
+    'REQUEST_TIME_FLOAT' => 1751222162.0573
+    'REQUEST_TIME' => 1751222162
+]
+2025-06-29 18:36:03 [127.0.0.1][-][-][trace][yii\base\Application::bootstrap] Bootstrap with yii\log\Dispatcher
+    in C:\Yii2\test-review\api\web\index.php:11
+2025-06-29 18:36:03 [127.0.0.1][-][-][warning][application] Unable to use cache for URL manager: Failed to instantiate component or class "cache".
+    in C:\Yii2\test-review\api\web\index.php:11
+2025-06-29 18:36:03 [127.0.0.1][-][-][trace][yii\web\UrlManager::parseRequest] [
+    'rule' => 'POST api/login',
+    'match' => false,
+    'parent' => null,
+]
+    in C:\Yii2\test-review\api\web\index.php:11
+2025-06-29 18:36:03 [127.0.0.1][-][-][trace][yii\web\UrlManager::parseRequest] [
+    'rule' => 'GET api/user-role/<id:\\d+>',
+    'match' => false,
+    'parent' => null,
+]
+    in C:\Yii2\test-review\api\web\index.php:11
+2025-06-29 18:36:03 [127.0.0.1][-][-][trace][yii\web\UrlManager::parseRequest] [
+    'rule' => 'GET api/products',
+    'match' => false,
+    'parent' => null,
+]
+    in C:\Yii2\test-review\api\web\index.php:11
+2025-06-29 18:36:03 [127.0.0.1][-][-][trace][yii\web\UrlManager::parseRequest] [
+    'rule' => 'GET api/products/<id:\\d+>',
+    'match' => false,
+    'parent' => null,
+]
+    in C:\Yii2\test-review\api\web\index.php:11
+2025-06-29 18:36:03 [127.0.0.1][-][-][trace][yii\web\UrlRule::parseRequest] Request parsed with URL rule: api/reviews
+    in C:\Yii2\test-review\api\web\index.php:11
+2025-06-29 18:36:03 [127.0.0.1][-][-][trace][yii\web\UrlManager::parseRequest] [
+    'rule' => 'GET api/reviews',
+    'match' => true,
+    'parent' => null,
+]
+    in C:\Yii2\test-review\api\web\index.php:11
+2025-06-29 18:36:03 [127.0.0.1][-][-][trace][yii\web\Application::handleRequest] Route requested: 'v1/review/index'
+    in C:\Yii2\test-review\api\web\index.php:11
+2025-06-29 18:36:03 [127.0.0.1][-][-][trace][yii\base\Module::getModule] Loading module: v1
+    in C:\Yii2\test-review\api\web\index.php:11
+2025-06-29 18:36:03 [127.0.0.1][-][-][trace][yii\base\Controller::runAction] Route to run: v1/review/index
+    in C:\Yii2\test-review\api\web\index.php:11
+2025-06-29 18:36:03 [127.0.0.1][-][-][info][yii\filters\RateLimiter::beforeAction] Rate limit skipped: user not logged in.
+    in C:\Yii2\test-review\api\web\index.php:11
+2025-06-29 18:36:03 [127.0.0.1][-][-][trace][yii\base\Action::runWithParams] Running action: yii\rest\IndexAction::run(), invoked by api\modules\v1\controllers\ReviewController
+    in C:\Yii2\test-review\api\web\index.php:11
+2025-06-29 18:36:03 [127.0.0.1][-][-][info][yii\db\Command::query] SHOW FULL COLUMNS FROM `review`
+    in C:\Yii2\test-review\api\web\index.php:11
+2025-06-29 18:36:03 [127.0.0.1][-][-][info][yii\db\Connection::open] Opening DB connection: mysql:host=localhost;dbname=test_review
+    in C:\Yii2\test-review\api\web\index.php:11
+2025-06-29 18:36:03 [127.0.0.1][-][-][info][yii\db\Command::query] SHOW CREATE TABLE `review`
+    in C:\Yii2\test-review\api\web\index.php:11
+2025-06-29 18:36:03 [127.0.0.1][-][-][info][yii\db\Command::query] SELECT
+    `kcu`.`CONSTRAINT_NAME` AS `constraint_name`,
+    `kcu`.`COLUMN_NAME` AS `column_name`,
+    `kcu`.`REFERENCED_TABLE_NAME` AS `referenced_table_name`,
+    `kcu`.`REFERENCED_COLUMN_NAME` AS `referenced_column_name`
+FROM `information_schema`.`REFERENTIAL_CONSTRAINTS` AS `rc`
+JOIN `information_schema`.`KEY_COLUMN_USAGE` AS `kcu` ON
+    (
+        `kcu`.`CONSTRAINT_CATALOG` = `rc`.`CONSTRAINT_CATALOG` OR
+        (`kcu`.`CONSTRAINT_CATALOG` IS NULL AND `rc`.`CONSTRAINT_CATALOG` IS NULL)
+    ) AND
+    `kcu`.`CONSTRAINT_SCHEMA` = `rc`.`CONSTRAINT_SCHEMA` AND
+    `kcu`.`CONSTRAINT_NAME` = `rc`.`CONSTRAINT_NAME`
+WHERE `rc`.`CONSTRAINT_SCHEMA` = database() AND `kcu`.`TABLE_SCHEMA` = database()
+AND `rc`.`TABLE_NAME` = 'review' AND `kcu`.`TABLE_NAME` = 'review'
+    in C:\Yii2\test-review\api\web\index.php:11
+2025-06-29 18:36:03 [127.0.0.1][-][-][info][yii\db\Command::query] SELECT COUNT(*) FROM `review`
+    in C:\Yii2\test-review\api\web\index.php:11
+2025-06-29 18:36:03 [127.0.0.1][-][-][info][yii\db\Command::query] SELECT * FROM `review` LIMIT 20
+    in C:\Yii2\test-review\api\web\index.php:11
+2025-06-29 18:36:03 [127.0.0.1][-][-][info][yii\db\Command::query] SELECT * FROM `user` WHERE `id`=3
+    in C:\Yii2\test-review\api\modules\v1\models\Review.php:43
+    in C:\Yii2\test-review\api\web\index.php:11
+2025-06-29 18:36:03 [127.0.0.1][-][-][info][yii\db\Command::query] SHOW FULL COLUMNS FROM `user`
+    in C:\Yii2\test-review\api\modules\v1\models\Review.php:43
+    in C:\Yii2\test-review\api\web\index.php:11
+2025-06-29 18:36:03 [127.0.0.1][-][-][info][yii\db\Command::query] SHOW CREATE TABLE `user`
+    in C:\Yii2\test-review\api\modules\v1\models\Review.php:43
+    in C:\Yii2\test-review\api\web\index.php:11
+2025-06-29 18:36:03 [127.0.0.1][-][-][info][yii\db\Command::query] SELECT
+    `kcu`.`CONSTRAINT_NAME` AS `constraint_name`,
+    `kcu`.`COLUMN_NAME` AS `column_name`,
+    `kcu`.`REFERENCED_TABLE_NAME` AS `referenced_table_name`,
+    `kcu`.`REFERENCED_COLUMN_NAME` AS `referenced_column_name`
+FROM `information_schema`.`REFERENTIAL_CONSTRAINTS` AS `rc`
+JOIN `information_schema`.`KEY_COLUMN_USAGE` AS `kcu` ON
+    (
+        `kcu`.`CONSTRAINT_CATALOG` = `rc`.`CONSTRAINT_CATALOG` OR
+        (`kcu`.`CONSTRAINT_CATALOG` IS NULL AND `rc`.`CONSTRAINT_CATALOG` IS NULL)
+    ) AND
+    `kcu`.`CONSTRAINT_SCHEMA` = `rc`.`CONSTRAINT_SCHEMA` AND
+    `kcu`.`CONSTRAINT_NAME` = `rc`.`CONSTRAINT_NAME`
+WHERE `rc`.`CONSTRAINT_SCHEMA` = database() AND `kcu`.`TABLE_SCHEMA` = database()
+AND `rc`.`TABLE_NAME` = 'user' AND `kcu`.`TABLE_NAME` = 'user'
+    in C:\Yii2\test-review\api\modules\v1\models\Review.php:43
+    in C:\Yii2\test-review\api\web\index.php:11
+2025-06-29 18:36:03 [127.0.0.1][-][-][info][yii\db\Command::query] SELECT * FROM `product` WHERE `id`=8
+    in C:\Yii2\test-review\api\modules\v1\models\Review.php:47
+    in C:\Yii2\test-review\api\web\index.php:11
+2025-06-29 18:36:03 [127.0.0.1][-][-][info][yii\db\Command::query] SHOW FULL COLUMNS FROM `product`
+    in C:\Yii2\test-review\api\modules\v1\models\Review.php:47
+    in C:\Yii2\test-review\api\web\index.php:11
+2025-06-29 18:36:03 [127.0.0.1][-][-][info][yii\db\Command::query] SHOW CREATE TABLE `product`
+    in C:\Yii2\test-review\api\modules\v1\models\Review.php:47
+    in C:\Yii2\test-review\api\web\index.php:11
+2025-06-29 18:36:03 [127.0.0.1][-][-][info][yii\db\Command::query] SELECT
+    `kcu`.`CONSTRAINT_NAME` AS `constraint_name`,
+    `kcu`.`COLUMN_NAME` AS `column_name`,
+    `kcu`.`REFERENCED_TABLE_NAME` AS `referenced_table_name`,
+    `kcu`.`REFERENCED_COLUMN_NAME` AS `referenced_column_name`
+FROM `information_schema`.`REFERENTIAL_CONSTRAINTS` AS `rc`
+JOIN `information_schema`.`KEY_COLUMN_USAGE` AS `kcu` ON
+    (
+        `kcu`.`CONSTRAINT_CATALOG` = `rc`.`CONSTRAINT_CATALOG` OR
+        (`kcu`.`CONSTRAINT_CATALOG` IS NULL AND `rc`.`CONSTRAINT_CATALOG` IS NULL)
+    ) AND
+    `kcu`.`CONSTRAINT_SCHEMA` = `rc`.`CONSTRAINT_SCHEMA` AND
+    `kcu`.`CONSTRAINT_NAME` = `rc`.`CONSTRAINT_NAME`
+WHERE `rc`.`CONSTRAINT_SCHEMA` = database() AND `kcu`.`TABLE_SCHEMA` = database()
+AND `rc`.`TABLE_NAME` = 'product' AND `kcu`.`TABLE_NAME` = 'product'
+    in C:\Yii2\test-review\api\modules\v1\models\Review.php:47
+    in C:\Yii2\test-review\api\web\index.php:11
+2025-06-29 18:36:03 [127.0.0.1][-][-][info][yii\db\Command::query] SELECT * FROM `user` WHERE `id`=2
+    in C:\Yii2\test-review\api\modules\v1\models\Review.php:43
+    in C:\Yii2\test-review\api\web\index.php:11
+2025-06-29 18:36:03 [127.0.0.1][-][-][info][yii\db\Command::query] SELECT * FROM `product` WHERE `id`=4
+    in C:\Yii2\test-review\api\modules\v1\models\Review.php:47
+    in C:\Yii2\test-review\api\web\index.php:11
+2025-06-29 18:36:03 [127.0.0.1][-][-][info][yii\db\Command::query] SELECT * FROM `user` WHERE `id`=1
+    in C:\Yii2\test-review\api\modules\v1\models\Review.php:43
+    in C:\Yii2\test-review\api\web\index.php:11
+2025-06-29 18:36:03 [127.0.0.1][-][-][info][yii\db\Command::query] SELECT * FROM `product` WHERE `id`=8
+    in C:\Yii2\test-review\api\modules\v1\models\Review.php:47
+    in C:\Yii2\test-review\api\web\index.php:11
+2025-06-29 18:36:03 [127.0.0.1][-][-][info][yii\db\Command::query] SELECT * FROM `user` WHERE `id`=3
+    in C:\Yii2\test-review\api\modules\v1\models\Review.php:43
+    in C:\Yii2\test-review\api\web\index.php:11
+2025-06-29 18:36:03 [127.0.0.1][-][-][info][yii\db\Command::query] SELECT * FROM `product` WHERE `id`=7
+    in C:\Yii2\test-review\api\modules\v1\models\Review.php:47
+    in C:\Yii2\test-review\api\web\index.php:11
+2025-06-29 18:36:03 [127.0.0.1][-][-][info][yii\db\Command::query] SELECT * FROM `user` WHERE `id`=2
+    in C:\Yii2\test-review\api\modules\v1\models\Review.php:43
+    in C:\Yii2\test-review\api\web\index.php:11
+2025-06-29 18:36:03 [127.0.0.1][-][-][info][yii\db\Command::query] SELECT * FROM `product` WHERE `id`=5
+    in C:\Yii2\test-review\api\modules\v1\models\Review.php:47
+    in C:\Yii2\test-review\api\web\index.php:11
+2025-06-29 18:36:03 [127.0.0.1][-][-][info][yii\db\Command::query] SELECT * FROM `user` WHERE `id`=3
+    in C:\Yii2\test-review\api\modules\v1\models\Review.php:43
+    in C:\Yii2\test-review\api\web\index.php:11
+2025-06-29 18:36:03 [127.0.0.1][-][-][info][yii\db\Command::query] SELECT * FROM `product` WHERE `id`=6
+    in C:\Yii2\test-review\api\modules\v1\models\Review.php:47
+    in C:\Yii2\test-review\api\web\index.php:11
+2025-06-29 18:36:03 [127.0.0.1][-][-][info][yii\db\Command::query] SELECT * FROM `user` WHERE `id`=3
+    in C:\Yii2\test-review\api\modules\v1\models\Review.php:43
+    in C:\Yii2\test-review\api\web\index.php:11
+2025-06-29 18:36:03 [127.0.0.1][-][-][info][yii\db\Command::query] SELECT * FROM `product` WHERE `id`=1
+    in C:\Yii2\test-review\api\modules\v1\models\Review.php:47
+    in C:\Yii2\test-review\api\web\index.php:11
+2025-06-29 18:36:03 [127.0.0.1][-][-][info][yii\db\Command::query] SELECT * FROM `user` WHERE `id`=1
+    in C:\Yii2\test-review\api\modules\v1\models\Review.php:43
+    in C:\Yii2\test-review\api\web\index.php:11
+2025-06-29 18:36:03 [127.0.0.1][-][-][info][yii\db\Command::query] SELECT * FROM `product` WHERE `id`=2
+    in C:\Yii2\test-review\api\modules\v1\models\Review.php:47
+    in C:\Yii2\test-review\api\web\index.php:11
+2025-06-29 18:36:03 [127.0.0.1][-][-][info][yii\db\Command::query] SELECT * FROM `user` WHERE `id`=1
+    in C:\Yii2\test-review\api\modules\v1\models\Review.php:43
+    in C:\Yii2\test-review\api\web\index.php:11
+2025-06-29 18:36:03 [127.0.0.1][-][-][info][yii\db\Command::query] SELECT * FROM `product` WHERE `id`=8
+    in C:\Yii2\test-review\api\modules\v1\models\Review.php:47
+    in C:\Yii2\test-review\api\web\index.php:11
+2025-06-29 18:36:03 [127.0.0.1][-][-][info][yii\db\Command::query] SELECT * FROM `user` WHERE `id`=1
+    in C:\Yii2\test-review\api\modules\v1\models\Review.php:43
+    in C:\Yii2\test-review\api\web\index.php:11
+2025-06-29 18:36:03 [127.0.0.1][-][-][info][yii\db\Command::query] SELECT * FROM `product` WHERE `id`=3
+    in C:\Yii2\test-review\api\modules\v1\models\Review.php:47
+    in C:\Yii2\test-review\api\web\index.php:11
+2025-06-29 18:36:03 [127.0.0.1][-][-][info][yii\db\Command::query] SELECT * FROM `user` WHERE `id`=3
+    in C:\Yii2\test-review\api\modules\v1\models\Review.php:43
+    in C:\Yii2\test-review\api\web\index.php:11
+2025-06-29 18:36:03 [127.0.0.1][-][-][info][yii\db\Command::query] SELECT * FROM `product` WHERE `id`=9
+    in C:\Yii2\test-review\api\modules\v1\models\Review.php:47
+    in C:\Yii2\test-review\api\web\index.php:11
+2025-06-29 18:36:03 [127.0.0.1][-][-][info][yii\db\Command::query] SELECT * FROM `user` WHERE `id`=1
+    in C:\Yii2\test-review\api\modules\v1\models\Review.php:43
+    in C:\Yii2\test-review\api\web\index.php:11
+2025-06-29 18:36:03 [127.0.0.1][-][-][info][yii\db\Command::query] SELECT * FROM `product` WHERE `id`=10
+    in C:\Yii2\test-review\api\modules\v1\models\Review.php:47
+    in C:\Yii2\test-review\api\web\index.php:11
+2025-06-29 18:36:03 [127.0.0.1][-][-][info][yii\db\Command::query] SELECT * FROM `user` WHERE `id`=2
+    in C:\Yii2\test-review\api\modules\v1\models\Review.php:43
+    in C:\Yii2\test-review\api\web\index.php:11
+2025-06-29 18:36:03 [127.0.0.1][-][-][info][yii\db\Command::query] SELECT * FROM `product` WHERE `id`=6
+    in C:\Yii2\test-review\api\modules\v1\models\Review.php:47
+    in C:\Yii2\test-review\api\web\index.php:11
+2025-06-29 18:36:03 [127.0.0.1][-][-][info][yii\db\Command::query] SELECT * FROM `user` WHERE `id`=1
+    in C:\Yii2\test-review\api\modules\v1\models\Review.php:43
+    in C:\Yii2\test-review\api\web\index.php:11
+2025-06-29 18:36:03 [127.0.0.1][-][-][info][yii\db\Command::query] SELECT * FROM `product` WHERE `id`=7
+    in C:\Yii2\test-review\api\modules\v1\models\Review.php:47
+    in C:\Yii2\test-review\api\web\index.php:11
+2025-06-29 18:36:03 [127.0.0.1][-][-][info][yii\db\Command::query] SELECT * FROM `user` WHERE `id`=3
+    in C:\Yii2\test-review\api\modules\v1\models\Review.php:43
+    in C:\Yii2\test-review\api\web\index.php:11
+2025-06-29 18:36:03 [127.0.0.1][-][-][info][yii\db\Command::query] SELECT * FROM `product` WHERE `id`=6
+    in C:\Yii2\test-review\api\modules\v1\models\Review.php:47
+    in C:\Yii2\test-review\api\web\index.php:11
+2025-06-29 18:36:03 [127.0.0.1][-][-][info][yii\db\Command::query] SELECT * FROM `user` WHERE `id`=4
+    in C:\Yii2\test-review\api\modules\v1\models\Review.php:43
+    in C:\Yii2\test-review\api\web\index.php:11
+2025-06-29 18:36:03 [127.0.0.1][-][-][info][yii\db\Command::query] SELECT * FROM `product` WHERE `id`=2
+    in C:\Yii2\test-review\api\modules\v1\models\Review.php:47
+    in C:\Yii2\test-review\api\web\index.php:11
+2025-06-29 18:36:03 [127.0.0.1][-][-][info][yii\db\Command::query] SELECT * FROM `user` WHERE `id`=4
+    in C:\Yii2\test-review\api\modules\v1\models\Review.php:43
+    in C:\Yii2\test-review\api\web\index.php:11
+2025-06-29 18:36:03 [127.0.0.1][-][-][info][yii\db\Command::query] SELECT * FROM `product` WHERE `id`=2
+    in C:\Yii2\test-review\api\modules\v1\models\Review.php:47
+    in C:\Yii2\test-review\api\web\index.php:11
+2025-06-29 18:36:03 [127.0.0.1][-][-][info][application] $_GET = [
+    'expand' => 'product,user'
+]
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = [
+    'Phpstorm-90abd190' => 'e3ca3928-140e-49f6-83f7-dff6b78eef42'
+    'advanced-backend' => 't24k8pj9i32olfm0fmc6jq9639'
+    '_csrf-backend' => '1bd6362881ca72d91e33a653286a04965560bc3518b94935b7d75cb74c0278f6a:2:{i:0;s:13:\"_csrf-backend\";i:1;s:32:\"gTIVa9XaP-w9O8lth3uld6009sfSiZ2O\";}'
+    '_csrf' => 'a46c2ef7df1f3cb7095a5096797efb58eb9f38ae8918693b43fa41b9a7ed2bbfa:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"g_ksoVzYera2B9gO2HrZM6WIWWElTpfT\";}'
+]
+
+$_SERVER = [
+    'DOCUMENT_ROOT' => 'C:\\Yii2\\test-review\\api\\web'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'REMOTE_PORT' => '63115'
+    'SERVER_SOFTWARE' => 'PHP/8.3.0 (Development Server)'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_PORT' => '8080'
+    'REQUEST_URI' => '/api/reviews?expand=product,user'
+    'REQUEST_METHOD' => 'GET'
+    'SCRIPT_NAME' => '/index.php'
+    'SCRIPT_FILENAME' => 'C:\\Yii2\\test-review\\api\\web\\index.php'
+    'PATH_INFO' => '/api/reviews'
+    'PHP_SELF' => '/index.php/api/reviews'
+    'QUERY_STRING' => 'expand=product,user'
+    'HTTP_HOST' => 'localhost:8080'
+    'HTTP_CONNECTION' => 'close'
+    'HTTP_SEC_CH_UA_PLATFORM' => '\"Windows\"'
+    'HTTP_AUTHORIZATION' => '***'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/137.0.0.0 Safari/537.36'
+    'HTTP_ACCEPT' => 'application/json, text/plain, */*'
+    'HTTP_SEC_CH_UA' => '\"Google Chrome\";v=\"137\", \"Chromium\";v=\"137\", \"Not/A)Brand\";v=\"24\"'
+    'HTTP_SEC_CH_UA_MOBILE' => '?0'
+    'HTTP_SEC_FETCH_SITE' => 'same-origin'
+    'HTTP_SEC_FETCH_MODE' => 'cors'
+    'HTTP_SEC_FETCH_DEST' => 'empty'
+    'HTTP_REFERER' => 'http://localhost:5173/moderation'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br, zstd'
+    'HTTP_ACCEPT_LANGUAGE' => 'ru-RU,ru;q=0.9,en-US;q=0.8,en;q=0.7'
+    'HTTP_COOKIE' => 'Phpstorm-90abd190=e3ca3928-140e-49f6-83f7-dff6b78eef42; advanced-backend=t24k8pj9i32olfm0fmc6jq9639; _csrf-backend=1bd6362881ca72d91e33a653286a04965560bc3518b94935b7d75cb74c0278f6a%3A2%3A%7Bi%3A0%3Bs%3A13%3A%22_csrf-backend%22%3Bi%3A1%3Bs%3A32%3A%22gTIVa9XaP-w9O8lth3uld6009sfSiZ2O%22%3B%7D; _csrf=a46c2ef7df1f3cb7095a5096797efb58eb9f38ae8918693b43fa41b9a7ed2bbfa%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22g_ksoVzYera2B9gO2HrZM6WIWWElTpfT%22%3B%7D'
+    'REQUEST_TIME_FLOAT' => 1751222163.48
+    'REQUEST_TIME' => 1751222163
+]
+2025-06-29 18:36:05 [127.0.0.1][4][-][trace][yii\base\Application::bootstrap] Bootstrap with yii\log\Dispatcher
+    in C:\Yii2\test-review\api\web\index.php:11
+2025-06-29 18:36:05 [127.0.0.1][4][-][warning][application] Unable to use cache for URL manager: Failed to instantiate component or class "cache".
+    in C:\Yii2\test-review\api\web\index.php:11
+2025-06-29 18:36:05 [127.0.0.1][4][-][trace][yii\web\UrlManager::parseRequest] [
+    'rule' => 'POST api/login',
+    'match' => false,
+    'parent' => null,
+]
+    in C:\Yii2\test-review\api\web\index.php:11
+2025-06-29 18:36:05 [127.0.0.1][4][-][trace][yii\web\UrlManager::parseRequest] [
+    'rule' => 'GET api/user-role/<id:\\d+>',
+    'match' => false,
+    'parent' => null,
+]
+    in C:\Yii2\test-review\api\web\index.php:11
+2025-06-29 18:36:05 [127.0.0.1][4][-][trace][yii\web\UrlManager::parseRequest] [
+    'rule' => 'GET api/products',
+    'match' => false,
+    'parent' => null,
+]
+    in C:\Yii2\test-review\api\web\index.php:11
+2025-06-29 18:36:05 [127.0.0.1][4][-][trace][yii\web\UrlManager::parseRequest] [
+    'rule' => 'GET api/products/<id:\\d+>',
+    'match' => false,
+    'parent' => null,
+]
+    in C:\Yii2\test-review\api\web\index.php:11
+2025-06-29 18:36:05 [127.0.0.1][4][-][trace][yii\web\UrlManager::parseRequest] [
+    'rule' => 'GET api/reviews',
+    'match' => false,
+    'parent' => null,
+]
+    in C:\Yii2\test-review\api\web\index.php:11
+2025-06-29 18:36:05 [127.0.0.1][4][-][trace][yii\web\UrlManager::parseRequest] [
+    'rule' => 'POST api/reviews',
+    'match' => false,
+    'parent' => null,
+]
+    in C:\Yii2\test-review\api\web\index.php:11
+2025-06-29 18:36:05 [127.0.0.1][4][-][trace][yii\web\UrlRule::parseRequest] Request parsed with URL rule: api/reviews/<id:\d+>/approve
+    in C:\Yii2\test-review\api\web\index.php:11
+2025-06-29 18:36:05 [127.0.0.1][4][-][trace][yii\web\UrlManager::parseRequest] [
+    'rule' => 'PUT api/reviews/<id:\\d+>/approve',
+    'match' => true,
+    'parent' => null,
+]
+    in C:\Yii2\test-review\api\web\index.php:11
+2025-06-29 18:36:05 [127.0.0.1][4][-][trace][yii\web\Application::handleRequest] Route requested: 'v1/review/approve'
+    in C:\Yii2\test-review\api\web\index.php:11
+2025-06-29 18:36:05 [127.0.0.1][4][-][trace][yii\base\Module::getModule] Loading module: v1
+    in C:\Yii2\test-review\api\web\index.php:11
+2025-06-29 18:36:05 [127.0.0.1][4][-][trace][yii\base\Controller::runAction] Route to run: v1/review/approve
+    in C:\Yii2\test-review\api\web\index.php:11
+2025-06-29 18:36:05 [127.0.0.1][4][-][info][yii\db\Command::query] SHOW FULL COLUMNS FROM `user`
+    in C:\Yii2\test-review\api\modules\v1\models\User.php:61
+    in C:\Yii2\test-review\api\web\index.php:11
+2025-06-29 18:36:05 [127.0.0.1][4][-][info][yii\db\Connection::open] Opening DB connection: mysql:host=localhost;dbname=test_review
+    in C:\Yii2\test-review\api\modules\v1\models\User.php:61
+    in C:\Yii2\test-review\api\web\index.php:11
+2025-06-29 18:36:05 [127.0.0.1][4][-][info][yii\db\Command::query] SHOW CREATE TABLE `user`
+    in C:\Yii2\test-review\api\modules\v1\models\User.php:61
+    in C:\Yii2\test-review\api\web\index.php:11
+2025-06-29 18:36:05 [127.0.0.1][4][-][info][yii\db\Command::query] SELECT
+    `kcu`.`CONSTRAINT_NAME` AS `constraint_name`,
+    `kcu`.`COLUMN_NAME` AS `column_name`,
+    `kcu`.`REFERENCED_TABLE_NAME` AS `referenced_table_name`,
+    `kcu`.`REFERENCED_COLUMN_NAME` AS `referenced_column_name`
+FROM `information_schema`.`REFERENTIAL_CONSTRAINTS` AS `rc`
+JOIN `information_schema`.`KEY_COLUMN_USAGE` AS `kcu` ON
+    (
+        `kcu`.`CONSTRAINT_CATALOG` = `rc`.`CONSTRAINT_CATALOG` OR
+        (`kcu`.`CONSTRAINT_CATALOG` IS NULL AND `rc`.`CONSTRAINT_CATALOG` IS NULL)
+    ) AND
+    `kcu`.`CONSTRAINT_SCHEMA` = `rc`.`CONSTRAINT_SCHEMA` AND
+    `kcu`.`CONSTRAINT_NAME` = `rc`.`CONSTRAINT_NAME`
+WHERE `rc`.`CONSTRAINT_SCHEMA` = database() AND `kcu`.`TABLE_SCHEMA` = database()
+AND `rc`.`TABLE_NAME` = 'user' AND `kcu`.`TABLE_NAME` = 'user'
+    in C:\Yii2\test-review\api\modules\v1\models\User.php:61
+    in C:\Yii2\test-review\api\web\index.php:11
+2025-06-29 18:36:05 [127.0.0.1][4][-][info][yii\db\Command::query] SELECT * FROM `user` WHERE `id`=4
+    in C:\Yii2\test-review\api\modules\v1\models\User.php:61
+    in C:\Yii2\test-review\api\web\index.php:11
+2025-06-29 18:36:05 [127.0.0.1][4][-][info][yii\web\User::login] User '4' logged in from 127.0.0.1. Session not enabled.
+    in C:\Yii2\test-review\api\web\index.php:11
+2025-06-29 18:36:05 [127.0.0.1][4][-][info][yii\filters\RateLimiter::beforeAction] Rate limit skipped: "user" does not implement RateLimitInterface.
+    in C:\Yii2\test-review\api\web\index.php:11
+2025-06-29 18:36:05 [127.0.0.1][4][-][trace][yii\base\InlineAction::runWithParams] Running action: api\modules\v1\controllers\ReviewController::actionApprove()
+    in C:\Yii2\test-review\api\web\index.php:11
+2025-06-29 18:36:05 [127.0.0.1][4][-][info][yii\db\Command::query] SELECT * FROM `auth_assignment` WHERE `user_id`='4'
+    in C:\Yii2\test-review\api\modules\v1\controllers\ReviewController.php:57
+    in C:\Yii2\test-review\api\web\index.php:11
+2025-06-29 18:36:05 [127.0.0.1][4][-][info][yii\db\Command::query] SELECT * FROM `auth_item` WHERE `name`='moderator'
+    in C:\Yii2\test-review\api\modules\v1\controllers\ReviewController.php:57
+    in C:\Yii2\test-review\api\web\index.php:11
+2025-06-29 18:36:05 [127.0.0.1][4][-][trace][yii\rbac\DbManager::checkAccessRecursive] Checking role: moderator
+    in C:\Yii2\test-review\api\modules\v1\controllers\ReviewController.php:57
+    in C:\Yii2\test-review\api\web\index.php:11
+2025-06-29 18:36:05 [127.0.0.1][4][-][info][yii\db\Command::query] SHOW FULL COLUMNS FROM `review`
+    in C:\Yii2\test-review\api\modules\v1\controllers\ReviewController.php:48
+    in C:\Yii2\test-review\api\modules\v1\controllers\ReviewController.php:61
+    in C:\Yii2\test-review\api\web\index.php:11
+2025-06-29 18:36:05 [127.0.0.1][4][-][info][yii\db\Command::query] SHOW CREATE TABLE `review`
+    in C:\Yii2\test-review\api\modules\v1\controllers\ReviewController.php:48
+    in C:\Yii2\test-review\api\modules\v1\controllers\ReviewController.php:61
+    in C:\Yii2\test-review\api\web\index.php:11
+2025-06-29 18:36:05 [127.0.0.1][4][-][info][yii\db\Command::query] SELECT
+    `kcu`.`CONSTRAINT_NAME` AS `constraint_name`,
+    `kcu`.`COLUMN_NAME` AS `column_name`,
+    `kcu`.`REFERENCED_TABLE_NAME` AS `referenced_table_name`,
+    `kcu`.`REFERENCED_COLUMN_NAME` AS `referenced_column_name`
+FROM `information_schema`.`REFERENTIAL_CONSTRAINTS` AS `rc`
+JOIN `information_schema`.`KEY_COLUMN_USAGE` AS `kcu` ON
+    (
+        `kcu`.`CONSTRAINT_CATALOG` = `rc`.`CONSTRAINT_CATALOG` OR
+        (`kcu`.`CONSTRAINT_CATALOG` IS NULL AND `rc`.`CONSTRAINT_CATALOG` IS NULL)
+    ) AND
+    `kcu`.`CONSTRAINT_SCHEMA` = `rc`.`CONSTRAINT_SCHEMA` AND
+    `kcu`.`CONSTRAINT_NAME` = `rc`.`CONSTRAINT_NAME`
+WHERE `rc`.`CONSTRAINT_SCHEMA` = database() AND `kcu`.`TABLE_SCHEMA` = database()
+AND `rc`.`TABLE_NAME` = 'review' AND `kcu`.`TABLE_NAME` = 'review'
+    in C:\Yii2\test-review\api\modules\v1\controllers\ReviewController.php:48
+    in C:\Yii2\test-review\api\modules\v1\controllers\ReviewController.php:61
+    in C:\Yii2\test-review\api\web\index.php:11
+2025-06-29 18:36:05 [127.0.0.1][4][-][info][yii\db\Command::query] SELECT * FROM `review` WHERE `id`='5'
+    in C:\Yii2\test-review\api\modules\v1\controllers\ReviewController.php:48
+    in C:\Yii2\test-review\api\modules\v1\controllers\ReviewController.php:61
+    in C:\Yii2\test-review\api\web\index.php:11
+2025-06-29 18:36:05 [127.0.0.1][4][-][info][yii\db\Command::execute] UPDATE `review` SET `status`='approved' WHERE `id`=5
+    in C:\Yii2\test-review\api\modules\v1\controllers\ReviewController.php:64
+    in C:\Yii2\test-review\api\web\index.php:11
+2025-06-29 18:36:05 [127.0.0.1][4][-][info][yii\db\Command::query] SELECT * FROM `user` WHERE `id`=2
+    in C:\Yii2\test-review\api\modules\v1\models\Review.php:43
+    in C:\Yii2\test-review\api\web\index.php:11
+2025-06-29 18:36:05 [127.0.0.1][4][-][info][yii\db\Command::query] SELECT * FROM `product` WHERE `id`=5
+    in C:\Yii2\test-review\api\modules\v1\models\Review.php:47
+    in C:\Yii2\test-review\api\web\index.php:11
+2025-06-29 18:36:05 [127.0.0.1][4][-][info][yii\db\Command::query] SHOW FULL COLUMNS FROM `product`
+    in C:\Yii2\test-review\api\modules\v1\models\Review.php:47
+    in C:\Yii2\test-review\api\web\index.php:11
+2025-06-29 18:36:05 [127.0.0.1][4][-][info][yii\db\Command::query] SHOW CREATE TABLE `product`
+    in C:\Yii2\test-review\api\modules\v1\models\Review.php:47
+    in C:\Yii2\test-review\api\web\index.php:11
+2025-06-29 18:36:05 [127.0.0.1][4][-][info][yii\db\Command::query] SELECT
+    `kcu`.`CONSTRAINT_NAME` AS `constraint_name`,
+    `kcu`.`COLUMN_NAME` AS `column_name`,
+    `kcu`.`REFERENCED_TABLE_NAME` AS `referenced_table_name`,
+    `kcu`.`REFERENCED_COLUMN_NAME` AS `referenced_column_name`
+FROM `information_schema`.`REFERENTIAL_CONSTRAINTS` AS `rc`
+JOIN `information_schema`.`KEY_COLUMN_USAGE` AS `kcu` ON
+    (
+        `kcu`.`CONSTRAINT_CATALOG` = `rc`.`CONSTRAINT_CATALOG` OR
+        (`kcu`.`CONSTRAINT_CATALOG` IS NULL AND `rc`.`CONSTRAINT_CATALOG` IS NULL)
+    ) AND
+    `kcu`.`CONSTRAINT_SCHEMA` = `rc`.`CONSTRAINT_SCHEMA` AND
+    `kcu`.`CONSTRAINT_NAME` = `rc`.`CONSTRAINT_NAME`
+WHERE `rc`.`CONSTRAINT_SCHEMA` = database() AND `kcu`.`TABLE_SCHEMA` = database()
+AND `rc`.`TABLE_NAME` = 'product' AND `kcu`.`TABLE_NAME` = 'product'
+    in C:\Yii2\test-review\api\modules\v1\models\Review.php:47
+    in C:\Yii2\test-review\api\web\index.php:11
+2025-06-29 18:36:05 [127.0.0.1][4][-][info][application] $_GET = [
+    'id' => '5'
+]
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = [
+    'Phpstorm-90abd190' => 'e3ca3928-140e-49f6-83f7-dff6b78eef42'
+    'advanced-backend' => 't24k8pj9i32olfm0fmc6jq9639'
+    '_csrf-backend' => '1bd6362881ca72d91e33a653286a04965560bc3518b94935b7d75cb74c0278f6a:2:{i:0;s:13:\"_csrf-backend\";i:1;s:32:\"gTIVa9XaP-w9O8lth3uld6009sfSiZ2O\";}'
+    '_csrf' => 'a46c2ef7df1f3cb7095a5096797efb58eb9f38ae8918693b43fa41b9a7ed2bbfa:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"g_ksoVzYera2B9gO2HrZM6WIWWElTpfT\";}'
+]
+
+$_SERVER = [
+    'DOCUMENT_ROOT' => 'C:\\Yii2\\test-review\\api\\web'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'REMOTE_PORT' => '63118'
+    'SERVER_SOFTWARE' => 'PHP/8.3.0 (Development Server)'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_PORT' => '8080'
+    'REQUEST_URI' => '/api/reviews/5/approve'
+    'REQUEST_METHOD' => 'PUT'
+    'SCRIPT_NAME' => '/index.php'
+    'SCRIPT_FILENAME' => 'C:\\Yii2\\test-review\\api\\web\\index.php'
+    'PATH_INFO' => '/api/reviews/5/approve'
+    'PHP_SELF' => '/index.php/api/reviews/5/approve'
+    'HTTP_HOST' => 'localhost:8080'
+    'HTTP_CONNECTION' => 'close'
+    'CONTENT_LENGTH' => '2'
+    'HTTP_CONTENT_LENGTH' => '2'
+    'HTTP_SEC_CH_UA_PLATFORM' => '\"Windows\"'
+    'HTTP_AUTHORIZATION' => '***'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/137.0.0.0 Safari/537.36'
+    'HTTP_ACCEPT' => 'application/json, text/plain, */*'
+    'HTTP_SEC_CH_UA' => '\"Google Chrome\";v=\"137\", \"Chromium\";v=\"137\", \"Not/A)Brand\";v=\"24\"'
+    'CONTENT_TYPE' => 'application/json'
+    'HTTP_CONTENT_TYPE' => 'application/json'
+    'HTTP_SEC_CH_UA_MOBILE' => '?0'
+    'HTTP_ORIGIN' => 'http://localhost:5173'
+    'HTTP_SEC_FETCH_SITE' => 'same-origin'
+    'HTTP_SEC_FETCH_MODE' => 'cors'
+    'HTTP_SEC_FETCH_DEST' => 'empty'
+    'HTTP_REFERER' => 'http://localhost:5173/moderation'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br, zstd'
+    'HTTP_ACCEPT_LANGUAGE' => 'ru-RU,ru;q=0.9,en-US;q=0.8,en;q=0.7'
+    'HTTP_COOKIE' => 'Phpstorm-90abd190=e3ca3928-140e-49f6-83f7-dff6b78eef42; advanced-backend=t24k8pj9i32olfm0fmc6jq9639; _csrf-backend=1bd6362881ca72d91e33a653286a04965560bc3518b94935b7d75cb74c0278f6a%3A2%3A%7Bi%3A0%3Bs%3A13%3A%22_csrf-backend%22%3Bi%3A1%3Bs%3A32%3A%22gTIVa9XaP-w9O8lth3uld6009sfSiZ2O%22%3B%7D; _csrf=a46c2ef7df1f3cb7095a5096797efb58eb9f38ae8918693b43fa41b9a7ed2bbfa%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22g_ksoVzYera2B9gO2HrZM6WIWWElTpfT%22%3B%7D'
+    'REQUEST_TIME_FLOAT' => 1751222165.0137
+    'REQUEST_TIME' => 1751222165
+]
+2025-06-29 18:36:08 [127.0.0.1][-][-][trace][yii\base\Application::bootstrap] Bootstrap with yii\log\Dispatcher
+    in C:\Yii2\test-review\api\web\index.php:11
+2025-06-29 18:36:08 [127.0.0.1][-][-][warning][application] Unable to use cache for URL manager: Failed to instantiate component or class "cache".
+    in C:\Yii2\test-review\api\web\index.php:11
+2025-06-29 18:36:08 [127.0.0.1][-][-][trace][yii\web\UrlManager::parseRequest] [
+    'rule' => 'POST api/login',
+    'match' => false,
+    'parent' => null,
+]
+    in C:\Yii2\test-review\api\web\index.php:11
+2025-06-29 18:36:08 [127.0.0.1][-][-][trace][yii\web\UrlManager::parseRequest] [
+    'rule' => 'GET api/user-role/<id:\\d+>',
+    'match' => false,
+    'parent' => null,
+]
+    in C:\Yii2\test-review\api\web\index.php:11
+2025-06-29 18:36:08 [127.0.0.1][-][-][trace][yii\web\UrlManager::parseRequest] [
+    'rule' => 'GET api/products',
+    'match' => false,
+    'parent' => null,
+]
+    in C:\Yii2\test-review\api\web\index.php:11
+2025-06-29 18:36:08 [127.0.0.1][-][-][trace][yii\web\UrlRule::parseRequest] Request parsed with URL rule: api/products/<id:\d+>
+    in C:\Yii2\test-review\api\web\index.php:11
+2025-06-29 18:36:08 [127.0.0.1][-][-][trace][yii\web\UrlManager::parseRequest] [
+    'rule' => 'GET api/products/<id:\\d+>',
+    'match' => true,
+    'parent' => null,
+]
+    in C:\Yii2\test-review\api\web\index.php:11
+2025-06-29 18:36:08 [127.0.0.1][-][-][trace][yii\web\Application::handleRequest] Route requested: 'v1/product/view'
+    in C:\Yii2\test-review\api\web\index.php:11
+2025-06-29 18:36:08 [127.0.0.1][-][-][trace][yii\base\Module::getModule] Loading module: v1
+    in C:\Yii2\test-review\api\web\index.php:11
+2025-06-29 18:36:08 [127.0.0.1][-][-][trace][yii\base\Controller::runAction] Route to run: v1/product/view
+    in C:\Yii2\test-review\api\web\index.php:11
+2025-06-29 18:36:08 [127.0.0.1][-][-][info][yii\filters\RateLimiter::beforeAction] Rate limit skipped: user not logged in.
+    in C:\Yii2\test-review\api\web\index.php:11
+2025-06-29 18:36:08 [127.0.0.1][-][-][trace][yii\base\Action::runWithParams] Running action: yii\rest\ViewAction::run(), invoked by api\modules\v1\controllers\ProductController
+    in C:\Yii2\test-review\api\web\index.php:11
+2025-06-29 18:36:08 [127.0.0.1][-][-][info][yii\db\Command::query] SHOW FULL COLUMNS FROM `product`
+    in C:\Yii2\test-review\api\web\index.php:11
+2025-06-29 18:36:08 [127.0.0.1][-][-][info][yii\db\Connection::open] Opening DB connection: mysql:host=localhost;dbname=test_review
+    in C:\Yii2\test-review\api\web\index.php:11
+2025-06-29 18:36:08 [127.0.0.1][-][-][info][yii\db\Command::query] SHOW CREATE TABLE `product`
+    in C:\Yii2\test-review\api\web\index.php:11
+2025-06-29 18:36:08 [127.0.0.1][-][-][info][yii\db\Command::query] SELECT
+    `kcu`.`CONSTRAINT_NAME` AS `constraint_name`,
+    `kcu`.`COLUMN_NAME` AS `column_name`,
+    `kcu`.`REFERENCED_TABLE_NAME` AS `referenced_table_name`,
+    `kcu`.`REFERENCED_COLUMN_NAME` AS `referenced_column_name`
+FROM `information_schema`.`REFERENTIAL_CONSTRAINTS` AS `rc`
+JOIN `information_schema`.`KEY_COLUMN_USAGE` AS `kcu` ON
+    (
+        `kcu`.`CONSTRAINT_CATALOG` = `rc`.`CONSTRAINT_CATALOG` OR
+        (`kcu`.`CONSTRAINT_CATALOG` IS NULL AND `rc`.`CONSTRAINT_CATALOG` IS NULL)
+    ) AND
+    `kcu`.`CONSTRAINT_SCHEMA` = `rc`.`CONSTRAINT_SCHEMA` AND
+    `kcu`.`CONSTRAINT_NAME` = `rc`.`CONSTRAINT_NAME`
+WHERE `rc`.`CONSTRAINT_SCHEMA` = database() AND `kcu`.`TABLE_SCHEMA` = database()
+AND `rc`.`TABLE_NAME` = 'product' AND `kcu`.`TABLE_NAME` = 'product'
+    in C:\Yii2\test-review\api\web\index.php:11
+2025-06-29 18:36:08 [127.0.0.1][-][-][info][yii\db\Command::query] SELECT * FROM `product` WHERE `id`='1'
+    in C:\Yii2\test-review\api\web\index.php:11
+2025-06-29 18:36:08 [127.0.0.1][-][-][info][application] $_GET = [
+    'id' => '1'
+]
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = [
+    'Phpstorm-90abd190' => 'e3ca3928-140e-49f6-83f7-dff6b78eef42'
+    'advanced-backend' => 't24k8pj9i32olfm0fmc6jq9639'
+    '_csrf-backend' => '1bd6362881ca72d91e33a653286a04965560bc3518b94935b7d75cb74c0278f6a:2:{i:0;s:13:\"_csrf-backend\";i:1;s:32:\"gTIVa9XaP-w9O8lth3uld6009sfSiZ2O\";}'
+    '_csrf' => 'f55d873881953e240df5eeb056c1d938d54b42d77b6bd5791534885db252f86aa:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"b4vgwRCfrcGxp-RH5_6AylnTzM16A_Be\";}'
+]
+
+$_SERVER = [
+    'DOCUMENT_ROOT' => 'C:\\Yii2\\test-review\\api\\web'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'REMOTE_PORT' => '63124'
+    'SERVER_SOFTWARE' => 'PHP/8.3.0 (Development Server)'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_PORT' => '8080'
+    'REQUEST_URI' => '/api/products/1'
+    'REQUEST_METHOD' => 'GET'
+    'SCRIPT_NAME' => '/index.php'
+    'SCRIPT_FILENAME' => 'C:\\Yii2\\test-review\\api\\web\\index.php'
+    'PATH_INFO' => '/api/products/1'
+    'PHP_SELF' => '/index.php/api/products/1'
+    'HTTP_HOST' => 'localhost:8080'
+    'HTTP_CONNECTION' => 'close'
+    'HTTP_SEC_CH_UA_PLATFORM' => '\"Windows\"'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/137.0.0.0 Safari/537.36'
+    'HTTP_ACCEPT' => 'application/json, text/plain, */*'
+    'HTTP_SEC_CH_UA' => '\"Google Chrome\";v=\"137\", \"Chromium\";v=\"137\", \"Not/A)Brand\";v=\"24\"'
+    'HTTP_SEC_CH_UA_MOBILE' => '?0'
+    'HTTP_SEC_FETCH_SITE' => 'same-origin'
+    'HTTP_SEC_FETCH_MODE' => 'cors'
+    'HTTP_SEC_FETCH_DEST' => 'empty'
+    'HTTP_REFERER' => 'http://localhost:5173/products/1'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br, zstd'
+    'HTTP_ACCEPT_LANGUAGE' => 'ru-RU,ru;q=0.9,en-US;q=0.8,en;q=0.7'
+    'HTTP_COOKIE' => 'Phpstorm-90abd190=e3ca3928-140e-49f6-83f7-dff6b78eef42; advanced-backend=t24k8pj9i32olfm0fmc6jq9639; _csrf-backend=1bd6362881ca72d91e33a653286a04965560bc3518b94935b7d75cb74c0278f6a%3A2%3A%7Bi%3A0%3Bs%3A13%3A%22_csrf-backend%22%3Bi%3A1%3Bs%3A32%3A%22gTIVa9XaP-w9O8lth3uld6009sfSiZ2O%22%3B%7D; _csrf=f55d873881953e240df5eeb056c1d938d54b42d77b6bd5791534885db252f86aa%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22b4vgwRCfrcGxp-RH5_6AylnTzM16A_Be%22%3B%7D'
+    'REQUEST_TIME_FLOAT' => 1751222168.2974
+    'REQUEST_TIME' => 1751222168
+]
+2025-06-29 18:36:08 [127.0.0.1][-][-][trace][yii\base\Application::bootstrap] Bootstrap with yii\log\Dispatcher
+    in C:\Yii2\test-review\api\web\index.php:11
+2025-06-29 18:36:08 [127.0.0.1][-][-][warning][application] Unable to use cache for URL manager: Failed to instantiate component or class "cache".
+    in C:\Yii2\test-review\api\web\index.php:11
+2025-06-29 18:36:08 [127.0.0.1][-][-][trace][yii\web\UrlManager::parseRequest] [
+    'rule' => 'POST api/login',
+    'match' => false,
+    'parent' => null,
+]
+    in C:\Yii2\test-review\api\web\index.php:11
+2025-06-29 18:36:08 [127.0.0.1][-][-][trace][yii\web\UrlManager::parseRequest] [
+    'rule' => 'GET api/user-role/<id:\\d+>',
+    'match' => false,
+    'parent' => null,
+]
+    in C:\Yii2\test-review\api\web\index.php:11
+2025-06-29 18:36:08 [127.0.0.1][-][-][trace][yii\web\UrlManager::parseRequest] [
+    'rule' => 'GET api/products',
+    'match' => false,
+    'parent' => null,
+]
+    in C:\Yii2\test-review\api\web\index.php:11
+2025-06-29 18:36:08 [127.0.0.1][-][-][trace][yii\web\UrlManager::parseRequest] [
+    'rule' => 'GET api/products/<id:\\d+>',
+    'match' => false,
+    'parent' => null,
+]
+    in C:\Yii2\test-review\api\web\index.php:11
+2025-06-29 18:36:08 [127.0.0.1][-][-][trace][yii\web\UrlRule::parseRequest] Request parsed with URL rule: api/reviews
+    in C:\Yii2\test-review\api\web\index.php:11
+2025-06-29 18:36:08 [127.0.0.1][-][-][trace][yii\web\UrlManager::parseRequest] [
+    'rule' => 'GET api/reviews',
+    'match' => true,
+    'parent' => null,
+]
+    in C:\Yii2\test-review\api\web\index.php:11
+2025-06-29 18:36:08 [127.0.0.1][-][-][trace][yii\web\Application::handleRequest] Route requested: 'v1/review/index'
+    in C:\Yii2\test-review\api\web\index.php:11
+2025-06-29 18:36:08 [127.0.0.1][-][-][trace][yii\base\Module::getModule] Loading module: v1
+    in C:\Yii2\test-review\api\web\index.php:11
+2025-06-29 18:36:08 [127.0.0.1][-][-][trace][yii\base\Controller::runAction] Route to run: v1/review/index
+    in C:\Yii2\test-review\api\web\index.php:11
+2025-06-29 18:36:08 [127.0.0.1][-][-][info][yii\filters\RateLimiter::beforeAction] Rate limit skipped: user not logged in.
+    in C:\Yii2\test-review\api\web\index.php:11
+2025-06-29 18:36:08 [127.0.0.1][-][-][trace][yii\base\Action::runWithParams] Running action: yii\rest\IndexAction::run(), invoked by api\modules\v1\controllers\ReviewController
+    in C:\Yii2\test-review\api\web\index.php:11
+2025-06-29 18:36:08 [127.0.0.1][-][-][info][yii\db\Command::query] SHOW FULL COLUMNS FROM `review`
+    in C:\Yii2\test-review\api\web\index.php:11
+2025-06-29 18:36:08 [127.0.0.1][-][-][info][yii\db\Connection::open] Opening DB connection: mysql:host=localhost;dbname=test_review
+    in C:\Yii2\test-review\api\web\index.php:11
+2025-06-29 18:36:08 [127.0.0.1][-][-][info][yii\db\Command::query] SHOW CREATE TABLE `review`
+    in C:\Yii2\test-review\api\web\index.php:11
+2025-06-29 18:36:08 [127.0.0.1][-][-][info][yii\db\Command::query] SELECT
+    `kcu`.`CONSTRAINT_NAME` AS `constraint_name`,
+    `kcu`.`COLUMN_NAME` AS `column_name`,
+    `kcu`.`REFERENCED_TABLE_NAME` AS `referenced_table_name`,
+    `kcu`.`REFERENCED_COLUMN_NAME` AS `referenced_column_name`
+FROM `information_schema`.`REFERENTIAL_CONSTRAINTS` AS `rc`
+JOIN `information_schema`.`KEY_COLUMN_USAGE` AS `kcu` ON
+    (
+        `kcu`.`CONSTRAINT_CATALOG` = `rc`.`CONSTRAINT_CATALOG` OR
+        (`kcu`.`CONSTRAINT_CATALOG` IS NULL AND `rc`.`CONSTRAINT_CATALOG` IS NULL)
+    ) AND
+    `kcu`.`CONSTRAINT_SCHEMA` = `rc`.`CONSTRAINT_SCHEMA` AND
+    `kcu`.`CONSTRAINT_NAME` = `rc`.`CONSTRAINT_NAME`
+WHERE `rc`.`CONSTRAINT_SCHEMA` = database() AND `kcu`.`TABLE_SCHEMA` = database()
+AND `rc`.`TABLE_NAME` = 'review' AND `kcu`.`TABLE_NAME` = 'review'
+    in C:\Yii2\test-review\api\web\index.php:11
+2025-06-29 18:36:08 [127.0.0.1][-][-][info][yii\db\Command::query] SELECT COUNT(*) FROM `review`
+    in C:\Yii2\test-review\api\web\index.php:11
+2025-06-29 18:36:08 [127.0.0.1][-][-][info][yii\db\Command::query] SELECT * FROM `review` LIMIT 20
+    in C:\Yii2\test-review\api\web\index.php:11
+2025-06-29 18:36:08 [127.0.0.1][-][-][info][yii\db\Command::query] SELECT * FROM `user` WHERE `id`=3
+    in C:\Yii2\test-review\api\modules\v1\models\Review.php:43
+    in C:\Yii2\test-review\api\web\index.php:11
+2025-06-29 18:36:08 [127.0.0.1][-][-][info][yii\db\Command::query] SHOW FULL COLUMNS FROM `user`
+    in C:\Yii2\test-review\api\modules\v1\models\Review.php:43
+    in C:\Yii2\test-review\api\web\index.php:11
+2025-06-29 18:36:08 [127.0.0.1][-][-][info][yii\db\Command::query] SHOW CREATE TABLE `user`
+    in C:\Yii2\test-review\api\modules\v1\models\Review.php:43
+    in C:\Yii2\test-review\api\web\index.php:11
+2025-06-29 18:36:08 [127.0.0.1][-][-][info][yii\db\Command::query] SELECT
+    `kcu`.`CONSTRAINT_NAME` AS `constraint_name`,
+    `kcu`.`COLUMN_NAME` AS `column_name`,
+    `kcu`.`REFERENCED_TABLE_NAME` AS `referenced_table_name`,
+    `kcu`.`REFERENCED_COLUMN_NAME` AS `referenced_column_name`
+FROM `information_schema`.`REFERENTIAL_CONSTRAINTS` AS `rc`
+JOIN `information_schema`.`KEY_COLUMN_USAGE` AS `kcu` ON
+    (
+        `kcu`.`CONSTRAINT_CATALOG` = `rc`.`CONSTRAINT_CATALOG` OR
+        (`kcu`.`CONSTRAINT_CATALOG` IS NULL AND `rc`.`CONSTRAINT_CATALOG` IS NULL)
+    ) AND
+    `kcu`.`CONSTRAINT_SCHEMA` = `rc`.`CONSTRAINT_SCHEMA` AND
+    `kcu`.`CONSTRAINT_NAME` = `rc`.`CONSTRAINT_NAME`
+WHERE `rc`.`CONSTRAINT_SCHEMA` = database() AND `kcu`.`TABLE_SCHEMA` = database()
+AND `rc`.`TABLE_NAME` = 'user' AND `kcu`.`TABLE_NAME` = 'user'
+    in C:\Yii2\test-review\api\modules\v1\models\Review.php:43
+    in C:\Yii2\test-review\api\web\index.php:11
+2025-06-29 18:36:08 [127.0.0.1][-][-][info][yii\db\Command::query] SELECT * FROM `product` WHERE `id`=8
+    in C:\Yii2\test-review\api\modules\v1\models\Review.php:47
+    in C:\Yii2\test-review\api\web\index.php:11
+2025-06-29 18:36:08 [127.0.0.1][-][-][info][yii\db\Command::query] SHOW FULL COLUMNS FROM `product`
+    in C:\Yii2\test-review\api\modules\v1\models\Review.php:47
+    in C:\Yii2\test-review\api\web\index.php:11
+2025-06-29 18:36:08 [127.0.0.1][-][-][info][yii\db\Command::query] SHOW CREATE TABLE `product`
+    in C:\Yii2\test-review\api\modules\v1\models\Review.php:47
+    in C:\Yii2\test-review\api\web\index.php:11
+2025-06-29 18:36:08 [127.0.0.1][-][-][info][yii\db\Command::query] SELECT
+    `kcu`.`CONSTRAINT_NAME` AS `constraint_name`,
+    `kcu`.`COLUMN_NAME` AS `column_name`,
+    `kcu`.`REFERENCED_TABLE_NAME` AS `referenced_table_name`,
+    `kcu`.`REFERENCED_COLUMN_NAME` AS `referenced_column_name`
+FROM `information_schema`.`REFERENTIAL_CONSTRAINTS` AS `rc`
+JOIN `information_schema`.`KEY_COLUMN_USAGE` AS `kcu` ON
+    (
+        `kcu`.`CONSTRAINT_CATALOG` = `rc`.`CONSTRAINT_CATALOG` OR
+        (`kcu`.`CONSTRAINT_CATALOG` IS NULL AND `rc`.`CONSTRAINT_CATALOG` IS NULL)
+    ) AND
+    `kcu`.`CONSTRAINT_SCHEMA` = `rc`.`CONSTRAINT_SCHEMA` AND
+    `kcu`.`CONSTRAINT_NAME` = `rc`.`CONSTRAINT_NAME`
+WHERE `rc`.`CONSTRAINT_SCHEMA` = database() AND `kcu`.`TABLE_SCHEMA` = database()
+AND `rc`.`TABLE_NAME` = 'product' AND `kcu`.`TABLE_NAME` = 'product'
+    in C:\Yii2\test-review\api\modules\v1\models\Review.php:47
+    in C:\Yii2\test-review\api\web\index.php:11
+2025-06-29 18:36:08 [127.0.0.1][-][-][info][yii\db\Command::query] SELECT * FROM `user` WHERE `id`=2
+    in C:\Yii2\test-review\api\modules\v1\models\Review.php:43
+    in C:\Yii2\test-review\api\web\index.php:11
+2025-06-29 18:36:08 [127.0.0.1][-][-][info][yii\db\Command::query] SELECT * FROM `product` WHERE `id`=4
+    in C:\Yii2\test-review\api\modules\v1\models\Review.php:47
+    in C:\Yii2\test-review\api\web\index.php:11
+2025-06-29 18:36:08 [127.0.0.1][-][-][info][yii\db\Command::query] SELECT * FROM `user` WHERE `id`=1
+    in C:\Yii2\test-review\api\modules\v1\models\Review.php:43
+    in C:\Yii2\test-review\api\web\index.php:11
+2025-06-29 18:36:08 [127.0.0.1][-][-][info][yii\db\Command::query] SELECT * FROM `product` WHERE `id`=8
+    in C:\Yii2\test-review\api\modules\v1\models\Review.php:47
+    in C:\Yii2\test-review\api\web\index.php:11
+2025-06-29 18:36:08 [127.0.0.1][-][-][info][yii\db\Command::query] SELECT * FROM `user` WHERE `id`=3
+    in C:\Yii2\test-review\api\modules\v1\models\Review.php:43
+    in C:\Yii2\test-review\api\web\index.php:11
+2025-06-29 18:36:08 [127.0.0.1][-][-][info][yii\db\Command::query] SELECT * FROM `product` WHERE `id`=7
+    in C:\Yii2\test-review\api\modules\v1\models\Review.php:47
+    in C:\Yii2\test-review\api\web\index.php:11
+2025-06-29 18:36:08 [127.0.0.1][-][-][info][yii\db\Command::query] SELECT * FROM `user` WHERE `id`=2
+    in C:\Yii2\test-review\api\modules\v1\models\Review.php:43
+    in C:\Yii2\test-review\api\web\index.php:11
+2025-06-29 18:36:08 [127.0.0.1][-][-][info][yii\db\Command::query] SELECT * FROM `product` WHERE `id`=5
+    in C:\Yii2\test-review\api\modules\v1\models\Review.php:47
+    in C:\Yii2\test-review\api\web\index.php:11
+2025-06-29 18:36:08 [127.0.0.1][-][-][info][yii\db\Command::query] SELECT * FROM `user` WHERE `id`=3
+    in C:\Yii2\test-review\api\modules\v1\models\Review.php:43
+    in C:\Yii2\test-review\api\web\index.php:11
+2025-06-29 18:36:08 [127.0.0.1][-][-][info][yii\db\Command::query] SELECT * FROM `product` WHERE `id`=6
+    in C:\Yii2\test-review\api\modules\v1\models\Review.php:47
+    in C:\Yii2\test-review\api\web\index.php:11
+2025-06-29 18:36:08 [127.0.0.1][-][-][info][yii\db\Command::query] SELECT * FROM `user` WHERE `id`=3
+    in C:\Yii2\test-review\api\modules\v1\models\Review.php:43
+    in C:\Yii2\test-review\api\web\index.php:11
+2025-06-29 18:36:08 [127.0.0.1][-][-][info][yii\db\Command::query] SELECT * FROM `product` WHERE `id`=1
+    in C:\Yii2\test-review\api\modules\v1\models\Review.php:47
+    in C:\Yii2\test-review\api\web\index.php:11
+2025-06-29 18:36:08 [127.0.0.1][-][-][info][yii\db\Command::query] SELECT * FROM `user` WHERE `id`=1
+    in C:\Yii2\test-review\api\modules\v1\models\Review.php:43
+    in C:\Yii2\test-review\api\web\index.php:11
+2025-06-29 18:36:08 [127.0.0.1][-][-][info][yii\db\Command::query] SELECT * FROM `product` WHERE `id`=2
+    in C:\Yii2\test-review\api\modules\v1\models\Review.php:47
+    in C:\Yii2\test-review\api\web\index.php:11
+2025-06-29 18:36:08 [127.0.0.1][-][-][info][yii\db\Command::query] SELECT * FROM `user` WHERE `id`=1
+    in C:\Yii2\test-review\api\modules\v1\models\Review.php:43
+    in C:\Yii2\test-review\api\web\index.php:11
+2025-06-29 18:36:08 [127.0.0.1][-][-][info][yii\db\Command::query] SELECT * FROM `product` WHERE `id`=8
+    in C:\Yii2\test-review\api\modules\v1\models\Review.php:47
+    in C:\Yii2\test-review\api\web\index.php:11
+2025-06-29 18:36:08 [127.0.0.1][-][-][info][yii\db\Command::query] SELECT * FROM `user` WHERE `id`=1
+    in C:\Yii2\test-review\api\modules\v1\models\Review.php:43
+    in C:\Yii2\test-review\api\web\index.php:11
+2025-06-29 18:36:08 [127.0.0.1][-][-][info][yii\db\Command::query] SELECT * FROM `product` WHERE `id`=3
+    in C:\Yii2\test-review\api\modules\v1\models\Review.php:47
+    in C:\Yii2\test-review\api\web\index.php:11
+2025-06-29 18:36:08 [127.0.0.1][-][-][info][yii\db\Command::query] SELECT * FROM `user` WHERE `id`=3
+    in C:\Yii2\test-review\api\modules\v1\models\Review.php:43
+    in C:\Yii2\test-review\api\web\index.php:11
+2025-06-29 18:36:08 [127.0.0.1][-][-][info][yii\db\Command::query] SELECT * FROM `product` WHERE `id`=9
+    in C:\Yii2\test-review\api\modules\v1\models\Review.php:47
+    in C:\Yii2\test-review\api\web\index.php:11
+2025-06-29 18:36:08 [127.0.0.1][-][-][info][yii\db\Command::query] SELECT * FROM `user` WHERE `id`=1
+    in C:\Yii2\test-review\api\modules\v1\models\Review.php:43
+    in C:\Yii2\test-review\api\web\index.php:11
+2025-06-29 18:36:08 [127.0.0.1][-][-][info][yii\db\Command::query] SELECT * FROM `product` WHERE `id`=10
+    in C:\Yii2\test-review\api\modules\v1\models\Review.php:47
+    in C:\Yii2\test-review\api\web\index.php:11
+2025-06-29 18:36:08 [127.0.0.1][-][-][info][yii\db\Command::query] SELECT * FROM `user` WHERE `id`=2
+    in C:\Yii2\test-review\api\modules\v1\models\Review.php:43
+    in C:\Yii2\test-review\api\web\index.php:11
+2025-06-29 18:36:08 [127.0.0.1][-][-][info][yii\db\Command::query] SELECT * FROM `product` WHERE `id`=6
+    in C:\Yii2\test-review\api\modules\v1\models\Review.php:47
+    in C:\Yii2\test-review\api\web\index.php:11
+2025-06-29 18:36:08 [127.0.0.1][-][-][info][yii\db\Command::query] SELECT * FROM `user` WHERE `id`=1
+    in C:\Yii2\test-review\api\modules\v1\models\Review.php:43
+    in C:\Yii2\test-review\api\web\index.php:11
+2025-06-29 18:36:08 [127.0.0.1][-][-][info][yii\db\Command::query] SELECT * FROM `product` WHERE `id`=7
+    in C:\Yii2\test-review\api\modules\v1\models\Review.php:47
+    in C:\Yii2\test-review\api\web\index.php:11
+2025-06-29 18:36:08 [127.0.0.1][-][-][info][yii\db\Command::query] SELECT * FROM `user` WHERE `id`=3
+    in C:\Yii2\test-review\api\modules\v1\models\Review.php:43
+    in C:\Yii2\test-review\api\web\index.php:11
+2025-06-29 18:36:08 [127.0.0.1][-][-][info][yii\db\Command::query] SELECT * FROM `product` WHERE `id`=6
+    in C:\Yii2\test-review\api\modules\v1\models\Review.php:47
+    in C:\Yii2\test-review\api\web\index.php:11
+2025-06-29 18:36:08 [127.0.0.1][-][-][info][yii\db\Command::query] SELECT * FROM `user` WHERE `id`=4
+    in C:\Yii2\test-review\api\modules\v1\models\Review.php:43
+    in C:\Yii2\test-review\api\web\index.php:11
+2025-06-29 18:36:08 [127.0.0.1][-][-][info][yii\db\Command::query] SELECT * FROM `product` WHERE `id`=2
+    in C:\Yii2\test-review\api\modules\v1\models\Review.php:47
+    in C:\Yii2\test-review\api\web\index.php:11
+2025-06-29 18:36:08 [127.0.0.1][-][-][info][yii\db\Command::query] SELECT * FROM `user` WHERE `id`=4
+    in C:\Yii2\test-review\api\modules\v1\models\Review.php:43
+    in C:\Yii2\test-review\api\web\index.php:11
+2025-06-29 18:36:08 [127.0.0.1][-][-][info][yii\db\Command::query] SELECT * FROM `product` WHERE `id`=2
+    in C:\Yii2\test-review\api\modules\v1\models\Review.php:47
+    in C:\Yii2\test-review\api\web\index.php:11
+2025-06-29 18:36:08 [127.0.0.1][-][-][info][application] $_GET = [
+    'expand' => 'product,user'
+]
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = [
+    'Phpstorm-90abd190' => 'e3ca3928-140e-49f6-83f7-dff6b78eef42'
+    'advanced-backend' => 't24k8pj9i32olfm0fmc6jq9639'
+    '_csrf-backend' => '1bd6362881ca72d91e33a653286a04965560bc3518b94935b7d75cb74c0278f6a:2:{i:0;s:13:\"_csrf-backend\";i:1;s:32:\"gTIVa9XaP-w9O8lth3uld6009sfSiZ2O\";}'
+    '_csrf' => 'f55d873881953e240df5eeb056c1d938d54b42d77b6bd5791534885db252f86aa:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"b4vgwRCfrcGxp-RH5_6AylnTzM16A_Be\";}'
+]
+
+$_SERVER = [
+    'DOCUMENT_ROOT' => 'C:\\Yii2\\test-review\\api\\web'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'REMOTE_PORT' => '63128'
+    'SERVER_SOFTWARE' => 'PHP/8.3.0 (Development Server)'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_PORT' => '8080'
+    'REQUEST_URI' => '/api/reviews?expand=product,user'
+    'REQUEST_METHOD' => 'GET'
+    'SCRIPT_NAME' => '/index.php'
+    'SCRIPT_FILENAME' => 'C:\\Yii2\\test-review\\api\\web\\index.php'
+    'PATH_INFO' => '/api/reviews'
+    'PHP_SELF' => '/index.php/api/reviews'
+    'QUERY_STRING' => 'expand=product,user'
+    'HTTP_HOST' => 'localhost:8080'
+    'HTTP_CONNECTION' => 'close'
+    'HTTP_SEC_CH_UA_PLATFORM' => '\"Windows\"'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/137.0.0.0 Safari/537.36'
+    'HTTP_ACCEPT' => 'application/json, text/plain, */*'
+    'HTTP_SEC_CH_UA' => '\"Google Chrome\";v=\"137\", \"Chromium\";v=\"137\", \"Not/A)Brand\";v=\"24\"'
+    'HTTP_SEC_CH_UA_MOBILE' => '?0'
+    'HTTP_SEC_FETCH_SITE' => 'same-origin'
+    'HTTP_SEC_FETCH_MODE' => 'cors'
+    'HTTP_SEC_FETCH_DEST' => 'empty'
+    'HTTP_REFERER' => 'http://localhost:5173/products/1'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br, zstd'
+    'HTTP_ACCEPT_LANGUAGE' => 'ru-RU,ru;q=0.9,en-US;q=0.8,en;q=0.7'
+    'HTTP_COOKIE' => 'Phpstorm-90abd190=e3ca3928-140e-49f6-83f7-dff6b78eef42; advanced-backend=t24k8pj9i32olfm0fmc6jq9639; _csrf-backend=1bd6362881ca72d91e33a653286a04965560bc3518b94935b7d75cb74c0278f6a%3A2%3A%7Bi%3A0%3Bs%3A13%3A%22_csrf-backend%22%3Bi%3A1%3Bs%3A32%3A%22gTIVa9XaP-w9O8lth3uld6009sfSiZ2O%22%3B%7D; _csrf=f55d873881953e240df5eeb056c1d938d54b42d77b6bd5791534885db252f86aa%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22b4vgwRCfrcGxp-RH5_6AylnTzM16A_Be%22%3B%7D'
+    'REQUEST_TIME_FLOAT' => 1751222168.5578
+    'REQUEST_TIME' => 1751222168
+]
+2025-06-29 18:36:08 [127.0.0.1][4][-][trace][yii\base\Application::bootstrap] Bootstrap with yii\log\Dispatcher
+    in C:\Yii2\test-review\api\web\index.php:11
+2025-06-29 18:36:08 [127.0.0.1][4][-][warning][application] Unable to use cache for URL manager: Failed to instantiate component or class "cache".
+    in C:\Yii2\test-review\api\web\index.php:11
+2025-06-29 18:36:08 [127.0.0.1][4][-][trace][yii\web\UrlManager::parseRequest] [
+    'rule' => 'POST api/login',
+    'match' => false,
+    'parent' => null,
+]
+    in C:\Yii2\test-review\api\web\index.php:11
+2025-06-29 18:36:08 [127.0.0.1][4][-][trace][yii\web\UrlRule::parseRequest] Request parsed with URL rule: api/user-role/<id:\d+>
+    in C:\Yii2\test-review\api\web\index.php:11
+2025-06-29 18:36:08 [127.0.0.1][4][-][trace][yii\web\UrlManager::parseRequest] [
+    'rule' => 'GET api/user-role/<id:\\d+>',
+    'match' => true,
+    'parent' => null,
+]
+    in C:\Yii2\test-review\api\web\index.php:11
+2025-06-29 18:36:08 [127.0.0.1][4][-][trace][yii\web\Application::handleRequest] Route requested: 'v1/user/user-role'
+    in C:\Yii2\test-review\api\web\index.php:11
+2025-06-29 18:36:08 [127.0.0.1][4][-][trace][yii\base\Module::getModule] Loading module: v1
+    in C:\Yii2\test-review\api\web\index.php:11
+2025-06-29 18:36:08 [127.0.0.1][4][-][trace][yii\base\Controller::runAction] Route to run: v1/user/user-role
+    in C:\Yii2\test-review\api\web\index.php:11
+2025-06-29 18:36:08 [127.0.0.1][4][-][info][yii\db\Command::query] SHOW FULL COLUMNS FROM `user`
+    in C:\Yii2\test-review\api\modules\v1\models\User.php:61
+    in C:\Yii2\test-review\api\web\index.php:11
+2025-06-29 18:36:08 [127.0.0.1][4][-][info][yii\db\Connection::open] Opening DB connection: mysql:host=localhost;dbname=test_review
+    in C:\Yii2\test-review\api\modules\v1\models\User.php:61
+    in C:\Yii2\test-review\api\web\index.php:11
+2025-06-29 18:36:08 [127.0.0.1][4][-][info][yii\db\Command::query] SHOW CREATE TABLE `user`
+    in C:\Yii2\test-review\api\modules\v1\models\User.php:61
+    in C:\Yii2\test-review\api\web\index.php:11
+2025-06-29 18:36:08 [127.0.0.1][4][-][info][yii\db\Command::query] SELECT
+    `kcu`.`CONSTRAINT_NAME` AS `constraint_name`,
+    `kcu`.`COLUMN_NAME` AS `column_name`,
+    `kcu`.`REFERENCED_TABLE_NAME` AS `referenced_table_name`,
+    `kcu`.`REFERENCED_COLUMN_NAME` AS `referenced_column_name`
+FROM `information_schema`.`REFERENTIAL_CONSTRAINTS` AS `rc`
+JOIN `information_schema`.`KEY_COLUMN_USAGE` AS `kcu` ON
+    (
+        `kcu`.`CONSTRAINT_CATALOG` = `rc`.`CONSTRAINT_CATALOG` OR
+        (`kcu`.`CONSTRAINT_CATALOG` IS NULL AND `rc`.`CONSTRAINT_CATALOG` IS NULL)
+    ) AND
+    `kcu`.`CONSTRAINT_SCHEMA` = `rc`.`CONSTRAINT_SCHEMA` AND
+    `kcu`.`CONSTRAINT_NAME` = `rc`.`CONSTRAINT_NAME`
+WHERE `rc`.`CONSTRAINT_SCHEMA` = database() AND `kcu`.`TABLE_SCHEMA` = database()
+AND `rc`.`TABLE_NAME` = 'user' AND `kcu`.`TABLE_NAME` = 'user'
+    in C:\Yii2\test-review\api\modules\v1\models\User.php:61
+    in C:\Yii2\test-review\api\web\index.php:11
+2025-06-29 18:36:08 [127.0.0.1][4][-][info][yii\db\Command::query] SELECT * FROM `user` WHERE `id`=4
+    in C:\Yii2\test-review\api\modules\v1\models\User.php:61
+    in C:\Yii2\test-review\api\web\index.php:11
+2025-06-29 18:36:08 [127.0.0.1][4][-][info][yii\web\User::login] User '4' logged in from 127.0.0.1. Session not enabled.
+    in C:\Yii2\test-review\api\web\index.php:11
+2025-06-29 18:36:08 [127.0.0.1][4][-][info][yii\filters\RateLimiter::beforeAction] Rate limit skipped: "user" does not implement RateLimitInterface.
+    in C:\Yii2\test-review\api\web\index.php:11
+2025-06-29 18:36:08 [127.0.0.1][4][-][trace][yii\base\InlineAction::runWithParams] Running action: api\modules\v1\controllers\UserController::actionUserRole()
+    in C:\Yii2\test-review\api\web\index.php:11
+2025-06-29 18:36:08 [127.0.0.1][4][-][info][yii\db\Command::query] SELECT `item_name` FROM `auth_assignment` WHERE `user_id`='4'
+    in C:\Yii2\test-review\api\modules\v1\controllers\UserController.php:37
+    in C:\Yii2\test-review\api\web\index.php:11
+2025-06-29 18:36:08 [127.0.0.1][4][-][info][application] $_GET = [
+    'id' => '4'
+]
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = [
+    'Phpstorm-90abd190' => 'e3ca3928-140e-49f6-83f7-dff6b78eef42'
+    'advanced-backend' => 't24k8pj9i32olfm0fmc6jq9639'
+    '_csrf-backend' => '1bd6362881ca72d91e33a653286a04965560bc3518b94935b7d75cb74c0278f6a:2:{i:0;s:13:\"_csrf-backend\";i:1;s:32:\"gTIVa9XaP-w9O8lth3uld6009sfSiZ2O\";}'
+    '_csrf' => 'f55d873881953e240df5eeb056c1d938d54b42d77b6bd5791534885db252f86aa:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"b4vgwRCfrcGxp-RH5_6AylnTzM16A_Be\";}'
+]
+
+$_SERVER = [
+    'DOCUMENT_ROOT' => 'C:\\Yii2\\test-review\\api\\web'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'REMOTE_PORT' => '63132'
+    'SERVER_SOFTWARE' => 'PHP/8.3.0 (Development Server)'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_PORT' => '8080'
+    'REQUEST_URI' => '/api/user-role/4'
+    'REQUEST_METHOD' => 'GET'
+    'SCRIPT_NAME' => '/index.php'
+    'SCRIPT_FILENAME' => 'C:\\Yii2\\test-review\\api\\web\\index.php'
+    'PATH_INFO' => '/api/user-role/4'
+    'PHP_SELF' => '/index.php/api/user-role/4'
+    'HTTP_HOST' => 'localhost:8080'
+    'HTTP_CONNECTION' => 'close'
+    'HTTP_SEC_CH_UA_PLATFORM' => '\"Windows\"'
+    'HTTP_AUTHORIZATION' => '***'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/137.0.0.0 Safari/537.36'
+    'HTTP_ACCEPT' => 'application/json, text/plain, */*'
+    'HTTP_SEC_CH_UA' => '\"Google Chrome\";v=\"137\", \"Chromium\";v=\"137\", \"Not/A)Brand\";v=\"24\"'
+    'HTTP_SEC_CH_UA_MOBILE' => '?0'
+    'HTTP_SEC_FETCH_SITE' => 'same-origin'
+    'HTTP_SEC_FETCH_MODE' => 'cors'
+    'HTTP_SEC_FETCH_DEST' => 'empty'
+    'HTTP_REFERER' => 'http://localhost:5173/products/1'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br, zstd'
+    'HTTP_ACCEPT_LANGUAGE' => 'ru-RU,ru;q=0.9,en-US;q=0.8,en;q=0.7'
+    'HTTP_COOKIE' => 'Phpstorm-90abd190=e3ca3928-140e-49f6-83f7-dff6b78eef42; advanced-backend=t24k8pj9i32olfm0fmc6jq9639; _csrf-backend=1bd6362881ca72d91e33a653286a04965560bc3518b94935b7d75cb74c0278f6a%3A2%3A%7Bi%3A0%3Bs%3A13%3A%22_csrf-backend%22%3Bi%3A1%3Bs%3A32%3A%22gTIVa9XaP-w9O8lth3uld6009sfSiZ2O%22%3B%7D; _csrf=f55d873881953e240df5eeb056c1d938d54b42d77b6bd5791534885db252f86aa%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22b4vgwRCfrcGxp-RH5_6AylnTzM16A_Be%22%3B%7D'
+    'REQUEST_TIME_FLOAT' => 1751222168.6387
+    'REQUEST_TIME' => 1751222168
+]
+2025-06-29 18:36:10 [127.0.0.1][-][-][trace][yii\base\Application::bootstrap] Bootstrap with yii\log\Dispatcher
+    in C:\Yii2\test-review\api\web\index.php:11
+2025-06-29 18:36:10 [127.0.0.1][-][-][warning][application] Unable to use cache for URL manager: Failed to instantiate component or class "cache".
+    in C:\Yii2\test-review\api\web\index.php:11
+2025-06-29 18:36:10 [127.0.0.1][-][-][trace][yii\web\UrlManager::parseRequest] [
+    'rule' => 'POST api/login',
+    'match' => false,
+    'parent' => null,
+]
+    in C:\Yii2\test-review\api\web\index.php:11
+2025-06-29 18:36:10 [127.0.0.1][-][-][trace][yii\web\UrlManager::parseRequest] [
+    'rule' => 'GET api/user-role/<id:\\d+>',
+    'match' => false,
+    'parent' => null,
+]
+    in C:\Yii2\test-review\api\web\index.php:11
+2025-06-29 18:36:10 [127.0.0.1][-][-][trace][yii\web\UrlRule::parseRequest] Request parsed with URL rule: api/products
+    in C:\Yii2\test-review\api\web\index.php:11
+2025-06-29 18:36:10 [127.0.0.1][-][-][trace][yii\web\UrlManager::parseRequest] [
+    'rule' => 'GET api/products',
+    'match' => true,
+    'parent' => null,
+]
+    in C:\Yii2\test-review\api\web\index.php:11
+2025-06-29 18:36:10 [127.0.0.1][-][-][trace][yii\web\Application::handleRequest] Route requested: 'v1/product/index'
+    in C:\Yii2\test-review\api\web\index.php:11
+2025-06-29 18:36:10 [127.0.0.1][-][-][trace][yii\base\Module::getModule] Loading module: v1
+    in C:\Yii2\test-review\api\web\index.php:11
+2025-06-29 18:36:10 [127.0.0.1][-][-][trace][yii\base\Controller::runAction] Route to run: v1/product/index
+    in C:\Yii2\test-review\api\web\index.php:11
+2025-06-29 18:36:10 [127.0.0.1][-][-][info][yii\filters\RateLimiter::beforeAction] Rate limit skipped: user not logged in.
+    in C:\Yii2\test-review\api\web\index.php:11
+2025-06-29 18:36:10 [127.0.0.1][-][-][trace][yii\base\Action::runWithParams] Running action: yii\rest\IndexAction::run(), invoked by api\modules\v1\controllers\ProductController
+    in C:\Yii2\test-review\api\web\index.php:11
+2025-06-29 18:36:10 [127.0.0.1][-][-][info][yii\db\Command::query] SHOW FULL COLUMNS FROM `product`
+    in C:\Yii2\test-review\api\web\index.php:11
+2025-06-29 18:36:10 [127.0.0.1][-][-][info][yii\db\Connection::open] Opening DB connection: mysql:host=localhost;dbname=test_review
+    in C:\Yii2\test-review\api\web\index.php:11
+2025-06-29 18:36:10 [127.0.0.1][-][-][info][yii\db\Command::query] SHOW CREATE TABLE `product`
+    in C:\Yii2\test-review\api\web\index.php:11
+2025-06-29 18:36:10 [127.0.0.1][-][-][info][yii\db\Command::query] SELECT
+    `kcu`.`CONSTRAINT_NAME` AS `constraint_name`,
+    `kcu`.`COLUMN_NAME` AS `column_name`,
+    `kcu`.`REFERENCED_TABLE_NAME` AS `referenced_table_name`,
+    `kcu`.`REFERENCED_COLUMN_NAME` AS `referenced_column_name`
+FROM `information_schema`.`REFERENTIAL_CONSTRAINTS` AS `rc`
+JOIN `information_schema`.`KEY_COLUMN_USAGE` AS `kcu` ON
+    (
+        `kcu`.`CONSTRAINT_CATALOG` = `rc`.`CONSTRAINT_CATALOG` OR
+        (`kcu`.`CONSTRAINT_CATALOG` IS NULL AND `rc`.`CONSTRAINT_CATALOG` IS NULL)
+    ) AND
+    `kcu`.`CONSTRAINT_SCHEMA` = `rc`.`CONSTRAINT_SCHEMA` AND
+    `kcu`.`CONSTRAINT_NAME` = `rc`.`CONSTRAINT_NAME`
+WHERE `rc`.`CONSTRAINT_SCHEMA` = database() AND `kcu`.`TABLE_SCHEMA` = database()
+AND `rc`.`TABLE_NAME` = 'product' AND `kcu`.`TABLE_NAME` = 'product'
+    in C:\Yii2\test-review\api\web\index.php:11
+2025-06-29 18:36:10 [127.0.0.1][-][-][info][yii\db\Command::query] SELECT COUNT(*) FROM `product`
+    in C:\Yii2\test-review\api\web\index.php:11
+2025-06-29 18:36:10 [127.0.0.1][-][-][info][yii\db\Command::query] SELECT * FROM `product` LIMIT 20
+    in C:\Yii2\test-review\api\web\index.php:11
+2025-06-29 18:36:10 [127.0.0.1][-][-][info][application] $_GET = []
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = [
+    'Phpstorm-90abd190' => 'e3ca3928-140e-49f6-83f7-dff6b78eef42'
+    'advanced-backend' => 't24k8pj9i32olfm0fmc6jq9639'
+    '_csrf-backend' => '1bd6362881ca72d91e33a653286a04965560bc3518b94935b7d75cb74c0278f6a:2:{i:0;s:13:\"_csrf-backend\";i:1;s:32:\"gTIVa9XaP-w9O8lth3uld6009sfSiZ2O\";}'
+    '_csrf' => '74ec75e86448636f4af6ef1a82c0fff81ea216ef5aca9ae9429629353716e746a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"Ef-NhL4t3Y9NQydq9H4DCXY8QTMfd5J2\";}'
+]
+
+$_SERVER = [
+    'DOCUMENT_ROOT' => 'C:\\Yii2\\test-review\\api\\web'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'REMOTE_PORT' => '63136'
+    'SERVER_SOFTWARE' => 'PHP/8.3.0 (Development Server)'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_PORT' => '8080'
+    'REQUEST_URI' => '/api/products'
+    'REQUEST_METHOD' => 'GET'
+    'SCRIPT_NAME' => '/index.php'
+    'SCRIPT_FILENAME' => 'C:\\Yii2\\test-review\\api\\web\\index.php'
+    'PATH_INFO' => '/api/products'
+    'PHP_SELF' => '/index.php/api/products'
+    'HTTP_HOST' => 'localhost:8080'
+    'HTTP_CONNECTION' => 'close'
+    'HTTP_SEC_CH_UA_PLATFORM' => '\"Windows\"'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/137.0.0.0 Safari/537.36'
+    'HTTP_ACCEPT' => 'application/json, text/plain, */*'
+    'HTTP_SEC_CH_UA' => '\"Google Chrome\";v=\"137\", \"Chromium\";v=\"137\", \"Not/A)Brand\";v=\"24\"'
+    'HTTP_SEC_CH_UA_MOBILE' => '?0'
+    'HTTP_SEC_FETCH_SITE' => 'same-origin'
+    'HTTP_SEC_FETCH_MODE' => 'cors'
+    'HTTP_SEC_FETCH_DEST' => 'empty'
+    'HTTP_REFERER' => 'http://localhost:5173/products'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br, zstd'
+    'HTTP_ACCEPT_LANGUAGE' => 'ru-RU,ru;q=0.9,en-US;q=0.8,en;q=0.7'
+    'HTTP_COOKIE' => 'Phpstorm-90abd190=e3ca3928-140e-49f6-83f7-dff6b78eef42; advanced-backend=t24k8pj9i32olfm0fmc6jq9639; _csrf-backend=1bd6362881ca72d91e33a653286a04965560bc3518b94935b7d75cb74c0278f6a%3A2%3A%7Bi%3A0%3Bs%3A13%3A%22_csrf-backend%22%3Bi%3A1%3Bs%3A32%3A%22gTIVa9XaP-w9O8lth3uld6009sfSiZ2O%22%3B%7D; _csrf=74ec75e86448636f4af6ef1a82c0fff81ea216ef5aca9ae9429629353716e746a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22Ef-NhL4t3Y9NQydq9H4DCXY8QTMfd5J2%22%3B%7D'
+    'REQUEST_TIME_FLOAT' => 1751222170.3258
+    'REQUEST_TIME' => 1751222170
+]
+2025-06-29 18:36:11 [127.0.0.1][-][-][trace][yii\base\Application::bootstrap] Bootstrap with yii\log\Dispatcher
+    in C:\Yii2\test-review\api\web\index.php:11
+2025-06-29 18:36:11 [127.0.0.1][-][-][warning][application] Unable to use cache for URL manager: Failed to instantiate component or class "cache".
+    in C:\Yii2\test-review\api\web\index.php:11
+2025-06-29 18:36:11 [127.0.0.1][-][-][trace][yii\web\UrlManager::parseRequest] [
+    'rule' => 'POST api/login',
+    'match' => false,
+    'parent' => null,
+]
+    in C:\Yii2\test-review\api\web\index.php:11
+2025-06-29 18:36:11 [127.0.0.1][-][-][trace][yii\web\UrlManager::parseRequest] [
+    'rule' => 'GET api/user-role/<id:\\d+>',
+    'match' => false,
+    'parent' => null,
+]
+    in C:\Yii2\test-review\api\web\index.php:11
+2025-06-29 18:36:11 [127.0.0.1][-][-][trace][yii\web\UrlManager::parseRequest] [
+    'rule' => 'GET api/products',
+    'match' => false,
+    'parent' => null,
+]
+    in C:\Yii2\test-review\api\web\index.php:11
+2025-06-29 18:36:11 [127.0.0.1][-][-][trace][yii\web\UrlRule::parseRequest] Request parsed with URL rule: api/products/<id:\d+>
+    in C:\Yii2\test-review\api\web\index.php:11
+2025-06-29 18:36:11 [127.0.0.1][-][-][trace][yii\web\UrlManager::parseRequest] [
+    'rule' => 'GET api/products/<id:\\d+>',
+    'match' => true,
+    'parent' => null,
+]
+    in C:\Yii2\test-review\api\web\index.php:11
+2025-06-29 18:36:11 [127.0.0.1][-][-][trace][yii\web\Application::handleRequest] Route requested: 'v1/product/view'
+    in C:\Yii2\test-review\api\web\index.php:11
+2025-06-29 18:36:11 [127.0.0.1][-][-][trace][yii\base\Module::getModule] Loading module: v1
+    in C:\Yii2\test-review\api\web\index.php:11
+2025-06-29 18:36:11 [127.0.0.1][-][-][trace][yii\base\Controller::runAction] Route to run: v1/product/view
+    in C:\Yii2\test-review\api\web\index.php:11
+2025-06-29 18:36:11 [127.0.0.1][-][-][info][yii\filters\RateLimiter::beforeAction] Rate limit skipped: user not logged in.
+    in C:\Yii2\test-review\api\web\index.php:11
+2025-06-29 18:36:11 [127.0.0.1][-][-][trace][yii\base\Action::runWithParams] Running action: yii\rest\ViewAction::run(), invoked by api\modules\v1\controllers\ProductController
+    in C:\Yii2\test-review\api\web\index.php:11
+2025-06-29 18:36:11 [127.0.0.1][-][-][info][yii\db\Command::query] SHOW FULL COLUMNS FROM `product`
+    in C:\Yii2\test-review\api\web\index.php:11
+2025-06-29 18:36:11 [127.0.0.1][-][-][info][yii\db\Connection::open] Opening DB connection: mysql:host=localhost;dbname=test_review
+    in C:\Yii2\test-review\api\web\index.php:11
+2025-06-29 18:36:11 [127.0.0.1][-][-][info][yii\db\Command::query] SHOW CREATE TABLE `product`
+    in C:\Yii2\test-review\api\web\index.php:11
+2025-06-29 18:36:11 [127.0.0.1][-][-][info][yii\db\Command::query] SELECT
+    `kcu`.`CONSTRAINT_NAME` AS `constraint_name`,
+    `kcu`.`COLUMN_NAME` AS `column_name`,
+    `kcu`.`REFERENCED_TABLE_NAME` AS `referenced_table_name`,
+    `kcu`.`REFERENCED_COLUMN_NAME` AS `referenced_column_name`
+FROM `information_schema`.`REFERENTIAL_CONSTRAINTS` AS `rc`
+JOIN `information_schema`.`KEY_COLUMN_USAGE` AS `kcu` ON
+    (
+        `kcu`.`CONSTRAINT_CATALOG` = `rc`.`CONSTRAINT_CATALOG` OR
+        (`kcu`.`CONSTRAINT_CATALOG` IS NULL AND `rc`.`CONSTRAINT_CATALOG` IS NULL)
+    ) AND
+    `kcu`.`CONSTRAINT_SCHEMA` = `rc`.`CONSTRAINT_SCHEMA` AND
+    `kcu`.`CONSTRAINT_NAME` = `rc`.`CONSTRAINT_NAME`
+WHERE `rc`.`CONSTRAINT_SCHEMA` = database() AND `kcu`.`TABLE_SCHEMA` = database()
+AND `rc`.`TABLE_NAME` = 'product' AND `kcu`.`TABLE_NAME` = 'product'
+    in C:\Yii2\test-review\api\web\index.php:11
+2025-06-29 18:36:11 [127.0.0.1][-][-][info][yii\db\Command::query] SELECT * FROM `product` WHERE `id`='5'
+    in C:\Yii2\test-review\api\web\index.php:11
+2025-06-29 18:36:11 [127.0.0.1][-][-][info][application] $_GET = [
+    'id' => '5'
+]
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = [
+    'Phpstorm-90abd190' => 'e3ca3928-140e-49f6-83f7-dff6b78eef42'
+    'advanced-backend' => 't24k8pj9i32olfm0fmc6jq9639'
+    '_csrf-backend' => '1bd6362881ca72d91e33a653286a04965560bc3518b94935b7d75cb74c0278f6a:2:{i:0;s:13:\"_csrf-backend\";i:1;s:32:\"gTIVa9XaP-w9O8lth3uld6009sfSiZ2O\";}'
+    '_csrf' => '74ec75e86448636f4af6ef1a82c0fff81ea216ef5aca9ae9429629353716e746a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"Ef-NhL4t3Y9NQydq9H4DCXY8QTMfd5J2\";}'
+]
+
+$_SERVER = [
+    'DOCUMENT_ROOT' => 'C:\\Yii2\\test-review\\api\\web'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'REMOTE_PORT' => '63142'
+    'SERVER_SOFTWARE' => 'PHP/8.3.0 (Development Server)'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_PORT' => '8080'
+    'REQUEST_URI' => '/api/products/5'
+    'REQUEST_METHOD' => 'GET'
+    'SCRIPT_NAME' => '/index.php'
+    'SCRIPT_FILENAME' => 'C:\\Yii2\\test-review\\api\\web\\index.php'
+    'PATH_INFO' => '/api/products/5'
+    'PHP_SELF' => '/index.php/api/products/5'
+    'HTTP_HOST' => 'localhost:8080'
+    'HTTP_CONNECTION' => 'close'
+    'HTTP_SEC_CH_UA_PLATFORM' => '\"Windows\"'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/137.0.0.0 Safari/537.36'
+    'HTTP_ACCEPT' => 'application/json, text/plain, */*'
+    'HTTP_SEC_CH_UA' => '\"Google Chrome\";v=\"137\", \"Chromium\";v=\"137\", \"Not/A)Brand\";v=\"24\"'
+    'HTTP_SEC_CH_UA_MOBILE' => '?0'
+    'HTTP_SEC_FETCH_SITE' => 'same-origin'
+    'HTTP_SEC_FETCH_MODE' => 'cors'
+    'HTTP_SEC_FETCH_DEST' => 'empty'
+    'HTTP_REFERER' => 'http://localhost:5173/products/5'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br, zstd'
+    'HTTP_ACCEPT_LANGUAGE' => 'ru-RU,ru;q=0.9,en-US;q=0.8,en;q=0.7'
+    'HTTP_COOKIE' => 'Phpstorm-90abd190=e3ca3928-140e-49f6-83f7-dff6b78eef42; advanced-backend=t24k8pj9i32olfm0fmc6jq9639; _csrf-backend=1bd6362881ca72d91e33a653286a04965560bc3518b94935b7d75cb74c0278f6a%3A2%3A%7Bi%3A0%3Bs%3A13%3A%22_csrf-backend%22%3Bi%3A1%3Bs%3A32%3A%22gTIVa9XaP-w9O8lth3uld6009sfSiZ2O%22%3B%7D; _csrf=74ec75e86448636f4af6ef1a82c0fff81ea216ef5aca9ae9429629353716e746a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22Ef-NhL4t3Y9NQydq9H4DCXY8QTMfd5J2%22%3B%7D'
+    'REQUEST_TIME_FLOAT' => 1751222171.7998
+    'REQUEST_TIME' => 1751222171
+]
+2025-06-29 18:36:12 [127.0.0.1][-][-][trace][yii\base\Application::bootstrap] Bootstrap with yii\log\Dispatcher
+    in C:\Yii2\test-review\api\web\index.php:11
+2025-06-29 18:36:12 [127.0.0.1][-][-][warning][application] Unable to use cache for URL manager: Failed to instantiate component or class "cache".
+    in C:\Yii2\test-review\api\web\index.php:11
+2025-06-29 18:36:12 [127.0.0.1][-][-][trace][yii\web\UrlManager::parseRequest] [
+    'rule' => 'POST api/login',
+    'match' => false,
+    'parent' => null,
+]
+    in C:\Yii2\test-review\api\web\index.php:11
+2025-06-29 18:36:12 [127.0.0.1][-][-][trace][yii\web\UrlManager::parseRequest] [
+    'rule' => 'GET api/user-role/<id:\\d+>',
+    'match' => false,
+    'parent' => null,
+]
+    in C:\Yii2\test-review\api\web\index.php:11
+2025-06-29 18:36:12 [127.0.0.1][-][-][trace][yii\web\UrlManager::parseRequest] [
+    'rule' => 'GET api/products',
+    'match' => false,
+    'parent' => null,
+]
+    in C:\Yii2\test-review\api\web\index.php:11
+2025-06-29 18:36:12 [127.0.0.1][-][-][trace][yii\web\UrlManager::parseRequest] [
+    'rule' => 'GET api/products/<id:\\d+>',
+    'match' => false,
+    'parent' => null,
+]
+    in C:\Yii2\test-review\api\web\index.php:11
+2025-06-29 18:36:12 [127.0.0.1][-][-][trace][yii\web\UrlRule::parseRequest] Request parsed with URL rule: api/reviews
+    in C:\Yii2\test-review\api\web\index.php:11
+2025-06-29 18:36:12 [127.0.0.1][-][-][trace][yii\web\UrlManager::parseRequest] [
+    'rule' => 'GET api/reviews',
+    'match' => true,
+    'parent' => null,
+]
+    in C:\Yii2\test-review\api\web\index.php:11
+2025-06-29 18:36:12 [127.0.0.1][-][-][trace][yii\web\Application::handleRequest] Route requested: 'v1/review/index'
+    in C:\Yii2\test-review\api\web\index.php:11
+2025-06-29 18:36:12 [127.0.0.1][-][-][trace][yii\base\Module::getModule] Loading module: v1
+    in C:\Yii2\test-review\api\web\index.php:11
+2025-06-29 18:36:12 [127.0.0.1][-][-][trace][yii\base\Controller::runAction] Route to run: v1/review/index
+    in C:\Yii2\test-review\api\web\index.php:11
+2025-06-29 18:36:12 [127.0.0.1][-][-][info][yii\filters\RateLimiter::beforeAction] Rate limit skipped: user not logged in.
+    in C:\Yii2\test-review\api\web\index.php:11
+2025-06-29 18:36:12 [127.0.0.1][-][-][trace][yii\base\Action::runWithParams] Running action: yii\rest\IndexAction::run(), invoked by api\modules\v1\controllers\ReviewController
+    in C:\Yii2\test-review\api\web\index.php:11
+2025-06-29 18:36:12 [127.0.0.1][-][-][info][yii\db\Command::query] SHOW FULL COLUMNS FROM `review`
+    in C:\Yii2\test-review\api\web\index.php:11
+2025-06-29 18:36:12 [127.0.0.1][-][-][info][yii\db\Connection::open] Opening DB connection: mysql:host=localhost;dbname=test_review
+    in C:\Yii2\test-review\api\web\index.php:11
+2025-06-29 18:36:12 [127.0.0.1][-][-][info][yii\db\Command::query] SHOW CREATE TABLE `review`
+    in C:\Yii2\test-review\api\web\index.php:11
+2025-06-29 18:36:12 [127.0.0.1][-][-][info][yii\db\Command::query] SELECT
+    `kcu`.`CONSTRAINT_NAME` AS `constraint_name`,
+    `kcu`.`COLUMN_NAME` AS `column_name`,
+    `kcu`.`REFERENCED_TABLE_NAME` AS `referenced_table_name`,
+    `kcu`.`REFERENCED_COLUMN_NAME` AS `referenced_column_name`
+FROM `information_schema`.`REFERENTIAL_CONSTRAINTS` AS `rc`
+JOIN `information_schema`.`KEY_COLUMN_USAGE` AS `kcu` ON
+    (
+        `kcu`.`CONSTRAINT_CATALOG` = `rc`.`CONSTRAINT_CATALOG` OR
+        (`kcu`.`CONSTRAINT_CATALOG` IS NULL AND `rc`.`CONSTRAINT_CATALOG` IS NULL)
+    ) AND
+    `kcu`.`CONSTRAINT_SCHEMA` = `rc`.`CONSTRAINT_SCHEMA` AND
+    `kcu`.`CONSTRAINT_NAME` = `rc`.`CONSTRAINT_NAME`
+WHERE `rc`.`CONSTRAINT_SCHEMA` = database() AND `kcu`.`TABLE_SCHEMA` = database()
+AND `rc`.`TABLE_NAME` = 'review' AND `kcu`.`TABLE_NAME` = 'review'
+    in C:\Yii2\test-review\api\web\index.php:11
+2025-06-29 18:36:12 [127.0.0.1][-][-][info][yii\db\Command::query] SELECT COUNT(*) FROM `review`
+    in C:\Yii2\test-review\api\web\index.php:11
+2025-06-29 18:36:12 [127.0.0.1][-][-][info][yii\db\Command::query] SELECT * FROM `review` LIMIT 20
+    in C:\Yii2\test-review\api\web\index.php:11
+2025-06-29 18:36:12 [127.0.0.1][-][-][info][yii\db\Command::query] SELECT * FROM `user` WHERE `id`=3
+    in C:\Yii2\test-review\api\modules\v1\models\Review.php:43
+    in C:\Yii2\test-review\api\web\index.php:11
+2025-06-29 18:36:12 [127.0.0.1][-][-][info][yii\db\Command::query] SHOW FULL COLUMNS FROM `user`
+    in C:\Yii2\test-review\api\modules\v1\models\Review.php:43
+    in C:\Yii2\test-review\api\web\index.php:11
+2025-06-29 18:36:12 [127.0.0.1][-][-][info][yii\db\Command::query] SHOW CREATE TABLE `user`
+    in C:\Yii2\test-review\api\modules\v1\models\Review.php:43
+    in C:\Yii2\test-review\api\web\index.php:11
+2025-06-29 18:36:12 [127.0.0.1][-][-][info][yii\db\Command::query] SELECT
+    `kcu`.`CONSTRAINT_NAME` AS `constraint_name`,
+    `kcu`.`COLUMN_NAME` AS `column_name`,
+    `kcu`.`REFERENCED_TABLE_NAME` AS `referenced_table_name`,
+    `kcu`.`REFERENCED_COLUMN_NAME` AS `referenced_column_name`
+FROM `information_schema`.`REFERENTIAL_CONSTRAINTS` AS `rc`
+JOIN `information_schema`.`KEY_COLUMN_USAGE` AS `kcu` ON
+    (
+        `kcu`.`CONSTRAINT_CATALOG` = `rc`.`CONSTRAINT_CATALOG` OR
+        (`kcu`.`CONSTRAINT_CATALOG` IS NULL AND `rc`.`CONSTRAINT_CATALOG` IS NULL)
+    ) AND
+    `kcu`.`CONSTRAINT_SCHEMA` = `rc`.`CONSTRAINT_SCHEMA` AND
+    `kcu`.`CONSTRAINT_NAME` = `rc`.`CONSTRAINT_NAME`
+WHERE `rc`.`CONSTRAINT_SCHEMA` = database() AND `kcu`.`TABLE_SCHEMA` = database()
+AND `rc`.`TABLE_NAME` = 'user' AND `kcu`.`TABLE_NAME` = 'user'
+    in C:\Yii2\test-review\api\modules\v1\models\Review.php:43
+    in C:\Yii2\test-review\api\web\index.php:11
+2025-06-29 18:36:12 [127.0.0.1][-][-][info][yii\db\Command::query] SELECT * FROM `product` WHERE `id`=8
+    in C:\Yii2\test-review\api\modules\v1\models\Review.php:47
+    in C:\Yii2\test-review\api\web\index.php:11
+2025-06-29 18:36:12 [127.0.0.1][-][-][info][yii\db\Command::query] SHOW FULL COLUMNS FROM `product`
+    in C:\Yii2\test-review\api\modules\v1\models\Review.php:47
+    in C:\Yii2\test-review\api\web\index.php:11
+2025-06-29 18:36:12 [127.0.0.1][-][-][info][yii\db\Command::query] SHOW CREATE TABLE `product`
+    in C:\Yii2\test-review\api\modules\v1\models\Review.php:47
+    in C:\Yii2\test-review\api\web\index.php:11
+2025-06-29 18:36:12 [127.0.0.1][-][-][info][yii\db\Command::query] SELECT
+    `kcu`.`CONSTRAINT_NAME` AS `constraint_name`,
+    `kcu`.`COLUMN_NAME` AS `column_name`,
+    `kcu`.`REFERENCED_TABLE_NAME` AS `referenced_table_name`,
+    `kcu`.`REFERENCED_COLUMN_NAME` AS `referenced_column_name`
+FROM `information_schema`.`REFERENTIAL_CONSTRAINTS` AS `rc`
+JOIN `information_schema`.`KEY_COLUMN_USAGE` AS `kcu` ON
+    (
+        `kcu`.`CONSTRAINT_CATALOG` = `rc`.`CONSTRAINT_CATALOG` OR
+        (`kcu`.`CONSTRAINT_CATALOG` IS NULL AND `rc`.`CONSTRAINT_CATALOG` IS NULL)
+    ) AND
+    `kcu`.`CONSTRAINT_SCHEMA` = `rc`.`CONSTRAINT_SCHEMA` AND
+    `kcu`.`CONSTRAINT_NAME` = `rc`.`CONSTRAINT_NAME`
+WHERE `rc`.`CONSTRAINT_SCHEMA` = database() AND `kcu`.`TABLE_SCHEMA` = database()
+AND `rc`.`TABLE_NAME` = 'product' AND `kcu`.`TABLE_NAME` = 'product'
+    in C:\Yii2\test-review\api\modules\v1\models\Review.php:47
+    in C:\Yii2\test-review\api\web\index.php:11
+2025-06-29 18:36:12 [127.0.0.1][-][-][info][yii\db\Command::query] SELECT * FROM `user` WHERE `id`=2
+    in C:\Yii2\test-review\api\modules\v1\models\Review.php:43
+    in C:\Yii2\test-review\api\web\index.php:11
+2025-06-29 18:36:12 [127.0.0.1][-][-][info][yii\db\Command::query] SELECT * FROM `product` WHERE `id`=4
+    in C:\Yii2\test-review\api\modules\v1\models\Review.php:47
+    in C:\Yii2\test-review\api\web\index.php:11
+2025-06-29 18:36:12 [127.0.0.1][-][-][info][yii\db\Command::query] SELECT * FROM `user` WHERE `id`=1
+    in C:\Yii2\test-review\api\modules\v1\models\Review.php:43
+    in C:\Yii2\test-review\api\web\index.php:11
+2025-06-29 18:36:12 [127.0.0.1][-][-][info][yii\db\Command::query] SELECT * FROM `product` WHERE `id`=8
+    in C:\Yii2\test-review\api\modules\v1\models\Review.php:47
+    in C:\Yii2\test-review\api\web\index.php:11
+2025-06-29 18:36:12 [127.0.0.1][-][-][info][yii\db\Command::query] SELECT * FROM `user` WHERE `id`=3
+    in C:\Yii2\test-review\api\modules\v1\models\Review.php:43
+    in C:\Yii2\test-review\api\web\index.php:11
+2025-06-29 18:36:12 [127.0.0.1][-][-][info][yii\db\Command::query] SELECT * FROM `product` WHERE `id`=7
+    in C:\Yii2\test-review\api\modules\v1\models\Review.php:47
+    in C:\Yii2\test-review\api\web\index.php:11
+2025-06-29 18:36:12 [127.0.0.1][-][-][info][yii\db\Command::query] SELECT * FROM `user` WHERE `id`=2
+    in C:\Yii2\test-review\api\modules\v1\models\Review.php:43
+    in C:\Yii2\test-review\api\web\index.php:11
+2025-06-29 18:36:12 [127.0.0.1][-][-][info][yii\db\Command::query] SELECT * FROM `product` WHERE `id`=5
+    in C:\Yii2\test-review\api\modules\v1\models\Review.php:47
+    in C:\Yii2\test-review\api\web\index.php:11
+2025-06-29 18:36:12 [127.0.0.1][-][-][info][yii\db\Command::query] SELECT * FROM `user` WHERE `id`=3
+    in C:\Yii2\test-review\api\modules\v1\models\Review.php:43
+    in C:\Yii2\test-review\api\web\index.php:11
+2025-06-29 18:36:12 [127.0.0.1][-][-][info][yii\db\Command::query] SELECT * FROM `product` WHERE `id`=6
+    in C:\Yii2\test-review\api\modules\v1\models\Review.php:47
+    in C:\Yii2\test-review\api\web\index.php:11
+2025-06-29 18:36:12 [127.0.0.1][-][-][info][yii\db\Command::query] SELECT * FROM `user` WHERE `id`=3
+    in C:\Yii2\test-review\api\modules\v1\models\Review.php:43
+    in C:\Yii2\test-review\api\web\index.php:11
+2025-06-29 18:36:12 [127.0.0.1][-][-][info][yii\db\Command::query] SELECT * FROM `product` WHERE `id`=1
+    in C:\Yii2\test-review\api\modules\v1\models\Review.php:47
+    in C:\Yii2\test-review\api\web\index.php:11
+2025-06-29 18:36:12 [127.0.0.1][-][-][info][yii\db\Command::query] SELECT * FROM `user` WHERE `id`=1
+    in C:\Yii2\test-review\api\modules\v1\models\Review.php:43
+    in C:\Yii2\test-review\api\web\index.php:11
+2025-06-29 18:36:12 [127.0.0.1][-][-][info][yii\db\Command::query] SELECT * FROM `product` WHERE `id`=2
+    in C:\Yii2\test-review\api\modules\v1\models\Review.php:47
+    in C:\Yii2\test-review\api\web\index.php:11
+2025-06-29 18:36:12 [127.0.0.1][-][-][info][yii\db\Command::query] SELECT * FROM `user` WHERE `id`=1
+    in C:\Yii2\test-review\api\modules\v1\models\Review.php:43
+    in C:\Yii2\test-review\api\web\index.php:11
+2025-06-29 18:36:12 [127.0.0.1][-][-][info][yii\db\Command::query] SELECT * FROM `product` WHERE `id`=8
+    in C:\Yii2\test-review\api\modules\v1\models\Review.php:47
+    in C:\Yii2\test-review\api\web\index.php:11
+2025-06-29 18:36:12 [127.0.0.1][-][-][info][yii\db\Command::query] SELECT * FROM `user` WHERE `id`=1
+    in C:\Yii2\test-review\api\modules\v1\models\Review.php:43
+    in C:\Yii2\test-review\api\web\index.php:11
+2025-06-29 18:36:12 [127.0.0.1][-][-][info][yii\db\Command::query] SELECT * FROM `product` WHERE `id`=3
+    in C:\Yii2\test-review\api\modules\v1\models\Review.php:47
+    in C:\Yii2\test-review\api\web\index.php:11
+2025-06-29 18:36:12 [127.0.0.1][-][-][info][yii\db\Command::query] SELECT * FROM `user` WHERE `id`=3
+    in C:\Yii2\test-review\api\modules\v1\models\Review.php:43
+    in C:\Yii2\test-review\api\web\index.php:11
+2025-06-29 18:36:12 [127.0.0.1][-][-][info][yii\db\Command::query] SELECT * FROM `product` WHERE `id`=9
+    in C:\Yii2\test-review\api\modules\v1\models\Review.php:47
+    in C:\Yii2\test-review\api\web\index.php:11
+2025-06-29 18:36:12 [127.0.0.1][-][-][info][yii\db\Command::query] SELECT * FROM `user` WHERE `id`=1
+    in C:\Yii2\test-review\api\modules\v1\models\Review.php:43
+    in C:\Yii2\test-review\api\web\index.php:11
+2025-06-29 18:36:12 [127.0.0.1][-][-][info][yii\db\Command::query] SELECT * FROM `product` WHERE `id`=10
+    in C:\Yii2\test-review\api\modules\v1\models\Review.php:47
+    in C:\Yii2\test-review\api\web\index.php:11
+2025-06-29 18:36:12 [127.0.0.1][-][-][info][yii\db\Command::query] SELECT * FROM `user` WHERE `id`=2
+    in C:\Yii2\test-review\api\modules\v1\models\Review.php:43
+    in C:\Yii2\test-review\api\web\index.php:11
+2025-06-29 18:36:12 [127.0.0.1][-][-][info][yii\db\Command::query] SELECT * FROM `product` WHERE `id`=6
+    in C:\Yii2\test-review\api\modules\v1\models\Review.php:47
+    in C:\Yii2\test-review\api\web\index.php:11
+2025-06-29 18:36:12 [127.0.0.1][-][-][info][yii\db\Command::query] SELECT * FROM `user` WHERE `id`=1
+    in C:\Yii2\test-review\api\modules\v1\models\Review.php:43
+    in C:\Yii2\test-review\api\web\index.php:11
+2025-06-29 18:36:12 [127.0.0.1][-][-][info][yii\db\Command::query] SELECT * FROM `product` WHERE `id`=7
+    in C:\Yii2\test-review\api\modules\v1\models\Review.php:47
+    in C:\Yii2\test-review\api\web\index.php:11
+2025-06-29 18:36:12 [127.0.0.1][-][-][info][yii\db\Command::query] SELECT * FROM `user` WHERE `id`=3
+    in C:\Yii2\test-review\api\modules\v1\models\Review.php:43
+    in C:\Yii2\test-review\api\web\index.php:11
+2025-06-29 18:36:12 [127.0.0.1][-][-][info][yii\db\Command::query] SELECT * FROM `product` WHERE `id`=6
+    in C:\Yii2\test-review\api\modules\v1\models\Review.php:47
+    in C:\Yii2\test-review\api\web\index.php:11
+2025-06-29 18:36:12 [127.0.0.1][-][-][info][yii\db\Command::query] SELECT * FROM `user` WHERE `id`=4
+    in C:\Yii2\test-review\api\modules\v1\models\Review.php:43
+    in C:\Yii2\test-review\api\web\index.php:11
+2025-06-29 18:36:12 [127.0.0.1][-][-][info][yii\db\Command::query] SELECT * FROM `product` WHERE `id`=2
+    in C:\Yii2\test-review\api\modules\v1\models\Review.php:47
+    in C:\Yii2\test-review\api\web\index.php:11
+2025-06-29 18:36:12 [127.0.0.1][-][-][info][yii\db\Command::query] SELECT * FROM `user` WHERE `id`=4
+    in C:\Yii2\test-review\api\modules\v1\models\Review.php:43
+    in C:\Yii2\test-review\api\web\index.php:11
+2025-06-29 18:36:12 [127.0.0.1][-][-][info][yii\db\Command::query] SELECT * FROM `product` WHERE `id`=2
+    in C:\Yii2\test-review\api\modules\v1\models\Review.php:47
+    in C:\Yii2\test-review\api\web\index.php:11
+2025-06-29 18:36:12 [127.0.0.1][-][-][info][application] $_GET = [
+    'expand' => 'product,user'
+]
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = [
+    'Phpstorm-90abd190' => 'e3ca3928-140e-49f6-83f7-dff6b78eef42'
+    'advanced-backend' => 't24k8pj9i32olfm0fmc6jq9639'
+    '_csrf-backend' => '1bd6362881ca72d91e33a653286a04965560bc3518b94935b7d75cb74c0278f6a:2:{i:0;s:13:\"_csrf-backend\";i:1;s:32:\"gTIVa9XaP-w9O8lth3uld6009sfSiZ2O\";}'
+    '_csrf' => '74ec75e86448636f4af6ef1a82c0fff81ea216ef5aca9ae9429629353716e746a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"Ef-NhL4t3Y9NQydq9H4DCXY8QTMfd5J2\";}'
+]
+
+$_SERVER = [
+    'DOCUMENT_ROOT' => 'C:\\Yii2\\test-review\\api\\web'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'REMOTE_PORT' => '63146'
+    'SERVER_SOFTWARE' => 'PHP/8.3.0 (Development Server)'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_PORT' => '8080'
+    'REQUEST_URI' => '/api/reviews?expand=product,user'
+    'REQUEST_METHOD' => 'GET'
+    'SCRIPT_NAME' => '/index.php'
+    'SCRIPT_FILENAME' => 'C:\\Yii2\\test-review\\api\\web\\index.php'
+    'PATH_INFO' => '/api/reviews'
+    'PHP_SELF' => '/index.php/api/reviews'
+    'QUERY_STRING' => 'expand=product,user'
+    'HTTP_HOST' => 'localhost:8080'
+    'HTTP_CONNECTION' => 'close'
+    'HTTP_SEC_CH_UA_PLATFORM' => '\"Windows\"'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/137.0.0.0 Safari/537.36'
+    'HTTP_ACCEPT' => 'application/json, text/plain, */*'
+    'HTTP_SEC_CH_UA' => '\"Google Chrome\";v=\"137\", \"Chromium\";v=\"137\", \"Not/A)Brand\";v=\"24\"'
+    'HTTP_SEC_CH_UA_MOBILE' => '?0'
+    'HTTP_SEC_FETCH_SITE' => 'same-origin'
+    'HTTP_SEC_FETCH_MODE' => 'cors'
+    'HTTP_SEC_FETCH_DEST' => 'empty'
+    'HTTP_REFERER' => 'http://localhost:5173/products/5'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br, zstd'
+    'HTTP_ACCEPT_LANGUAGE' => 'ru-RU,ru;q=0.9,en-US;q=0.8,en;q=0.7'
+    'HTTP_COOKIE' => 'Phpstorm-90abd190=e3ca3928-140e-49f6-83f7-dff6b78eef42; advanced-backend=t24k8pj9i32olfm0fmc6jq9639; _csrf-backend=1bd6362881ca72d91e33a653286a04965560bc3518b94935b7d75cb74c0278f6a%3A2%3A%7Bi%3A0%3Bs%3A13%3A%22_csrf-backend%22%3Bi%3A1%3Bs%3A32%3A%22gTIVa9XaP-w9O8lth3uld6009sfSiZ2O%22%3B%7D; _csrf=74ec75e86448636f4af6ef1a82c0fff81ea216ef5aca9ae9429629353716e746a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22Ef-NhL4t3Y9NQydq9H4DCXY8QTMfd5J2%22%3B%7D'
+    'REQUEST_TIME_FLOAT' => 1751222172.0603
+    'REQUEST_TIME' => 1751222172
+]
+2025-06-29 18:36:12 [127.0.0.1][4][-][trace][yii\base\Application::bootstrap] Bootstrap with yii\log\Dispatcher
+    in C:\Yii2\test-review\api\web\index.php:11
+2025-06-29 18:36:12 [127.0.0.1][4][-][warning][application] Unable to use cache for URL manager: Failed to instantiate component or class "cache".
+    in C:\Yii2\test-review\api\web\index.php:11
+2025-06-29 18:36:12 [127.0.0.1][4][-][trace][yii\web\UrlManager::parseRequest] [
+    'rule' => 'POST api/login',
+    'match' => false,
+    'parent' => null,
+]
+    in C:\Yii2\test-review\api\web\index.php:11
+2025-06-29 18:36:12 [127.0.0.1][4][-][trace][yii\web\UrlRule::parseRequest] Request parsed with URL rule: api/user-role/<id:\d+>
+    in C:\Yii2\test-review\api\web\index.php:11
+2025-06-29 18:36:12 [127.0.0.1][4][-][trace][yii\web\UrlManager::parseRequest] [
+    'rule' => 'GET api/user-role/<id:\\d+>',
+    'match' => true,
+    'parent' => null,
+]
+    in C:\Yii2\test-review\api\web\index.php:11
+2025-06-29 18:36:12 [127.0.0.1][4][-][trace][yii\web\Application::handleRequest] Route requested: 'v1/user/user-role'
+    in C:\Yii2\test-review\api\web\index.php:11
+2025-06-29 18:36:12 [127.0.0.1][4][-][trace][yii\base\Module::getModule] Loading module: v1
+    in C:\Yii2\test-review\api\web\index.php:11
+2025-06-29 18:36:12 [127.0.0.1][4][-][trace][yii\base\Controller::runAction] Route to run: v1/user/user-role
+    in C:\Yii2\test-review\api\web\index.php:11
+2025-06-29 18:36:12 [127.0.0.1][4][-][info][yii\db\Command::query] SHOW FULL COLUMNS FROM `user`
+    in C:\Yii2\test-review\api\modules\v1\models\User.php:61
+    in C:\Yii2\test-review\api\web\index.php:11
+2025-06-29 18:36:12 [127.0.0.1][4][-][info][yii\db\Connection::open] Opening DB connection: mysql:host=localhost;dbname=test_review
+    in C:\Yii2\test-review\api\modules\v1\models\User.php:61
+    in C:\Yii2\test-review\api\web\index.php:11
+2025-06-29 18:36:12 [127.0.0.1][4][-][info][yii\db\Command::query] SHOW CREATE TABLE `user`
+    in C:\Yii2\test-review\api\modules\v1\models\User.php:61
+    in C:\Yii2\test-review\api\web\index.php:11
+2025-06-29 18:36:12 [127.0.0.1][4][-][info][yii\db\Command::query] SELECT
+    `kcu`.`CONSTRAINT_NAME` AS `constraint_name`,
+    `kcu`.`COLUMN_NAME` AS `column_name`,
+    `kcu`.`REFERENCED_TABLE_NAME` AS `referenced_table_name`,
+    `kcu`.`REFERENCED_COLUMN_NAME` AS `referenced_column_name`
+FROM `information_schema`.`REFERENTIAL_CONSTRAINTS` AS `rc`
+JOIN `information_schema`.`KEY_COLUMN_USAGE` AS `kcu` ON
+    (
+        `kcu`.`CONSTRAINT_CATALOG` = `rc`.`CONSTRAINT_CATALOG` OR
+        (`kcu`.`CONSTRAINT_CATALOG` IS NULL AND `rc`.`CONSTRAINT_CATALOG` IS NULL)
+    ) AND
+    `kcu`.`CONSTRAINT_SCHEMA` = `rc`.`CONSTRAINT_SCHEMA` AND
+    `kcu`.`CONSTRAINT_NAME` = `rc`.`CONSTRAINT_NAME`
+WHERE `rc`.`CONSTRAINT_SCHEMA` = database() AND `kcu`.`TABLE_SCHEMA` = database()
+AND `rc`.`TABLE_NAME` = 'user' AND `kcu`.`TABLE_NAME` = 'user'
+    in C:\Yii2\test-review\api\modules\v1\models\User.php:61
+    in C:\Yii2\test-review\api\web\index.php:11
+2025-06-29 18:36:12 [127.0.0.1][4][-][info][yii\db\Command::query] SELECT * FROM `user` WHERE `id`=4
+    in C:\Yii2\test-review\api\modules\v1\models\User.php:61
+    in C:\Yii2\test-review\api\web\index.php:11
+2025-06-29 18:36:12 [127.0.0.1][4][-][info][yii\web\User::login] User '4' logged in from 127.0.0.1. Session not enabled.
+    in C:\Yii2\test-review\api\web\index.php:11
+2025-06-29 18:36:12 [127.0.0.1][4][-][info][yii\filters\RateLimiter::beforeAction] Rate limit skipped: "user" does not implement RateLimitInterface.
+    in C:\Yii2\test-review\api\web\index.php:11
+2025-06-29 18:36:12 [127.0.0.1][4][-][trace][yii\base\InlineAction::runWithParams] Running action: api\modules\v1\controllers\UserController::actionUserRole()
+    in C:\Yii2\test-review\api\web\index.php:11
+2025-06-29 18:36:12 [127.0.0.1][4][-][info][yii\db\Command::query] SELECT `item_name` FROM `auth_assignment` WHERE `user_id`='4'
+    in C:\Yii2\test-review\api\modules\v1\controllers\UserController.php:37
+    in C:\Yii2\test-review\api\web\index.php:11
+2025-06-29 18:36:12 [127.0.0.1][4][-][info][application] $_GET = [
+    'id' => '4'
+]
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = [
+    'Phpstorm-90abd190' => 'e3ca3928-140e-49f6-83f7-dff6b78eef42'
+    'advanced-backend' => 't24k8pj9i32olfm0fmc6jq9639'
+    '_csrf-backend' => '1bd6362881ca72d91e33a653286a04965560bc3518b94935b7d75cb74c0278f6a:2:{i:0;s:13:\"_csrf-backend\";i:1;s:32:\"gTIVa9XaP-w9O8lth3uld6009sfSiZ2O\";}'
+    '_csrf' => '74ec75e86448636f4af6ef1a82c0fff81ea216ef5aca9ae9429629353716e746a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"Ef-NhL4t3Y9NQydq9H4DCXY8QTMfd5J2\";}'
+]
+
+$_SERVER = [
+    'DOCUMENT_ROOT' => 'C:\\Yii2\\test-review\\api\\web'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'REMOTE_PORT' => '63150'
+    'SERVER_SOFTWARE' => 'PHP/8.3.0 (Development Server)'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_PORT' => '8080'
+    'REQUEST_URI' => '/api/user-role/4'
+    'REQUEST_METHOD' => 'GET'
+    'SCRIPT_NAME' => '/index.php'
+    'SCRIPT_FILENAME' => 'C:\\Yii2\\test-review\\api\\web\\index.php'
+    'PATH_INFO' => '/api/user-role/4'
+    'PHP_SELF' => '/index.php/api/user-role/4'
+    'HTTP_HOST' => 'localhost:8080'
+    'HTTP_CONNECTION' => 'close'
+    'HTTP_SEC_CH_UA_PLATFORM' => '\"Windows\"'
+    'HTTP_AUTHORIZATION' => '***'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/137.0.0.0 Safari/537.36'
+    'HTTP_ACCEPT' => 'application/json, text/plain, */*'
+    'HTTP_SEC_CH_UA' => '\"Google Chrome\";v=\"137\", \"Chromium\";v=\"137\", \"Not/A)Brand\";v=\"24\"'
+    'HTTP_SEC_CH_UA_MOBILE' => '?0'
+    'HTTP_SEC_FETCH_SITE' => 'same-origin'
+    'HTTP_SEC_FETCH_MODE' => 'cors'
+    'HTTP_SEC_FETCH_DEST' => 'empty'
+    'HTTP_REFERER' => 'http://localhost:5173/products/5'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br, zstd'
+    'HTTP_ACCEPT_LANGUAGE' => 'ru-RU,ru;q=0.9,en-US;q=0.8,en;q=0.7'
+    'HTTP_COOKIE' => 'Phpstorm-90abd190=e3ca3928-140e-49f6-83f7-dff6b78eef42; advanced-backend=t24k8pj9i32olfm0fmc6jq9639; _csrf-backend=1bd6362881ca72d91e33a653286a04965560bc3518b94935b7d75cb74c0278f6a%3A2%3A%7Bi%3A0%3Bs%3A13%3A%22_csrf-backend%22%3Bi%3A1%3Bs%3A32%3A%22gTIVa9XaP-w9O8lth3uld6009sfSiZ2O%22%3B%7D; _csrf=74ec75e86448636f4af6ef1a82c0fff81ea216ef5aca9ae9429629353716e746a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22Ef-NhL4t3Y9NQydq9H4DCXY8QTMfd5J2%22%3B%7D'
+    'REQUEST_TIME_FLOAT' => 1751222172.1465
+    'REQUEST_TIME' => 1751222172
+]
+2025-06-29 18:36:25 [127.0.0.1][-][-][trace][yii\base\Application::bootstrap] Bootstrap with yii\log\Dispatcher
+2025-06-29 18:36:25 [127.0.0.1][-][-][warning][application] Unable to use cache for URL manager: Failed to instantiate component or class "cache".
+2025-06-29 18:36:25 [127.0.0.1][-][-][trace][yii\web\UrlManager::parseRequest] [
+    'rule' => 'POST api/login',
+    'match' => false,
+    'parent' => null,
+]
+2025-06-29 18:36:25 [127.0.0.1][-][-][trace][yii\web\UrlManager::parseRequest] [
+    'rule' => 'GET api/user-role/<id:\\d+>',
+    'match' => false,
+    'parent' => null,
+]
+2025-06-29 18:36:25 [127.0.0.1][-][-][trace][yii\web\UrlManager::parseRequest] [
+    'rule' => 'GET api/products',
+    'match' => false,
+    'parent' => null,
+]
+2025-06-29 18:36:25 [127.0.0.1][-][-][trace][yii\web\UrlManager::parseRequest] [
+    'rule' => 'GET api/products/<id:\\d+>',
+    'match' => false,
+    'parent' => null,
+]
+2025-06-29 18:36:25 [127.0.0.1][-][-][trace][yii\web\UrlManager::parseRequest] [
+    'rule' => 'GET api/reviews',
+    'match' => false,
+    'parent' => null,
+]
+2025-06-29 18:36:25 [127.0.0.1][-][-][trace][yii\web\UrlManager::parseRequest] [
+    'rule' => 'POST api/reviews',
+    'match' => false,
+    'parent' => null,
+]
+2025-06-29 18:36:25 [127.0.0.1][-][-][trace][yii\web\UrlManager::parseRequest] [
+    'rule' => 'PUT api/reviews/<id:\\d+>/approve',
+    'match' => false,
+    'parent' => null,
+]
+2025-06-29 18:36:25 [127.0.0.1][-][-][error][yii\web\HttpException:404] yii\web\NotFoundHttpException: Page not found. in C:\Yii2\test-review\vendor\yiisoft\yii2\web\Request.php:331
+Stack trace:
+#0 C:\Yii2\test-review\vendor\yiisoft\yii2\web\Application.php(82): yii\web\Request->resolve()
+#1 C:\Yii2\test-review\vendor\yiisoft\yii2\base\Application.php(384): yii\web\Application->handleRequest(Object(yii\web\Request))
+#2 C:\Yii2\test-review\api\web\index.php(11): yii\base\Application->run()
+#3 {main}
+2025-06-29 18:36:25 [127.0.0.1][-][-][info][application] $_GET = [
+    'r' => 'site/login'
+]
+
+$_POST = [
+    '_csrf-backend' => 'r3jSv1ANBuwtX-qHfqzNGvIi_vg2EsXwluaphJUdI83ILJvpMTRejX1ynb4xlKFumhGLlFIk9cCvlc_X_EcRgg=='
+    'LoginForm' => [
+        'username' => 'vlad'
+        'password' => 'X2etH4cA46EAa8i'
+        'rememberMe' => '1'
+    ]
+    'login-button' => ''
+]
+
+$_FILES = []
+
+$_COOKIE = [
+    'Phpstorm-90abd190' => 'e3ca3928-140e-49f6-83f7-dff6b78eef42'
+    'advanced-backend' => 't24k8pj9i32olfm0fmc6jq9639'
+    '_csrf-backend' => '1bd6362881ca72d91e33a653286a04965560bc3518b94935b7d75cb74c0278f6a:2:{i:0;s:13:\"_csrf-backend\";i:1;s:32:\"gTIVa9XaP-w9O8lth3uld6009sfSiZ2O\";}'
+    '_csrf' => '354d18cee0bc5cdf9835ce61c8bb8ae7bf3d905f0f273a0e4922363a2a394dbfa:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"dBzsR_1zQg0XG5vWv1alPJLjPiAvEzXX\";}'
+]
+
+$_SERVER = [
+    'DOCUMENT_ROOT' => 'C:\\Yii2\\test-review\\api\\web'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'REMOTE_PORT' => '63162'
+    'SERVER_SOFTWARE' => 'PHP/8.3.0 (Development Server)'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_PORT' => '8080'
+    'REQUEST_URI' => '/index.php?r=site%2Flogin'
+    'REQUEST_METHOD' => 'POST'
+    'SCRIPT_NAME' => '/index.php'
+    'SCRIPT_FILENAME' => 'C:\\Yii2\\test-review\\api\\web\\index.php'
+    'PHP_SELF' => '/index.php'
+    'QUERY_STRING' => 'r=site%2Flogin'
+    'HTTP_HOST' => 'localhost:8080'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'CONTENT_LENGTH' => '245'
+    'HTTP_CONTENT_LENGTH' => '245'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'HTTP_SEC_CH_UA' => '\"Google Chrome\";v=\"137\", \"Chromium\";v=\"137\", \"Not/A)Brand\";v=\"24\"'
+    'HTTP_SEC_CH_UA_MOBILE' => '?0'
+    'HTTP_SEC_CH_UA_PLATFORM' => '\"Windows\"'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/137.0.0.0 Safari/537.36'
+    'HTTP_ORIGIN' => 'http://localhost:8080'
+    'CONTENT_TYPE' => 'application/x-www-form-urlencoded'
+    'HTTP_CONTENT_TYPE' => 'application/x-www-form-urlencoded'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7'
+    'HTTP_SEC_FETCH_SITE' => 'same-origin'
+    'HTTP_SEC_FETCH_MODE' => 'navigate'
+    'HTTP_SEC_FETCH_USER' => '?1'
+    'HTTP_SEC_FETCH_DEST' => 'document'
+    'HTTP_REFERER' => 'http://localhost:8080/index.php?r=site%2Flogin'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br, zstd'
+    'HTTP_ACCEPT_LANGUAGE' => 'ru-RU,ru;q=0.9,en-US;q=0.8,en;q=0.7'
+    'HTTP_COOKIE' => 'Phpstorm-90abd190=e3ca3928-140e-49f6-83f7-dff6b78eef42; advanced-backend=t24k8pj9i32olfm0fmc6jq9639; _csrf-backend=1bd6362881ca72d91e33a653286a04965560bc3518b94935b7d75cb74c0278f6a%3A2%3A%7Bi%3A0%3Bs%3A13%3A%22_csrf-backend%22%3Bi%3A1%3Bs%3A32%3A%22gTIVa9XaP-w9O8lth3uld6009sfSiZ2O%22%3B%7D; _csrf=354d18cee0bc5cdf9835ce61c8bb8ae7bf3d905f0f273a0e4922363a2a394dbfa%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22dBzsR_1zQg0XG5vWv1alPJLjPiAvEzXX%22%3B%7D'
+    'REQUEST_TIME_FLOAT' => 1751222185.285
+    'REQUEST_TIME' => 1751222185
+]
